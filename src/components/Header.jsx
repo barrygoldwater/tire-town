@@ -61,8 +61,14 @@ export default function Header({ onQuoteClick }) {
           </span>
         </a>
 
-        {/* Right: Phone + Quote button */}
+        {/* Right: About + Phone + Quote button */}
         <div className="flex items-center gap-2 sm:gap-4">
+          <a
+            href="/about"
+            className="hidden sm:inline text-[13px] font-semibold uppercase tracking-[0.06em] text-[#525252] hover:text-[#c8102e] px-3 py-2 transition-colors whitespace-nowrap"
+          >
+            About
+          </a>
           <a
             href="tel:619-954-0034"
             className="hidden sm:flex items-center gap-2 px-2 py-2 text-[13px] font-semibold text-primary hover:text-primary/80 transition-colors whitespace-nowrap"
