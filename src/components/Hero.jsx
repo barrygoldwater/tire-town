@@ -2,12 +2,6 @@ import { Phone } from "lucide-react";
 
 export default function Hero() {
   const brands = ["Excel", "Achieva", "Arisun", "Wanda", "Innova", "Wheel Mate"];
-  const stats = [
-    { num: "37", label: "Wheel models" },
-    { num: "23", label: "Tire models" },
-    { num: "320+", label: "Part numbers" },
-  ];
-
   return (
     <section className="relative bg-[#0a0a0a] overflow-hidden">
       {/* Atmospheric backdrop */}
@@ -21,7 +15,7 @@ export default function Hero() {
       {/* Top hairline */}
       <div className="absolute top-0 inset-x-0 h-px bg-white/10" />
 
-      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-16 sm:pt-24 lg:pt-32 pb-12 sm:pb-16 lg:pb-20">
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-16 sm:pt-24 lg:pt-32 pb-16 sm:pb-20 lg:pb-24">
         {/* Eyebrow */}
         <div className="flex items-center gap-3 mb-6 sm:mb-8">
           <div className="h-px w-8 bg-primary" />
@@ -76,19 +70,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Stats credential band */}
-        <div className="mt-10 sm:mt-14 grid grid-cols-3 max-w-2xl divide-x divide-white/10">
-          {stats.map((s, i) => (
-            <div key={s.label} className={i === 0 ? "pr-4 sm:pr-8" : "px-4 sm:px-8"}>
-              <div className="text-[28px] sm:text-[36px] lg:text-[44px] font-extrabold text-white tracking-[-0.025em] leading-none">
-                {s.num}
-              </div>
-              <div className="mt-2 text-[10px] sm:text-[11px] text-white/45 uppercase tracking-[0.15em] font-medium leading-tight">
-                {s.label}
-              </div>
-            </div>
-          ))}
-        </div>
+
       </div>
     </section>
   );
