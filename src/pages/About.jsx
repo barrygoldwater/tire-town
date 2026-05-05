@@ -31,8 +31,7 @@ function Hero() {
         }}
       />
 
-      {/* Bottom fade to white */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white pointer-events-none" />
+
 
       {/* Hero content */}
       <div className="relative z-10 h-full flex flex-col items-start justify-center text-left px-8 sm:px-16 lg:px-24 max-w-4xl">
