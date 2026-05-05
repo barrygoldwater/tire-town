@@ -1,4 +1,4 @@
-import { Phone } from "lucide-react";
+import { Phone, Download } from "lucide-react";
 import Logo from "./Logo";
 
 export default function Header({ onQuoteClick }) {
@@ -7,8 +7,19 @@ export default function Header({ onQuoteClick }) {
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 h-14 sm:h-[72px] flex items-center justify-between gap-3">
         <a href="#" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-3 sm:gap-4">
           <Logo className="h-9 sm:h-11" />
-          <span className="hidden sm:inline-block text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground border-l border-border pl-3 sm:pl-4">
+          <span className="hidden sm:inline-flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground border-l border-border pl-3 sm:pl-4">
             June 2026 Catalog
+            <a
+              href="/catalog.pdf"
+              download="Affordable-Tires-Catalog.pdf"
+              target="_blank"
+              rel="noopener"
+              aria-label="Download catalog PDF"
+              title="Download PDF"
+              className="text-primary hover:bg-primary/10 rounded-sm p-0.5 transition-colors"
+            >
+              <Download className="w-4 h-4" />
+            </a>
           </span>
         </a>
         <div className="flex items-center gap-2 sm:gap-4">

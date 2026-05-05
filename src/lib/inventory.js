@@ -1,24 +1,10 @@
 const inventory = {
   site: "Affordable Tires",
-  tagline: "Wholesale Golf Cart Wheels & Tires",
-  categories: {
-    wheels: {
-      name: "Wheels",
-      description: "Aluminum and steel golf cart wheels in 8\", 10\", 12\", 13\", 14\", and 15\" sizes",
-      brands: ["Excel", "Achieva", "Arisun", "Wheel Mate"],
-    },
-    tires: {
-      name: "Tires",
-      description: "Street, turf, all-terrain, and trail tires from 8\" to 15\" — DOT-approved options available",
-      brands: ["Excel", "Wanda", "Innova", "Arisun", "Carlstar", "Kenda", "GBC", "Deestone"],
-    },
-  },
+  tagline: "Wholesale Golf Cart, ATV, Lawn & Garden, Trailer, and Industrial Tires & Wheels",
   wheels: [
+    // ── GOLF CART WHEELS ──────────────────────────────────────────────────
     {
-      id: "excel-e106",
-      brand: "Excel",
-      model: "E106",
-      category: "wheel",
+      id: "excel-e106", brand: "Excel", model: "E106", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://nebula.wsimg.com/5eabac668807118277877eac80e47294?AccessKeyId=24DF0E420D17AE5CECFF&disposition=0&alloworigin=1",
       variants: [
         { size: "10x7 4/4", finish: "Machined Black", offset: "ET-25", part_number: "0709-031" },
@@ -31,10 +17,7 @@ const inventory = {
       ],
     },
     {
-      id: "excel-e117",
-      brand: "Excel",
-      model: "E117",
-      category: "wheel",
+      id: "excel-e117", brand: "Excel", model: "E117", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://nebula.wsimg.com/60b73db79877ab4b0ccc226be8d8097a?AccessKeyId=24DF0E420D17AE5CECFF&disposition=0&alloworigin=1",
       variants: [
         { size: "10x7 4/4", finish: "Machined Black", offset: "ET-25", part_number: "0725-031" },
@@ -46,10 +29,7 @@ const inventory = {
       ],
     },
     {
-      id: "excel-e118",
-      brand: "Excel",
-      model: "E118",
-      category: "wheel",
+      id: "excel-e118", brand: "Excel", model: "E118", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://nebula.wsimg.com/834b8342a06d161e31cdafbbdbe0f99f?AccessKeyId=24DF0E420D17AE5CECFF&disposition=0&alloworigin=1",
       variants: [
         { size: "10x7 4/4", finish: "Machined Black", offset: "ET-15", part_number: "0726-031" },
@@ -61,10 +41,7 @@ const inventory = {
       ],
     },
     {
-      id: "excel-e124",
-      brand: "Excel",
-      model: "E124",
-      category: "wheel",
+      id: "excel-e124", brand: "Excel", model: "E124", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://nebula.wsimg.com/73f256e38b33ef2be4d06bd3e1eae43b?AccessKeyId=24DF0E420D17AE5CECFF&disposition=0&alloworigin=1",
       variants: [
         { size: "10x7 4/4", finish: "Machined Black", offset: "ET-15", part_number: "0731-031" },
@@ -76,10 +53,7 @@ const inventory = {
       ],
     },
     {
-      id: "excel-e121",
-      brand: "Excel",
-      model: "E121",
-      category: "wheel",
+      id: "excel-e121", brand: "Excel", model: "E121", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://nebula.wsimg.com/22c13e121723128ffdcfd5baf2937398?AccessKeyId=24DF0E420D17AE5CECFF&disposition=0&alloworigin=1",
       variants: [
         { size: "10x7 4/4", finish: "Machined Black", offset: "ET-15", part_number: "0734-031" },
@@ -91,10 +65,7 @@ const inventory = {
       ],
     },
     {
-      id: "excel-e114",
-      brand: "Excel",
-      model: "E114",
-      category: "wheel",
+      id: "excel-e114", brand: "Excel", model: "E114", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://nebula.wsimg.com/c1c4326212b97dde5260c51fa38b8f08?AccessKeyId=24DF0E420D17AE5CECFF&disposition=0&alloworigin=1",
       variants: [
         { size: "10x7 4/4", finish: "Machined Black", offset: "ET-15", part_number: "0732-031" },
@@ -106,10 +77,7 @@ const inventory = {
       ],
     },
     {
-      id: "excel-e116",
-      brand: "Excel",
-      model: "E116",
-      category: "wheel",
+      id: "excel-e116", brand: "Excel", model: "E116", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://nebula.wsimg.com/2d469f9175d1a6d750d3b62c4d7d6e75?AccessKeyId=24DF0E420D17AE5CECFF&disposition=0&alloworigin=1",
       variants: [
         { size: "14x7 4/4", finish: "Machined Black", offset: "ET-15", part_number: "4716-031" },
@@ -117,10 +85,7 @@ const inventory = {
       ],
     },
     {
-      id: "excel-e108",
-      brand: "Excel",
-      model: "E108",
-      category: "wheel",
+      id: "excel-e108", brand: "Excel", model: "E108", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://nebula.wsimg.com/b06ae4c8075a9d181f707de0ff04a15d?AccessKeyId=24DF0E420D17AE5CECFF&disposition=0&alloworigin=1",
       variants: [
         { size: "10x7 4/4", finish: "Polished", offset: "ET-15", part_number: "0716-033" },
@@ -128,10 +93,7 @@ const inventory = {
       ],
     },
     {
-      id: "excel-steel-wheels",
-      brand: "Excel",
-      model: "Steel Wheels",
-      category: "wheel",
+      id: "excel-steel-wheels", brand: "Excel", model: "Steel Wheels", category: "wheel", vehicle_type: "golf_cart",
       type: "steel",
       image_url: "https://nebula.wsimg.com/90c27fb20b152ab526a2405b764fc023?AccessKeyId=24DF0E420D17AE5CECFF&disposition=0&alloworigin=1",
       variants: [
@@ -147,10 +109,7 @@ const inventory = {
       ],
     },
     {
-      id: "achieva-ar681",
-      brand: "Achieva",
-      model: "AR681",
-      category: "wheel",
+      id: "achieva-ar681", brand: "Achieva", model: "AR681", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://www.achievatire.com/s/cc_images/cache_10322718.jpg",
       variants: [
         { size: "10x7 4/4", finish: "Machined Black/Silver", offset: "-15MM", part_number: "RMA10768154101.6BS" },
@@ -169,10 +128,7 @@ const inventory = {
       ],
     },
     {
-      id: "achieva-ar588",
-      brand: "Achieva",
-      model: "AR588",
-      category: "wheel",
+      id: "achieva-ar588", brand: "Achieva", model: "AR588", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://www.achievatire.com/s/cc_images/cache_16049802.JPG",
       variants: [
         { size: "12x7 4/4", finish: "Machined Black", offset: "-25MM", part_number: "RMA1275882544MB" },
@@ -185,10 +141,7 @@ const inventory = {
       ],
     },
     {
-      id: "achieva-ar538",
-      brand: "Achieva",
-      model: "AR538",
-      category: "wheel",
+      id: "achieva-ar538", brand: "Achieva", model: "AR538", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://www.achievatire.com/s/cc_images/cache_14608807.JPG",
       variants: [
         { size: "12x7 4/4", finish: "Chrome", offset: "0", part_number: "RMA127538044CRM" },
@@ -200,10 +153,7 @@ const inventory = {
       ],
     },
     {
-      id: "achieva-ar598",
-      brand: "Achieva",
-      model: "AR598",
-      category: "wheel",
+      id: "achieva-ar598", brand: "Achieva", model: "AR598", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://www.achievatire.com/s/cc_images/cache_16049803.JPG",
       variants: [
         { size: "12x7 4/4", finish: "Machined Black", offset: "-25MM", part_number: "RMA1275982544MB" },
@@ -215,10 +165,7 @@ const inventory = {
       ],
     },
     {
-      id: "achieva-ar599",
-      brand: "Achieva",
-      model: "AR599",
-      category: "wheel",
+      id: "achieva-ar599", brand: "Achieva", model: "AR599", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://www.achievatire.com/s/cc_images/cache_16049817.JPG",
       variants: [
         { size: "12x7 4/4", finish: "Machined Black", offset: "-25MM", part_number: "RMA1275992544MB" },
@@ -230,10 +177,7 @@ const inventory = {
       ],
     },
     {
-      id: "achieva-ar128",
-      brand: "Achieva",
-      model: "AR128",
-      category: "wheel",
+      id: "achieva-ar128", brand: "Achieva", model: "AR128", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://www.achievatire.com/s/cc_images/cache_14608787.jpg",
       variants: [
         { size: "14x6 4/4", finish: "Chrome", offset: "-25MM", part_number: "RMA1461282544CRM" },
@@ -241,10 +185,7 @@ const inventory = {
       ],
     },
     {
-      id: "achieva-ar508",
-      brand: "Achieva",
-      model: "AR508",
-      category: "wheel",
+      id: "achieva-ar508", brand: "Achieva", model: "AR508", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://www.achievatire.com/s/cc_images/cache_14608805.JPG",
       variants: [
         { size: "15x6 4/4", finish: "Machined Black", offset: "-25MM", part_number: "RMA1565082544MB" },
@@ -252,20 +193,14 @@ const inventory = {
       ],
     },
     {
-      id: "achieva-ar218",
-      brand: "Achieva",
-      model: "AR218",
-      category: "wheel",
+      id: "achieva-ar218", brand: "Achieva", model: "AR218", category: "wheel", vehicle_type: "golf_cart",
       variants: [
         { size: "12x7 4/4", finish: "Chrome", offset: "0", part_number: "RMA127218044VCRM" },
         { size: "12x7 4/4", finish: "Machined Black", offset: "0", part_number: "RMA127218044MB" },
       ],
     },
     {
-      id: "achieva-ar658",
-      brand: "Achieva",
-      model: "AR658",
-      category: "wheel",
+      id: "achieva-ar658", brand: "Achieva", model: "AR658", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://www.achievatire.com/s/cc_images/cache_10330299.JPG?t=1568843021",
       variants: [
         { size: "12x7 -25mm", finish: "Machined Black", offset: "-25MM", part_number: "RMA1276582544MB" },
@@ -280,10 +215,7 @@ const inventory = {
       ],
     },
     {
-      id: "achieva-ar138",
-      brand: "Achieva",
-      model: "AR138",
-      category: "wheel",
+      id: "achieva-ar138", brand: "Achieva", model: "AR138", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://www.achievatire.com/s/cc_images/cache_14608795.jpg",
       variants: [
         { size: "12x7 4/4", finish: "Machined Black", offset: "0", part_number: "RMA127138044MB" },
@@ -293,10 +225,7 @@ const inventory = {
       ],
     },
     {
-      id: "achieva-ar558",
-      brand: "Achieva",
-      model: "AR558",
-      category: "wheel",
+      id: "achieva-ar558", brand: "Achieva", model: "AR558", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://www.achievatire.com/s/cc_images/cache_14608835.JPG",
       variants: [
         { size: "10x7 4/4", finish: "Machined Black", offset: "-15MM", part_number: "RMA1055815544MB" },
@@ -308,10 +237,7 @@ const inventory = {
       ],
     },
     {
-      id: "achieva-ar682",
-      brand: "Achieva",
-      model: "AR682",
-      category: "wheel",
+      id: "achieva-ar682", brand: "Achieva", model: "AR682", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://www.achievatire.com/s/cc_images/cache_10375410.jpg",
       variants: [
         { size: "12x7 4/4", finish: "Machined Black", offset: "-25MM", part_number: "RMA127682254101.6MB" },
@@ -321,10 +247,7 @@ const inventory = {
       ],
     },
     {
-      id: "achieva-ar738",
-      brand: "Achieva",
-      model: "AR738",
-      category: "wheel",
+      id: "achieva-ar738", brand: "Achieva", model: "AR738", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://www.achievatire.com/s/cc_images/cache_20970909.JPG",
       variants: [
         { size: "12x7 -25mm", finish: "Machined Black", offset: "-25MM", part_number: "RMA1277382544MB" },
@@ -339,10 +262,7 @@ const inventory = {
       ],
     },
     {
-      id: "achieva-638",
-      brand: "Achieva",
-      model: "638",
-      category: "wheel",
+      id: "achieva-638", brand: "Achieva", model: "638", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://www.achievatire.com/s/cc_images/cache_19936462.JPG",
       variants: [
         { size: "15x7 4/4", finish: "Machined Black", offset: "-25MM", part_number: "RMA1576382544MB" },
@@ -350,10 +270,7 @@ const inventory = {
       ],
     },
     {
-      id: "achieva-ar688",
-      brand: "Achieva",
-      model: "AR688",
-      category: "wheel",
+      id: "achieva-ar688", brand: "Achieva", model: "AR688", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://www.achievatire.com/s/cc_images/cache_18050934.JPG",
       variants: [
         { size: "15x7 4/4", finish: "Machined Black", offset: "-25MM", part_number: "RMA1576882544MB" },
@@ -361,10 +278,7 @@ const inventory = {
       ],
     },
     {
-      id: "achieva-ar518",
-      brand: "Achieva",
-      model: "AR518",
-      category: "wheel",
+      id: "achieva-ar518", brand: "Achieva", model: "AR518", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://www.achievatire.com/s/cc_images/cache_16049811.JPG",
       variants: [
         { size: "15x6 4/4", finish: "Machined Black", offset: "-25MM", part_number: "RMA1565182544MB" },
@@ -372,10 +286,7 @@ const inventory = {
       ],
     },
     {
-      id: "achieva-ar528",
-      brand: "Achieva",
-      model: "AR528",
-      category: "wheel",
+      id: "achieva-ar528", brand: "Achieva", model: "AR528", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://www.achievatire.com/s/cc_images/cache_14608806.JPG",
       variants: [
         { size: "15x6 4/4", finish: "Machined Black", offset: "-25MM", part_number: "RMA1565282544MB" },
@@ -383,10 +294,7 @@ const inventory = {
       ],
     },
     {
-      id: "achieva-ar578",
-      brand: "Achieva",
-      model: "AR578",
-      category: "wheel",
+      id: "achieva-ar578", brand: "Achieva", model: "AR578", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://www.achievatire.com/s/cc_images/cache_14608888.JPG",
       variants: [
         { size: "15x6 4/4", finish: "Machined Black", offset: "-25MM", part_number: "RMA1565782544MB" },
@@ -394,10 +302,7 @@ const inventory = {
       ],
     },
     {
-      id: "achieva-ar618",
-      brand: "Achieva",
-      model: "AR618",
-      category: "wheel",
+      id: "achieva-ar618", brand: "Achieva", model: "AR618", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://www.achievatire.com/s/cc_images/cache_17822187.JPG",
       variants: [
         { size: "15x7 4/4", finish: "Machined Black", offset: "-25MM", part_number: "RMA1576182544MB" },
@@ -405,10 +310,7 @@ const inventory = {
       ],
     },
     {
-      id: "achieva-ar718",
-      brand: "Achieva",
-      model: "AR718",
-      category: "wheel",
+      id: "achieva-ar718", brand: "Achieva", model: "AR718", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://www.achievatire.com/s/cc_images/cache_19841307.JPG",
       variants: [
         { size: "12x7 4/4", finish: "Candy Red/Black", offset: "-25MM", part_number: "RMA1277182544BR" },
@@ -423,10 +325,7 @@ const inventory = {
       ],
     },
     {
-      id: "arisun-model-56",
-      brand: "Arisun",
-      model: "Model 56",
-      category: "wheel",
+      id: "arisun-model-56", brand: "Arisun", model: "Model 56", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://static.wixstatic.com/media/51625f_a84089d3c4db45a49ee3f849efc15a10~mv2.png/v1/fill/w_600,h_600,al_c,q_85,enc_auto/Series%2056.png",
       variants: [
         { size: "10x7", finish: "Glossy Black w/Machined Face", offset: "-15", part_number: "56T-10741-15-BLKF" },
@@ -435,10 +334,7 @@ const inventory = {
       ],
     },
     {
-      id: "arisun-model-75",
-      brand: "Arisun",
-      model: "Model 75",
-      category: "wheel",
+      id: "arisun-model-75", brand: "Arisun", model: "Model 75", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://static.wixstatic.com/media/51625f_719526da17af4e758eb2b46c12fc1501~mv2.png/v1/fill/w_600,h_600,al_c,q_85,enc_auto/Series%2075.png",
       variants: [
         { size: "10x7", finish: "Glossy Black w/Machined Face", offset: "-25", part_number: "75T-10741-25-BLKF" },
@@ -447,10 +343,7 @@ const inventory = {
       ],
     },
     {
-      id: "arisun-model-74",
-      brand: "Arisun",
-      model: "Model 74",
-      category: "wheel",
+      id: "arisun-model-74", brand: "Arisun", model: "Model 74", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://static.wixstatic.com/media/51625f_7c8920c0b32646f5ab70bfff43e18e60~mv2.png/v1/fill/w_600,h_600,al_c,q_85,enc_auto/Series%2074.png",
       variants: [
         { size: "12x7", finish: "Glossy Black w/Machined Face", offset: "-25", part_number: "74T-12741-25-BLKF" },
@@ -460,10 +353,7 @@ const inventory = {
       ],
     },
     {
-      id: "arisun-model-57",
-      brand: "Arisun",
-      model: "Model 57",
-      category: "wheel",
+      id: "arisun-model-57", brand: "Arisun", model: "Model 57", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://static.wixstatic.com/media/51625f_e44cd169513743c58723ac2a468fb86c~mv2.png/v1/fill/w_600,h_600,al_c,q_85,enc_auto/Series%2057.png",
       variants: [
         { size: "10x7", finish: "Full Glossy Black", offset: "-15", part_number: "57T-10741-15-BLK" },
@@ -480,10 +370,7 @@ const inventory = {
       ],
     },
     {
-      id: "wheelmate-c-series",
-      brand: "Wheel Mate",
-      model: "C-Series",
-      category: "wheel",
+      id: "wheelmate-c-series", brand: "Wheel Mate", model: "C-Series", category: "wheel", vehicle_type: "golf_cart",
       image_url: "https://rm-cart.com/cdn/shop/products/LSI_3_12_2018_Windshields-wheels-34_copy_2048x.jpg?v=1550528535",
       variants: [
         { size: "10x7", finish: "Black Machined", offset: "-15.5", part_number: "WM10580B" },
@@ -495,10 +382,7 @@ const inventory = {
       ],
     },
     {
-      id: "wheelmate-r-series",
-      brand: "Wheel Mate",
-      model: "R-Series",
-      category: "wheel",
+      id: "wheelmate-r-series", brand: "Wheel Mate", model: "R-Series", category: "wheel", vehicle_type: "golf_cart",
       variants: [
         { size: "12x7", finish: "Black Machined", offset: "-5", part_number: "WM12800RB" },
         { size: "12x7", finish: "Silver Machined", offset: "-5", part_number: "WM12800RM" },
@@ -515,10 +399,7 @@ const inventory = {
       ],
     },
     {
-      id: "wheelmate-j-series",
-      brand: "Wheel Mate",
-      model: "J-Series",
-      category: "wheel",
+      id: "wheelmate-j-series", brand: "Wheel Mate", model: "J-Series", category: "wheel", vehicle_type: "golf_cart",
       variants: [
         { size: "10x7", finish: "Black Machined", offset: "-15.5", part_number: "WM10590JB" },
         { size: "10x7", finish: "Silver Machined", offset: "-15.5", part_number: "WM10590JM" },
@@ -537,13 +418,104 @@ const inventory = {
         { size: "14x7", finish: "Bronze w/Mach. Groove", offset: "5", part_number: "WM1407590JSZM" },
       ],
     },
-  ],
-  tires: [
+
+    // ── ATV / UTV WHEELS ─────────────────────────────────────────────────
     {
-      id: "excel-sahara-classic",
-      brand: "Excel",
-      model: "Sahara Classic",
-      category: "tire",
+      id: "itp-ss112", brand: "ITP", model: "SS112", category: "wheel", vehicle_type: "atv",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/58624560d_itp-ss112.jpg",
+      features: ["Sport series alloy wheel", "Available in matte black and silver machined finishes"],
+      variants: [
+        { size: "12x7 4/115", finish: "Matte Black", offset: "-2+5", part_number: "1228374935B" },
+        { size: "12x7 4/115", finish: "Silver Machined", offset: "-2+5", part_number: "1228374935S" },
+        { size: "14x7 4/115", finish: "Matte Black", offset: "-2+5", part_number: "1428374935B" },
+      ],
+    },
+    {
+      id: "itp-ss216", brand: "ITP", model: "SS216", category: "wheel", vehicle_type: "atv",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/ff04ef3c7_itp-ss216.jpg",
+      features: ["Polished lip for a premium look", "Lightweight alloy construction"],
+      variants: [
+        { size: "14x7 4/115", finish: "Matte Black w/Polished Lip", offset: "5+2", part_number: "1428SS216MB" },
+        { size: "14x8 4/115", finish: "Matte Black w/Polished Lip", offset: "5+3", part_number: "1488SS216MB" },
+      ],
+    },
+    {
+      id: "itp-ss312", brand: "ITP", model: "SS312", category: "wheel", vehicle_type: "atv",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/70fdb0567_itp-ss312.jpg",
+      features: ["Bold sport-touring design", "Available in matte or machined finish"],
+      variants: [
+        { size: "12x7 4/115", finish: "Matte Black", offset: "4+3", part_number: "1228SS312MB" },
+        { size: "14x7 4/115", finish: "Matte Black", offset: "5+2", part_number: "1428SS312MB" },
+      ],
+    },
+    {
+      id: "itp-ss316", brand: "ITP", model: "SS316", category: "wheel", vehicle_type: "atv",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/6582b2f5d_itp-ss316.jpg",
+      features: ["Aggressive 10-spoke design", "Machined face highlights"],
+      variants: [
+        { size: "14x7 4/115", finish: "Matte Black Machined", offset: "5+2", part_number: "1428SS316MB" },
+        { size: "15x7 4/115", finish: "Matte Black Machined", offset: "5+2", part_number: "1528SS316MB" },
+      ],
+    },
+    {
+      id: "itp-ss6b", brand: "ITP", model: "SS6B", category: "wheel", vehicle_type: "atv",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/256df04c2_itp-ss6b.jpg",
+      features: ["Classic 6-spoke design", "Gloss black finish"],
+      variants: [
+        { size: "12x7 4/115", finish: "Gloss Black", offset: "4+3", part_number: "1228SS6B" },
+        { size: "14x7 4/115", finish: "Gloss Black", offset: "5+2", part_number: "1428SS6B" },
+      ],
+    },
+    {
+      id: "itp-ss6m", brand: "ITP", model: "SS6M", category: "wheel", vehicle_type: "atv",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/381ca1737_itp-ss6m.jpg",
+      features: ["Classic 6-spoke design", "Silver machined finish"],
+      variants: [
+        { size: "12x7 4/115", finish: "Silver Machined", offset: "4+3", part_number: "1228SS6M" },
+        { size: "14x7 4/115", finish: "Silver Machined", offset: "5+2", part_number: "1428SS6M" },
+      ],
+    },
+    {
+      id: "itp-cragar", brand: "ITP", model: "Cragar", category: "wheel", vehicle_type: "atv",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/bdfba2289_itp-cragar.jpg",
+      features: ["Iconic Cragar 5-spoke design", "Chrome finish", "15\" diameter"],
+      variants: [
+        { size: "15x7 5/4.5", finish: "Chrome", offset: "3.5+3.5", part_number: "1578CRAGAR" },
+      ],
+    },
+    {
+      id: "itp-hurricane", brand: "ITP", model: "Hurricane", category: "wheel", vehicle_type: "atv",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/7bb21d931_itp-hurricane.jpg",
+      features: ["Multi-spoke sport design", "Matte black with machined accents"],
+      variants: [
+        { size: "14x7 4/115", finish: "Matte Black Machined", offset: "5+2", part_number: "1428HURR" },
+        { size: "14x8 4/115", finish: "Matte Black Machined", offset: "5+3", part_number: "1488HURR" },
+      ],
+    },
+    {
+      id: "itp-tornado", brand: "ITP", model: "Tornado", category: "wheel", vehicle_type: "atv",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/8cfa1130c_itp-tornado.jpg",
+      features: ["Aggressive twisted spoke design", "Matte black finish"],
+      variants: [
+        { size: "14x7 4/115", finish: "Matte Black", offset: "5+2", part_number: "1428TORN" },
+        { size: "15x7 4/115", finish: "Matte Black", offset: "5+2", part_number: "1528TORN" },
+      ],
+    },
+    {
+      id: "itp-gt-ultra", brand: "ITP", model: "GT Ultra", category: "wheel", vehicle_type: "atv",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/07280fdae_itp-gt-ultra.jpg",
+      features: ["Premium alloy wheel", "Gunmetal finish with machined highlights", "Large diameter"],
+      variants: [
+        { size: "14x7 4/156", finish: "Gunmetal Machined", offset: "5+2", part_number: "1428GTUR" },
+        { size: "15x7 4/156", finish: "Gunmetal Machined", offset: "5+2", part_number: "1528GTUR" },
+      ],
+    },
+  ],
+
+  tires: [
+    // ── GOLF CART TIRES ───────────────────────────────────────────────────
+    {
+      id: "excel-sahara-classic", brand: "Excel", model: "Sahara Classic", category: "tire", vehicle_type: "golf_cart",
       type: "All Terrain",
       image_url: "https://nebula.wsimg.com/60f6b7f5063b1bad4f09fb8398c1f524?AccessKeyId=24DF0E420D17AE5CECFF&disposition=0&alloworigin=1",
       features: ["All Terrain tread", "On or Off the Road", "DOT for street legal use", "Smooth Ride"],
@@ -561,10 +533,7 @@ const inventory = {
       ],
     },
     {
-      id: "excel-classic",
-      brand: "Excel",
-      model: "Classic",
-      category: "tire",
+      id: "excel-classic", brand: "Excel", model: "Classic", category: "tire", vehicle_type: "golf_cart",
       type: "Street/Turf Low Profile",
       image_url: "https://nebula.wsimg.com/1df40582948ab97162dd30304da69ffb?AccessKeyId=24DF0E420D17AE5CECFF&disposition=0&alloworigin=1",
       features: ["Low profile Classic look", "Street or Course", "DOT for street legal use", "Smooth Ride", "Quiet Operation"],
@@ -583,13 +552,10 @@ const inventory = {
       ],
     },
     {
-      id: "excel-street-fox-radial",
-      brand: "Excel",
-      model: "Street Fox Radial",
-      category: "tire",
+      id: "excel-street-fox-radial", brand: "Excel", model: "Street Fox Radial", category: "tire", vehicle_type: "golf_cart",
       type: "Street Radial",
       image_url: "https://nebula.wsimg.com/17adc87e774574402bc4937062b05d41?AccessKeyId=24DF0E420D17AE5CECFF&disposition=0&alloworigin=1",
-      features: ["Lightweight aggressive Radial construction", "Large footprint for superior traction", "Street or Golf Course", "DOT for street legal use", "Smooth Ride and quiet operation"],
+      features: ["Lightweight aggressive Radial construction", "Large footprint for superior traction", "Street or Golf Course", "DOT for street legal use"],
       variants: [
         { size: "20X10.00R10 (245/50R10)", ply: "4 ply", weight: "16.9 lbs", part_number: "1000-661" },
         { size: "22X11.00R10 (260/60R10)", ply: "4 ply", weight: "19.5 lbs", part_number: "1021-661" },
@@ -603,10 +569,7 @@ const inventory = {
       ],
     },
     {
-      id: "excel-golf-pro",
-      brand: "Excel",
-      model: "Golf Pro",
-      category: "tire",
+      id: "excel-golf-pro", brand: "Excel", model: "Golf Pro", category: "tire", vehicle_type: "golf_cart",
       type: "Turf",
       image_url: "https://nebula.wsimg.com/afb0c76df15e4fdd423e9d99caa0dde1?AccessKeyId=24DF0E420D17AE5CECFF&disposition=0&alloworigin=1",
       features: ["Original Equipment replacement size", "Street or Golf Course", "DOT for street legal use", "Economical", "Quiet operation"],
@@ -616,10 +579,7 @@ const inventory = {
       ],
     },
     {
-      id: "excel-golf-pro-ii",
-      brand: "Excel",
-      model: "Golf Pro II",
-      category: "tire",
+      id: "excel-golf-pro-ii", brand: "Excel", model: "Golf Pro II", category: "tire", vehicle_type: "golf_cart",
       type: "Low Profile Street/Turf",
       image_url: "https://nebula.wsimg.com/beb2d049c5c42b7f7f645343533907db?AccessKeyId=24DF0E420D17AE5CECFF&disposition=0&alloworigin=1",
       features: ["Low profile metric sizing", "Street or Golf Course", "DOT for street legal use", "Smooth Ride", "Quiet operation"],
@@ -629,10 +589,7 @@ const inventory = {
       ],
     },
     {
-      id: "excel-atx-trail",
-      brand: "Excel",
-      model: "ATX Trail",
-      category: "tire",
+      id: "excel-atx-trail", brand: "Excel", model: "ATX Trail", category: "tire", vehicle_type: "golf_cart",
       type: "All Terrain",
       image_url: "https://nebula.wsimg.com/5c9f8e36d16871be459799e60f8747a0?AccessKeyId=24DF0E420D17AE5CECFF&disposition=0&alloworigin=1",
       features: ["Light weight all purpose tread", "Street, Dirt or Turf", "DOT for street legal use", "Smooth Ride", "Quiet operation"],
@@ -647,10 +604,7 @@ const inventory = {
       ],
     },
     {
-      id: "excel-endura",
-      brand: "Excel",
-      model: "Endura",
-      category: "tire",
+      id: "excel-endura", brand: "Excel", model: "Endura", category: "tire", vehicle_type: "golf_cart",
       type: "Low Profile Street/Turf",
       image_url: "https://nebula.wsimg.com/0042e497623c60c630a7b8f63deb1662?AccessKeyId=24DF0E420D17AE5CECFF&disposition=0&alloworigin=1",
       features: ["Low profile metric sizing", "Street or Golf Course", "DOT for street legal use", "Smooth Ride", "Quiet operation"],
@@ -663,10 +617,7 @@ const inventory = {
       ],
     },
     {
-      id: "wanda-wr028",
-      brand: "Wanda",
-      model: "WR028 Steel Belted Radial",
-      category: "tire",
+      id: "wanda-wr028", brand: "Wanda", model: "WR028 Steel Belted Radial", category: "tire", vehicle_type: "golf_cart",
       type: "Steel Belted Radial",
       image_url: "https://images.simpletire.com/images/q_auto/line-images/19116/19116-sidetread/wanda-wr028.png",
       features: ["Lightweight, smooth-riding all purpose tread", "4 ply carcass", "DOT Approved Spec", "High Load ratings"],
@@ -679,10 +630,7 @@ const inventory = {
       ],
     },
     {
-      id: "wanda-gfx-p825",
-      brand: "Wanda",
-      model: "GFX P825",
-      category: "tire",
+      id: "wanda-gfx-p825", brand: "Wanda", model: "GFX P825", category: "tire", vehicle_type: "golf_cart",
       type: "Street/Turf",
       image_url: "https://images.simpletire.com/images/q_auto/line-images/15678/15678-sidetread/wanda-p825.jpg",
       features: ["Lightweight, smooth-riding, all purpose tread", "4 ply carcass", "DOT Approved Spec", "High Load ratings"],
@@ -695,25 +643,17 @@ const inventory = {
       ],
     },
     {
-      id: "wanda-wg07",
-      brand: "Wanda",
-      model: "WG07",
-      category: "tire",
+      id: "wanda-wg07", brand: "Wanda", model: "WG07", category: "tire", vehicle_type: "golf_cart",
       type: "All Terrain",
       image_url: "https://cdn11.bigcommerce.com/s-gluxo/products/401/images/21679/wanda-23x10-14-DOT-All-Terrain-golf-cart-tires-p3026-GCTS_01__73835.1730815678.480.480.jpg?c=2",
-      features: ["Center rib design improves dry ground handling stability", "Variable pitch pattern reduces tire noise", "Circular arc shoulder prevents partial wear"],
-      variants: [
-        { size: "23-10R-14", ply: "4", load_rating: "900lbs", part_number: "231014WG07" },
-      ],
+      features: ["Center rib design improves dry ground handling stability", "Variable pitch pattern reduces tire noise"],
+      variants: [{ size: "23-10R-14", ply: "4", load_rating: "900lbs", part_number: "231014WG07" }],
     },
     {
-      id: "wanda-p3118",
-      brand: "Wanda",
-      model: "P3118",
-      category: "tire",
+      id: "wanda-p3118", brand: "Wanda", model: "P3118", category: "tire", vehicle_type: "golf_cart",
       type: "Off-Road",
       image_url: "https://cdn11.bigcommerce.com/s-gluxo/products/6170/images/27960/Wanda-20x10-12-All-Terrain-Golf-Cart-Tires-DOT-01__55443.1743635869.480.480.jpg?c=2",
-      features: ["Non-directional tread pattern", "High-land ratio multi-angle pattern reduces noise", "Steel sheet design between pattern blocks for comfort"],
+      features: ["Non-directional tread pattern", "High-land ratio multi-angle pattern reduces noise"],
       variants: [
         { size: "20-10-10", ply: "4", load_rating: "935lbs", part_number: "201010P3218" },
         { size: "20-10-12", ply: "4", load_rating: "825lbs", part_number: "201112P3118" },
@@ -722,13 +662,10 @@ const inventory = {
       ],
     },
     {
-      id: "wanda-wg02",
-      brand: "Wanda",
-      model: "WG02",
-      category: "tire",
+      id: "wanda-wg02", brand: "Wanda", model: "WG02", category: "tire", vehicle_type: "golf_cart",
       type: "Performance Street",
       image_url: "https://cdn11.bigcommerce.com/s-gluxo/products/199/images/708/wanda_205_50_10_low_profile_DOT_golf_cart_tires_01__67037.1416463652.480.480.png?c=2",
-      features: ["Variable pitch reduces noise, improves comfort", "High land ratio pattern improves wear resistance", "Excellent maneuverability", "Large pattern block with high lateral rigidity"],
+      features: ["Variable pitch reduces noise", "High land ratio pattern improves wear resistance", "Excellent maneuverability"],
       variants: [
         { size: "205/50-10", ply: "4", load_rating: "805lbs", part_number: "JS23-073" },
         { size: "205/55-10", ply: "4", load_rating: "805lbs" },
@@ -739,63 +676,45 @@ const inventory = {
       ],
     },
     {
-      id: "wanda-knobby-p322",
-      brand: "Wanda",
-      model: "Knobby P322",
-      category: "tire",
+      id: "wanda-knobby-p322", brand: "Wanda", model: "Knobby P322", category: "tire", vehicle_type: "golf_cart",
       type: "All Terrain",
       image_url: "https://golfcartstuff.com/cdn/shop/products/wanda-knobby-18x950-8-off-road-golf-cart-tire-only-18-tall-522409_1200x1200.jpg?v=1676048540",
       features: ["Versatility for a mix of terrains", "Enhanced Performance for most conditions", "4 ply design"],
       variants: [{ size: "18-9.50-8", ply: "4", part_number: "P322189508" }],
     },
     {
-      id: "wanda-sport-p340",
-      brand: "Wanda",
-      model: "Sport P340",
-      category: "tire",
+      id: "wanda-sport-p340", brand: "Wanda", model: "Sport P340", category: "tire", vehicle_type: "golf_cart",
       type: "Off-Road",
       image_url: "https://cdn11.bigcommerce.com/s-gluxo/products/5631/images/22421/18x9-10-DOT-all-terrain-golf-cart-tires_01__42882.1722530294.480.480.jpg?c=2",
-      features: ["Industry Leading Materials", "Fusion of well balanced design", "Safe comfortable ride", "4 ply design"],
+      features: ["Industry Leading Materials", "4 ply design"],
       variants: [{ size: "18-8.00-8", ply: "4", part_number: "P3401888" }],
     },
     {
-      id: "wanda-turf-p332",
-      brand: "Wanda",
-      model: "Turf P332",
-      category: "tire",
+      id: "wanda-turf-p332", brand: "Wanda", model: "Turf P332", category: "tire", vehicle_type: "golf_cart",
       type: "Turf",
       image_url: "https://cdn11.bigcommerce.com/s-gluxo/products/422/images/1498/18x8.5-8-inch-turf-golf-cart-tires_01__53845.1465832038.480.480.jpg?c=2",
-      features: ["Industry Leading Materials", "Fusion of well balanced design", "Safe comfortable ride", "4 ply design"],
+      features: ["Industry Leading Materials", "Safe comfortable ride", "4 ply design"],
       variants: [{ size: "18-8.50-8", ply: "4", part_number: "P332188508" }],
     },
     {
-      id: "wanda-lug-p311",
-      brand: "Wanda",
-      model: "Lug P311",
-      category: "tire",
+      id: "wanda-lug-p311", brand: "Wanda", model: "Lug P311", category: "tire", vehicle_type: "golf_cart",
       type: "Off-Road",
       image_url: "https://cdn11.bigcommerce.com/s-gluxo/products/198/images/707/wanda_22_11_10_all_terrain_golf_cart_tires_01__99269.1416463269.480.480.png?c=2",
-      features: ["Industry Leading Materials", "Fusion of well balanced design", "Safe comfortable ride", "4 ply design"],
+      features: ["Industry Leading Materials", "4 ply design"],
       variants: [{ size: "18-9.50-8", ply: "4", part_number: "P311189508" }],
     },
     {
-      id: "wanda-p3077",
-      brand: "Wanda",
-      model: "P3077",
-      category: "tire",
+      id: "wanda-p3077", brand: "Wanda", model: "P3077", category: "tire", vehicle_type: "golf_cart",
       type: "Heavy Duty",
       image_url: "https://cdn11.bigcommerce.com/s-gluxo/products/198/images/707/wanda_22_11_10_all_terrain_golf_cart_tires_01__99269.1416463269.480.480.png?c=2",
       features: ["8 ply Design", "Specially designed for this market"],
       variants: [{ size: "23-11-10", ply: "8", part_number: "P3077231110" }],
     },
     {
-      id: "innova-caymen-at-ia-8028",
-      brand: "Innova",
-      model: "Caymen AT IA-8028",
-      category: "tire",
+      id: "innova-caymen-at-ia-8028", brand: "Innova", model: "Caymen AT IA-8028", category: "tire", vehicle_type: "golf_cart",
       type: "All Terrain",
       image_url: "https://www.achievatire.com/s/cc_images/cache_10328082.JPG",
-      features: ["All Trails tread pattern smooth on pavement and off road", "Diamond side lugs dig out ruts and rough obstacles", "Double cut micro knurling on shoulder for added traction", "Original equipment tire for popular side-by-side and lifted golf carts"],
+      features: ["All Trails tread pattern smooth on pavement and off road", "Diamond side lugs dig out ruts and rough obstacles", "Original equipment tire for popular side-by-side and lifted golf carts"],
       variants: [
         { size: "22.5X10-8", ply: "4 ply", load_rating: "1320 lbs", part_number: "2251088028-4" },
         { size: "25X13-9", ply: "4 ply", load_rating: "1650 lbs", part_number: "251398028-4" },
@@ -808,13 +727,10 @@ const inventory = {
       ],
     },
     {
-      id: "innova-driver-ia-8018",
-      brand: "Innova",
-      model: "Driver IA-8018",
-      category: "tire",
+      id: "innova-driver-ia-8018", brand: "Innova", model: "Driver IA-8018", category: "tire", vehicle_type: "golf_cart",
       type: "Turf/Street",
       image_url: "https://images.simpletire.com/images/q_auto/line-images/6781/6781-sidetread/innova-driver-ia-8018.jpg",
-      features: ["Higher load capacity, extended service life", "Double Eagle style tread is golf course approved", "Reinforced carcass for added stability", "DOT rated for street", "Multiple applications from Trailer to golf carts"],
+      features: ["Higher load capacity, extended service life", "Double Eagle style tread is golf course approved", "DOT rated for street"],
       variants: [
         { size: "16.5X6.50-8", ply: "4 ply", load_rating: "615 lbs", part_number: "16588018-4" },
         { size: "16.5X6.50-8", ply: "6 ply", load_rating: "785 lbs", part_number: "16588018-6" },
@@ -825,13 +741,10 @@ const inventory = {
       ],
     },
     {
-      id: "innova-driver-pro-ia-8018",
-      brand: "Innova",
-      model: "Driver Pro IA-8018",
-      category: "tire",
+      id: "innova-driver-pro-ia-8018", brand: "Innova", model: "Driver Pro IA-8018", category: "tire", vehicle_type: "golf_cart",
       type: "Premium Golf Radial",
       image_url: "https://www.achievatire.com/s/cc_images/cache_10328021.jpg",
-      features: ["14\" & 15\" Premium Golf Tires Radial construction", "Lower rolling resistance, wide foot print", "DOT rated for street and golf course approved for turf", "Pair with Achieva Alloy Wheels"],
+      features: ["14\" & 15\" Premium Golf Tires Radial construction", "Lower rolling resistance, wide foot print", "DOT rated for street and golf course approved for turf"],
       variants: [
         { size: "205/50-10", ply: "4 ply", load_rating: "665 lbs", part_number: "20550108018-4" },
         { size: "215/35-12", ply: "4 ply", load_rating: "665 lbs", part_number: "215128018-4" },
@@ -841,10 +754,7 @@ const inventory = {
       ],
     },
     {
-      id: "arisun-cruze",
-      brand: "Arisun",
-      model: "Cruze",
-      category: "tire",
+      id: "arisun-cruze", brand: "Arisun", model: "Cruze", category: "tire", vehicle_type: "golf_cart",
       type: "Street/Turf",
       image_url: "https://golfcartstuff.com/cdn/shop/products/arisun-cruze-20530-14-turf-street-dot-approved-golf-cart-tires-20-tall-147724_1200x1200.jpg?v=1676047452",
       features: ["Smooth, rides quiet", "Non directional tread pattern", "Lightweight carcass", "DOT approved", "Turf Safe"],
@@ -859,10 +769,7 @@ const inventory = {
       ],
     },
     {
-      id: "arisun-x-trail-at",
-      brand: "Arisun",
-      model: "X-Trail AT",
-      category: "tire",
+      id: "arisun-x-trail-at", brand: "Arisun", model: "X-Trail AT", category: "tire", vehicle_type: "golf_cart",
       type: "All Terrain",
       image_url: "https://cdn11.bigcommerce.com/s-6a4rng/images/stencil/1280x1280/products/10604/51215/AX-10-12-4__19790.1775424182.jpg?c=2",
       features: ["All terrain golf cart tire", "Excellent traction in wet and dry conditions", "Performs on most trails (gravel, dirt, etc)"],
@@ -874,10 +781,7 @@ const inventory = {
       ],
     },
     {
-      id: "golf-cart-tire-assemblies",
-      brand: "Multiple",
-      model: "Golf Cart Tire Assemblies",
-      category: "tire",
+      id: "golf-cart-tire-assemblies", brand: "Multiple", model: "Golf Cart Tire Assemblies", category: "tire", vehicle_type: "golf_cart",
       type: "Stock Replacement",
       variants: [
         { size: "18x8.50-8", ply: "4", part_number: "1038908686B1" },
@@ -887,6 +791,280 @@ const inventory = {
         { size: "18.5x8.50-8", ply: "6", part_number: "DS7106" },
         { size: "18x8.50-8", ply: "6", part_number: "1885088036-GDRG" },
         { size: "205/50-10", ply: "4", part_number: "5191461" },
+      ],
+    },
+
+    // ── ATV / UTV TIRES ───────────────────────────────────────────────────
+    {
+      id: "itp-all-trail-xlt", brand: "ITP", model: "All Trail XLT", category: "tire", vehicle_type: "atv",
+      type: "All Terrain",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/960a29b63_itp-all-trail-xlt.jpg",
+      features: ["Aggressive tread pattern for traction in all conditions", "6-ply rated construction", "Knobby shoulder lugs for cornering grip", "DOT compliant"],
+      variants: [
+        { size: "22x7-10", ply: "6 ply", load_rating: "680 lbs", part_number: "532038" },
+        { size: "22x11-10", ply: "6 ply", load_rating: "880 lbs", part_number: "532039" },
+        { size: "24x8-11", ply: "6 ply", load_rating: "760 lbs", part_number: "532040" },
+        { size: "24x10-11", ply: "6 ply", load_rating: "940 lbs", part_number: "532041" },
+      ],
+    },
+    {
+      id: "itp-mud-lite-at", brand: "ITP", model: "Mud Lite AT", category: "tire", vehicle_type: "atv",
+      type: "Mud / All Terrain",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/14f30bfff_itp-mud-lite-at.jpg",
+      features: ["Self-cleaning mud tread design", "Open lug spacing evacuates mud and debris", "6-ply rated", "Excellent for soft terrain"],
+      variants: [
+        { size: "22x7-10", ply: "6 ply", load_rating: "595 lbs", part_number: "560368" },
+        { size: "22x11-10", ply: "6 ply", load_rating: "880 lbs", part_number: "560370" },
+        { size: "25x8-12", ply: "6 ply", load_rating: "715 lbs", part_number: "560372" },
+        { size: "25x10-12", ply: "6 ply", load_rating: "900 lbs", part_number: "560373" },
+      ],
+    },
+    {
+      id: "itp-ultracross-r-spec", brand: "ITP", model: "UltraCross R Spec", category: "tire", vehicle_type: "atv",
+      type: "High-Performance All Terrain",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/5d9652247_itp-ultracross-r-spec.jpg",
+      features: ["Radial construction for superior ride quality", "Aggressive chevron tread for maximum traction", "Wide tread for stability", "8-ply rated"],
+      variants: [
+        { size: "27x9R-14", ply: "8 ply Radial", load_rating: "1340 lbs", part_number: "6P0945" },
+        { size: "27x11R-14", ply: "8 ply Radial", load_rating: "1430 lbs", part_number: "6P0946" },
+        { size: "30x10R-14", ply: "8 ply Radial", load_rating: "1610 lbs", part_number: "6P0947" },
+      ],
+    },
+
+    // ── LAWN & GARDEN TIRES ───────────────────────────────────────────────
+    {
+      id: "carlisle-turf-saver", brand: "Carlisle", model: "Turf Saver", category: "tire", vehicle_type: "lawn_garden",
+      type: "Turf",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/74fa5583d_carlisle-turf-saver.jpg",
+      features: ["Rib center groove for long tread life", "Non-directional lug tread", "Turf-friendly design", "2-ply construction"],
+      variants: [
+        { size: "15x6.00-6", ply: "2 ply", load_rating: "380 lbs", part_number: "5111031" },
+        { size: "18x8.50-8", ply: "2 ply", load_rating: "480 lbs", part_number: "5111041" },
+        { size: "20x8.00-8", ply: "2 ply", load_rating: "590 lbs", part_number: "5111051" },
+        { size: "20x10.00-8", ply: "2 ply", load_rating: "650 lbs", part_number: "5111061" },
+        { size: "23x10.50-12", ply: "4 ply", load_rating: "870 lbs", part_number: "5111071" },
+      ],
+    },
+    {
+      id: "carlisle-turf-saver-ii", brand: "Carlisle", model: "Turf Saver II", category: "tire", vehicle_type: "lawn_garden",
+      type: "Turf",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/960d927a1_carlisle-turf-saver-ii.jpg",
+      features: ["Updated turf saver design", "Enhanced tread life", "Low ground pressure", "2-ply rated"],
+      variants: [
+        { size: "18x8.50-8", ply: "2 ply", load_rating: "480 lbs", part_number: "5111081" },
+        { size: "20x8.00-10", ply: "2 ply", load_rating: "560 lbs", part_number: "5111091" },
+        { size: "22x9.50-12", ply: "4 ply", load_rating: "780 lbs", part_number: "5111101" },
+      ],
+    },
+    {
+      id: "carlisle-turf-master", brand: "Carlisle", model: "Turf Master", category: "tire", vehicle_type: "lawn_garden",
+      type: "Premium Turf",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/01f6651e8_carlisle-turf-master.jpg",
+      features: ["Premium ribbed turf design", "Excellent traction and flotation", "Golf course approved", "Low compaction on turf"],
+      variants: [
+        { size: "18x9.50-8", ply: "4 ply", load_rating: "605 lbs", part_number: "5111111" },
+        { size: "20x8.00-8", ply: "4 ply", load_rating: "640 lbs", part_number: "5111121" },
+        { size: "20x8.00-10", ply: "4 ply", load_rating: "600 lbs", part_number: "5111131" },
+        { size: "23x10.50-12", ply: "4 ply", load_rating: "870 lbs", part_number: "5111141" },
+        { size: "26x12.00-12", ply: "4 ply", load_rating: "1175 lbs", part_number: "5111151" },
+      ],
+    },
+    {
+      id: "carlisle-turf-smart", brand: "Carlisle", model: "Turf Smart", category: "tire", vehicle_type: "lawn_garden",
+      type: "Turf",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/cba850d89_carlisle-turf-smart.jpg",
+      features: ["Smart tread design for low turf damage", "Excellent flotation", "Quiet operation", "4-ply rated"],
+      variants: [
+        { size: "20x8.00-8", ply: "4 ply", load_rating: "640 lbs", part_number: "5111161" },
+        { size: "20x10.00-10", ply: "4 ply", load_rating: "745 lbs", part_number: "5111171" },
+        { size: "24x12.00-12", ply: "4 ply", load_rating: "1055 lbs", part_number: "5111181" },
+      ],
+    },
+    {
+      id: "carlisle-multi-track", brand: "Carlisle", model: "Multi Trac C.S.", category: "tire", vehicle_type: "lawn_garden",
+      type: "Multi-Purpose",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/6d570f241_carlisle-multi-track.jpg",
+      features: ["Versatile tread for multiple applications", "Good traction on all surfaces", "4-ply rated", "Great for garden tractors"],
+      variants: [
+        { size: "15x6.00-6", ply: "4 ply", load_rating: "450 lbs", part_number: "5112011" },
+        { size: "18x8.50-8", ply: "4 ply", load_rating: "605 lbs", part_number: "5112021" },
+        { size: "20x8.00-10", ply: "4 ply", load_rating: "570 lbs", part_number: "5112031" },
+        { size: "23x10.50-12", ply: "4 ply", load_rating: "870 lbs", part_number: "5112041" },
+      ],
+    },
+    {
+      id: "carlisle-turf-tires", brand: "Carlisle", model: "Turf Tires", category: "tire", vehicle_type: "lawn_garden",
+      type: "Turf/General Purpose",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/3eed18936_carlisle-turf-tires.jpg",
+      features: ["General purpose turf tire", "Suitable for zero-turn mowers and garden tractors", "Ribbed tread for traction"],
+      variants: [
+        { size: "13x5.00-6", ply: "2 ply", load_rating: "250 lbs", part_number: "5113011" },
+        { size: "16x6.50-8", ply: "2 ply", load_rating: "400 lbs", part_number: "5113021" },
+        { size: "18x8.50-8", ply: "2 ply", load_rating: "480 lbs", part_number: "5113031" },
+      ],
+    },
+    {
+      id: "carlisle-turf-trac-rs", brand: "Carlisle", model: "Turf Trac R/S", category: "tire", vehicle_type: "lawn_garden",
+      type: "Premium Turf",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/53639afbe_carlisle-turf-trac-rs.jpg",
+      features: ["Ribbed/smooth combination tread", "Excellent stability on slopes", "Low vibration", "4-ply rated"],
+      variants: [
+        { size: "20x8.00-8", ply: "4 ply", load_rating: "640 lbs", part_number: "5114011" },
+        { size: "20x10.00-10", ply: "4 ply", load_rating: "745 lbs", part_number: "5114021" },
+        { size: "23x9.50-12", ply: "4 ply", load_rating: "815 lbs", part_number: "5114031" },
+      ],
+    },
+    {
+      id: "carlisle-otr-turf", brand: "Carlisle", model: "OTR Turf", category: "tire", vehicle_type: "lawn_garden",
+      type: "OTR Turf",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/f736d63c6_carlisle-otr-turf.jpg",
+      features: ["Oversized turf tire for large mowers", "Excellent flotation on soft turf", "4-ply rated"],
+      variants: [
+        { size: "24x12.00-12", ply: "4 ply", load_rating: "1055 lbs", part_number: "5115011" },
+        { size: "26x12.00-12", ply: "4 ply", load_rating: "1175 lbs", part_number: "5115021" },
+        { size: "26x12.00-14", ply: "4 ply", load_rating: "1175 lbs", part_number: "5115031" },
+      ],
+    },
+    {
+      id: "carlisle-sawtooth", brand: "Carlisle", model: "Sawtooth", category: "tire", vehicle_type: "lawn_garden",
+      type: "All Season",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/353a4d120_carlisle-sawtooth.jpg",
+      features: ["Sawtooth tread for all season traction", "Works well in varied terrain", "4-ply rated"],
+      variants: [
+        { size: "20x8.00-8", ply: "4 ply", load_rating: "590 lbs", part_number: "5116011" },
+        { size: "22x11.00-8", ply: "4 ply", load_rating: "780 lbs", part_number: "5116021" },
+        { size: "23x10.50-12", ply: "4 ply", load_rating: "870 lbs", part_number: "5116031" },
+      ],
+    },
+    {
+      id: "carlisle-all-trail-ii", brand: "Carlisle", model: "All Trail II", category: "tire", vehicle_type: "lawn_garden",
+      type: "All Trail",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/186caef63_carlisle-all-trail-ii.jpg",
+      features: ["Multi-purpose tread for trails and lawns", "Deep lug pattern for traction", "4-ply rated"],
+      variants: [
+        { size: "22x9.50-8", ply: "4 ply", load_rating: "670 lbs", part_number: "5117011" },
+        { size: "22x11.00-8", ply: "4 ply", load_rating: "780 lbs", part_number: "5117021" },
+        { size: "25x12.00-9", ply: "4 ply", load_rating: "1000 lbs", part_number: "5117031" },
+        { size: "25x13.00-9", ply: "4 ply", load_rating: "1020 lbs", part_number: "5117041" },
+      ],
+    },
+    {
+      id: "carlisle-at489", brand: "Carlisle", model: "AT489", category: "tire", vehicle_type: "lawn_garden",
+      type: "All Terrain",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/dd491a522_carlisle-at489.jpg",
+      features: ["Aggressive all-terrain tread", "Excellent mud and loose terrain performance", "6-ply rated"],
+      variants: [
+        { size: "22x7-10", ply: "6 ply", load_rating: "640 lbs", part_number: "5118011" },
+        { size: "22x9-10", ply: "6 ply", load_rating: "800 lbs", part_number: "5118021" },
+        { size: "22x11-10", ply: "6 ply", load_rating: "880 lbs", part_number: "5118031" },
+      ],
+    },
+    {
+      id: "carlisle-smooth-tread", brand: "Carlisle", model: "Smooth Tread", category: "tire", vehicle_type: "lawn_garden",
+      type: "Smooth / Industrial",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/2692b27c9_carlisle-smooth-tread.jpg",
+      features: ["Smooth tread for indoor/paved surfaces", "Non-marking rubber compound available", "Flat-free foam available on select sizes"],
+      variants: [
+        { size: "11x4.00-5", ply: "2 ply", load_rating: "190 lbs", part_number: "5119011" },
+        { size: "13x5.00-6", ply: "2 ply", load_rating: "250 lbs", part_number: "5119021" },
+        { size: "15x6.00-6", ply: "2 ply", load_rating: "380 lbs", part_number: "5119031" },
+      ],
+    },
+    {
+      id: "galaxy-mighty-mow-ts", brand: "Galaxy", model: "Mighty Mow TS", category: "tire", vehicle_type: "lawn_garden",
+      type: "Zero-Turn Turf",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/273430b84_galaxy-mighty-mow-ts.jpg",
+      features: ["Specifically designed for zero-turn mowers", "Turf-friendly tread pattern", "Excellent flotation and minimal rutting", "4-ply rated"],
+      variants: [
+        { size: "20x10.00-10", ply: "4 ply", load_rating: "745 lbs", part_number: "GAL-MMT-20100010" },
+        { size: "20x10.00-10", ply: "6 ply", load_rating: "855 lbs", part_number: "GAL-MMT-201000106" },
+        { size: "24x12.00-12", ply: "4 ply", load_rating: "1055 lbs", part_number: "GAL-MMT-241200012" },
+        { size: "26x12.00-12", ply: "4 ply", load_rating: "1175 lbs", part_number: "GAL-MMT-261200012" },
+      ],
+    },
+    {
+      id: "garden-pro-r3-pro", brand: "Garden Pro", model: "R3 Pro", category: "tire", vehicle_type: "lawn_garden",
+      type: "R3 Turf",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/499446bc4_garden-pro-r3-pro.jpg",
+      features: ["Premium R3 turf tread", "Ideal for premium lawn and garden equipment", "Minimal turf damage", "4-ply"],
+      variants: [
+        { size: "18x8.50-8", ply: "4 ply", load_rating: "480 lbs", part_number: "GP-R3-188508" },
+        { size: "20x8.00-10", ply: "4 ply", load_rating: "570 lbs", part_number: "GP-R3-200810" },
+        { size: "22x9.50-12", ply: "4 ply", load_rating: "780 lbs", part_number: "GP-R3-22950012" },
+        { size: "24x12.00-12", ply: "4 ply", load_rating: "1055 lbs", part_number: "GP-R3-241200012" },
+      ],
+    },
+    {
+      id: "turf-special", brand: "Carlisle", model: "Turf Special", category: "tire", vehicle_type: "lawn_garden",
+      type: "Turf",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/84895a0ed_turf-special.jpg",
+      features: ["Classic turf special design", "Smooth ribbed center and shoulder lugs", "Excellent for riding mowers", "2-ply rated"],
+      variants: [
+        { size: "13x5.00-6", ply: "2 ply", load_rating: "240 lbs", part_number: "5110011" },
+        { size: "16x6.50-8", ply: "2 ply", load_rating: "400 lbs", part_number: "5110021" },
+        { size: "18x8.50-8", ply: "2 ply", load_rating: "480 lbs", part_number: "5110031" },
+        { size: "20x8.00-10", ply: "2 ply", load_rating: "560 lbs", part_number: "5110041" },
+      ],
+    },
+
+    // ── TRAILER TIRES ─────────────────────────────────────────────────────
+    {
+      id: "trailer-tires", brand: "Carlisle", model: "Trailer Tires", category: "tire", vehicle_type: "trailer",
+      type: "ST Trailer",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/1a2675159_trailer-tires.jpg",
+      features: ["ST (Special Trailer) rated construction", "Reinforced sidewalls for trailer loads", "High load ratings", "Multiple sizes available"],
+      variants: [
+        { size: "ST175/80D13", ply: "6 ply", load_rating: "1360 lbs", part_number: "TRL-ST175-80D13" },
+        { size: "ST185/80D13", ply: "6 ply", load_rating: "1520 lbs", part_number: "TRL-ST185-80D13" },
+        { size: "ST205/75D14", ply: "6 ply", load_rating: "1610 lbs", part_number: "TRL-ST205-75D14" },
+        { size: "ST205/75R14", ply: "6 ply Radial", load_rating: "1760 lbs", part_number: "TRL-ST205-75R14" },
+        { size: "ST205/75D15", ply: "6 ply", load_rating: "1610 lbs", part_number: "TRL-ST205-75D15" },
+        { size: "ST205/75R15", ply: "6 ply Radial", load_rating: "1760 lbs", part_number: "TRL-ST205-75R15" },
+        { size: "ST225/75R15", ply: "6 ply Radial", load_rating: "2150 lbs", part_number: "TRL-ST225-75R15" },
+        { size: "ST235/80R16", ply: "10 ply Radial", load_rating: "2830 lbs", part_number: "TRL-ST235-80R16" },
+        { size: "ST235/85R16", ply: "10 ply Radial", load_rating: "3042 lbs", part_number: "TRL-ST235-85R16" },
+        { size: "ST225/75D15", ply: "8 ply", load_rating: "2150 lbs", part_number: "TRL-ST225-75D15" },
+      ],
+    },
+
+    // ── INDUSTRIAL TIRES ──────────────────────────────────────────────────
+    {
+      id: "carlisle-industrial-trax", brand: "Carlisle", model: "Industrial Trax", category: "tire", vehicle_type: "industrial",
+      type: "Industrial Lug",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/f6d6e91b2_carlisle-industrial-trax.jpg",
+      features: ["Heavy-duty lug tread for industrial applications", "Excellent traction on job sites", "High load capacity", "6-ply rated"],
+      variants: [
+        { size: "6.70-15", ply: "8 ply", load_rating: "2910 lbs", part_number: "IND-TRAX-67015" },
+        { size: "7.50-16", ply: "10 ply", load_rating: "3750 lbs", part_number: "IND-TRAX-75016" },
+        { size: "10.00-20", ply: "14 ply", load_rating: "6615 lbs", part_number: "IND-TRAX-100020" },
+        { size: "11.00-20", ply: "14 ply", load_rating: "7165 lbs", part_number: "IND-TRAX-110020" },
+        { size: "12.00-20", ply: "16 ply", load_rating: "8270 lbs", part_number: "IND-TRAX-120020" },
+      ],
+    },
+    {
+      id: "industrial-tires", brand: "Carlisle", model: "Industrial Tires", category: "tire", vehicle_type: "industrial",
+      type: "Industrial",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/ea7972b1e_industrial-tires.jpg",
+      features: ["Designed for forklifts, skid steers, and industrial equipment", "Puncture-resistant construction", "High load capacity", "Multiple tread styles available"],
+      variants: [
+        { size: "7.00-12", ply: "12 ply", load_rating: "4050 lbs", part_number: "IND-70012" },
+        { size: "8.25-15", ply: "12 ply", load_rating: "5510 lbs", part_number: "IND-82515" },
+        { size: "6.50-10", ply: "10 ply", load_rating: "3195 lbs", part_number: "IND-65010" },
+        { size: "8.25-20", ply: "14 ply", load_rating: "6175 lbs", part_number: "IND-82520" },
+        { size: "10.00-20", ply: "16 ply", load_rating: "6615 lbs", part_number: "IND-100020" },
+      ],
+    },
+    {
+      id: "specialty-tires", brand: "Carlisle", model: "Specialty Tires", category: "tire", vehicle_type: "industrial",
+      type: "Specialty / Foam-Filled",
+      image_url: "https://media.base44.com/images/public/69f9424939e8479ae4a4d2e5/ea7972b1e_industrial-tires.jpg",
+      features: ["Foam-filled flat-free options available", "Specialty tread designs for unique applications", "Airport ground support compatible sizes", "Custom applications available — call for details"],
+      variants: [
+        { size: "4.00-8", ply: "4 ply", load_rating: "825 lbs", part_number: "SPEC-40008" },
+        { size: "5.00-8", ply: "6 ply", load_rating: "1250 lbs", part_number: "SPEC-50008" },
+        { size: "6.50-10", ply: "10 ply", load_rating: "3195 lbs", part_number: "SPEC-65010" },
+        { size: "7.00-15", ply: "10 ply", load_rating: "3750 lbs", part_number: "SPEC-70015" },
+        { size: "8.25-20", ply: "16 ply", load_rating: "6175 lbs", part_number: "SPEC-82520" },
       ],
     },
   ],

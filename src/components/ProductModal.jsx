@@ -58,8 +58,24 @@ export default function ProductModal({ product, open, onClose, onQuoteClick }) {
                 </ul>
               )}
 
+              {/* Info chips */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 mt-5 sm:mt-6 mb-6 sm:mb-8">
+                <div className="rounded-md border border-black/8 bg-[#fafaf9] px-3.5 py-2.5">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">Lead Time</p>
+                  <p className="text-[13px] font-medium text-[#0a0a0a] mt-0.5">In stock — ships next business day</p>
+                </div>
+                <div className="rounded-md border border-black/8 bg-[#fafaf9] px-3.5 py-2.5">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">Ships From</p>
+                  <p className="text-[13px] font-medium text-[#0a0a0a] mt-0.5">{product.ships_from || "Phoenix, AZ or Greenville, SC"}</p>
+                </div>
+                <div className="rounded-md border border-black/8 bg-[#fafaf9] px-3.5 py-2.5">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">Min Order</p>
+                  <p className="text-[13px] font-medium text-[#0a0a0a] mt-0.5">1 piece — no minimum</p>
+                </div>
+              </div>
+
               {/* Variants — stacked cards, no overflow possible */}
-              <div className="mt-5 sm:mt-6 pt-4 sm:pt-5 border-t border-border">
+              <div className="pt-4 sm:pt-5 border-t border-border">
                 <div className="text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground mb-3">
                   Available Sizes <span className="text-[#0a0a0a] font-bold ml-1">({product.variants.length})</span>
                 </div>

@@ -1,9 +1,9 @@
 const CATEGORIES = [
   { id: "golf_cart",   label: "Golf Cart",     icon: "mdi:golf-cart",     available: true  },
-  { id: "industrial",  label: "Industrial",    icon: "mdi:tractor",       available: false },
-  { id: "atv",         label: "ATV / UTV",     icon: "mdi:atv",           available: false },
-  { id: "lawn_garden", label: "Lawn & Garden", icon: "mdi:mower",         available: false },
-  { id: "trailer",     label: "Trailer",       icon: "mdi:truck-trailer", available: false },
+  { id: "industrial",  label: "Industrial",    icon: "mdi:tractor",       available: true },
+  { id: "atv",         label: "ATV / UTV",     icon: "mdi:atv",           available: true },
+  { id: "lawn_garden", label: "Lawn & Garden", icon: "mdi:mower",         available: true },
+  { id: "trailer",     label: "Trailer",       icon: "mdi:truck-trailer", available: true },
 ];
 
 const PRIMARY_HEX = "527333";
@@ -54,11 +54,7 @@ export default function CategoryStrip({ selected, onSelect }) {
                 >
                   {cat.label}
                 </div>
-                {!cat.available && (
-                  <div className="text-[9px] font-semibold uppercase tracking-[0.14em] text-muted-foreground mt-1.5">
-                    Coming Soon
-                  </div>
-                )}
+
               </button>
             );
           })}
