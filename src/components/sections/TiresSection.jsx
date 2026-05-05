@@ -11,19 +11,19 @@ export default function TiresSection({ onProductClick }) {
   const brands = ["Excel", "Wanda", "Innova", "Arisun"];
 
   return (
-    <section id="tires" className="py-16 sm:py-20 bg-[#fafaf9]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <section id="tires" className="py-16 sm:py-20 lg:py-24 bg-[#fafaf9]">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">Tires</p>
-        <h2 className="text-3xl sm:text-4xl font-extrabold uppercase tracking-[-0.02em] text-[#0a0a0a] mt-1">
+        <h2 className="text-[28px] sm:text-4xl lg:text-[44px] font-extrabold uppercase tracking-[-0.025em] text-[#0a0a0a] mt-1">
           STREET, TURF & ALL-TERRAIN TIRES
         </h2>
-        <p className="mt-2 text-muted-foreground text-base max-w-2xl">
+        <p className="mt-2 text-muted-foreground text-[15px] sm:text-base max-w-2xl">
           Street, turf, all-terrain and trail patterns. DOT-approved options for street-legal builds.
         </p>
-        <div className="mt-6">
+        <div className="mt-5 sm:mt-6 flex gap-2 overflow-x-auto pb-2 -mx-5 px-5 sm:mx-0 sm:px-0 sm:flex-wrap scrollbar-hide">
           <BrandFilter brands={brands} activeBrand={activeBrand} onBrandChange={setActiveBrand} />
         </div>
-        <div className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="mt-6 sm:mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5 lg:gap-6">
           {filtered.map((product) => (
             <ProductCard key={product.id} product={product} onClick={onProductClick} />
           ))}

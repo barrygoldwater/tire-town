@@ -3,9 +3,9 @@ import { Phone } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a0a0a] py-12 sm:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <footer className="bg-[#0a0a0a] py-12 sm:py-16" style={{paddingBottom: "max(28px, calc(env(safe-area-inset-bottom) + 80px))"}}>
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-8 sm:gap-10 lg:gap-14">
           {/* Logo + tagline */}
           <div>
             <Logo className="h-10 w-auto brightness-0 invert" />

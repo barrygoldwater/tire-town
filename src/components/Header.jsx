@@ -1,70 +1,33 @@
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Phone } from "lucide-react";
 import Logo from "./Logo";
 
 export default function Header({ onQuoteClick }) {
-  const [mobileOpen, setMobileOpen] = useState(false);
-
-  const navItems = [
-    { label: "WHEELS", href: "#wheels" },
-    { label: "TIRES", href: "#tires" },
-  ];
-
-  const handleNavClick = () => setMobileOpen(false);
-
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-20">
-        <a href="#" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <Logo className="h-28 w-auto" />
+    <header className="sticky top-0 z-30 bg-white/96 backdrop-blur border-b border-border">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 h-14 sm:h-[72px] flex items-center justify-between gap-3">
+        <a href="#" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center">
+          <Logo className="h-7 sm:h-9" />
         </a>
-
-        <nav className="hidden md:flex items-center gap-8">
-          {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="text-[13px] font-semibold uppercase tracking-[0.08em] text-[#0a0a0a] hover:text-primary transition-colors"
-            >
-              {item.label}
-            </a>
-          ))}
+        <div className="flex items-center gap-2 sm:gap-6">
+          <nav className="hidden sm:flex items-center gap-7">
+            <a href="#wheels" className="text-sm font-medium text-[#404040] hover:text-[#0a0a0a] transition-colors">Wheels</a>
+            <a href="#tires" className="text-sm font-medium text-[#404040] hover:text-[#0a0a0a] transition-colors">Tires</a>
+          </nav>
+          <a
+            href="tel:619-954-0034"
+            aria-label="Call sales"
+            className="sm:hidden w-10 h-10 rounded-full bg-[#fafaf9] border border-border flex items-center justify-center active:bg-[#0a0a0a] active:text-white transition-colors"
+          >
+            <Phone className="w-4 h-4" />
+          </a>
           <button
             onClick={onQuoteClick}
-            className="bg-primary text-white text-[13px] font-semibold uppercase tracking-[0.08em] px-5 py-2.5 rounded-[4px] hover:bg-primary/90 transition-colors"
+            className="bg-[#0a0a0a] text-white text-[11px] sm:text-[13px] font-semibold uppercase tracking-[0.06em] sm:tracking-[0.08em] px-3.5 sm:px-5 py-2.5 rounded-[2px] active:bg-primary hover:bg-primary transition-colors whitespace-nowrap"
           >
-            REQUEST QUOTE
-          </button>
-        </nav>
-
-        <button
-          className="md:hidden p-2"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
-          {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
-      </div>
-
-      {mobileOpen && (
-        <div className="md:hidden bg-white border-t border-border px-4 pb-4">
-          {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              onClick={handleNavClick}
-              className="block py-3 text-[13px] font-semibold uppercase tracking-[0.08em] text-[#0a0a0a] border-b border-border"
-            >
-              {item.label}
-            </a>
-          ))}
-          <button
-            onClick={() => { onQuoteClick(); handleNavClick(); }}
-            className="mt-3 w-full bg-primary text-white text-[13px] font-semibold uppercase tracking-[0.08em] px-5 py-2.5 rounded-[4px]"
-          >
-            REQUEST QUOTE
+            Quote<span className="hidden sm:inline"> Request</span>
           </button>
         </div>
-      )}
+      </div>
     </header>
   );
 }

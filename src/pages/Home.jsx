@@ -7,6 +7,7 @@ import TiresSection from "@/components/sections/TiresSection";
 import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/Footer";
 import ProductModal from "@/components/ProductModal";
+import MobileBottomBar from "@/components/MobileBottomBar";
 
 export default function Home() {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -17,7 +18,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pb-20 sm:pb-0">
       <TopBar />
       <Header onQuoteClick={scrollToQuote} />
       <Hero />
@@ -32,6 +33,7 @@ export default function Home() {
         onClose={() => setSelectedProduct(null)}
         onQuoteClick={scrollToQuote}
       />
+      <MobileBottomBar onQuoteClick={scrollToQuote} />
     </div>
   );
 }
