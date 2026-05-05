@@ -53,13 +53,18 @@ export default function Inventory({ onProductClick, category }) {
     <section id="inventory" className="py-16 sm:py-20 lg:py-24 bg-[#fafaf9]">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Editorial header */}
-        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">Inventory</p>
-        <h2 className="text-[28px] sm:text-4xl lg:text-[44px] font-extrabold uppercase tracking-[-0.025em] text-[#0a0a0a] mt-1">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary mb-3">
+          June 2026 Catalog
+        </p>
+        <h2 className="text-[28px] sm:text-4xl lg:text-[44px] font-extrabold tracking-[-0.025em] text-[#0a0a0a]">
           {categoryLabel} Wheels &amp; Tires
         </h2>
         <p className="mt-2 text-muted-foreground text-[15px] sm:text-base max-w-2xl">
           Same-day quotes on stocking orders. Dealer pricing available — call or submit a request below.
         </p>
+        <span className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+          Catalog Edition · June 2026
+        </span>
 
         {!hasInventory ? <EmptyState /> : (
           <>
