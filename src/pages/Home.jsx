@@ -1,5 +1,4 @@
 import { useState, useRef } from "react";
-import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import CategoryStrip from "@/components/CategoryStrip";
@@ -21,8 +20,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen pb-20 sm:pb-0">
-      <TopBar />
-      <Header onQuoteClick={scrollToQuote} />
+<Header onQuoteClick={scrollToQuote} />
       <Hero />
       <CategoryStrip selected={category} onSelect={setCategory} />
       <WheelsSection onProductClick={setSelectedProduct} category={category} />
