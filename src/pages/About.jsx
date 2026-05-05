@@ -53,28 +53,47 @@ function Hero() {
 
 function StorySection() {
   return (
-    <section className="bg-background py-24 px-5">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-12 lg:gap-16 items-start">
-        <div>
-          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary mb-4">
-            Our Story
+    <section className="bg-background">
+      <div className="max-w-[820px] mx-auto px-6 py-24 sm:py-28">
+        <div className="h-12 w-[2px] bg-primary mb-8" />
+        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary mb-4">
+          Our Story
+        </p>
+        <h2 className="text-[36px] sm:text-[44px] font-extrabold leading-[1.1] tracking-[-0.02em] text-foreground mb-8">
+          Fifty Years In Specialty Rubber
+        </h2>
+        <div className="space-y-5 text-[17px] leading-[1.7] text-muted-foreground">
+          <p>
+            We started in 1976 with a simple bet: that the people who keep golf courses, school districts, and industrial sites running deserve a tire supplier who actually carries what they need. Five decades later, that bet still holds.
           </p>
-          <h2 className="text-[32px] sm:text-[40px] font-extrabold tracking-[-0.02em] text-foreground leading-[1.08] mb-6">
-            Fifty Years In Specialty Rubber
-          </h2>
-          <div className="space-y-5 text-[17px] leading-[1.65] text-muted-foreground">
-            <p>
-              We started in 1976 with a simple bet: that the people who keep golf courses, school districts, and industrial sites running deserve a tire supplier who actually carries what they need. Five decades later, that bet still holds.
-            </p>
-            <p>
-              The market shifted, the equipment got more specialized, and the brands consolidated — but the gap between what specialty operators need and what mass distributors stock has only gotten wider. Affordable was built to live in that gap. We carry the obscure sizes, the hard-to-find finishes, the load ratings most retailers won't touch, and we ship them out of two domestic warehouses fast enough to keep your equipment in service.
-            </p>
-            <p>
-              We're family-owned, we answer the phone when you call, and we still write our own catalog.
-            </p>
+          <p>
+            The market shifted, the equipment got more specialized, and the brands consolidated — but the gap between what specialty operators need and what mass distributors stock has only gotten wider. Affordable was built to live in that gap. We carry the obscure sizes, the hard-to-find finishes, the load ratings most retailers won't touch, and we ship them out of two domestic warehouses fast enough to keep your equipment in service.
+          </p>
+          <p>
+            We're family-owned, we answer the phone when you call, and we still write our own catalog.
+          </p>
+        </div>
+      </div>
+
+      <div className="border-t border-b border-border bg-secondary">
+        <div className="max-w-[1100px] mx-auto px-6 py-12 grid grid-cols-2 sm:grid-cols-4 gap-y-8 gap-x-4">
+          <div className="text-center sm:text-left">
+            <div className="text-[40px] sm:text-[48px] font-extrabold leading-none tracking-[-0.02em] text-foreground">1976</div>
+            <div className="mt-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-primary">Founded</div>
+          </div>
+          <div className="text-center sm:text-left">
+            <div className="text-[40px] sm:text-[48px] font-extrabold leading-none tracking-[-0.02em] text-foreground">50<span className="text-primary">+</span></div>
+            <div className="mt-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-primary">Years In Business</div>
+          </div>
+          <div className="text-center sm:text-left">
+            <div className="text-[40px] sm:text-[48px] font-extrabold leading-none tracking-[-0.02em] text-foreground">13</div>
+            <div className="mt-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-primary">Brand Partners</div>
+          </div>
+          <div className="text-center sm:text-left">
+            <div className="text-[40px] sm:text-[48px] font-extrabold leading-none tracking-[-0.02em] text-foreground">2</div>
+            <div className="mt-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-primary">Warehouses</div>
           </div>
         </div>
-        <div className="w-full rounded-[var(--radius)] bg-secondary" style={{ aspectRatio: "4/5" }} />
       </div>
     </section>
   );
