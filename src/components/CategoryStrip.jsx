@@ -1,10 +1,20 @@
-const CATEGORIES = [
-  { id: "golf_cart",   label: "Golf Cart",     icon: "mdi:golf-cart",     available: true  },
-  { id: "industrial",  label: "Industrial",    icon: "mdi:tractor",       available: true },
-  { id: "atv",         label: "ATV / UTV",     icon: "mdi:atv",           available: true },
-  { id: "lawn_garden", label: "Lawn & Garden", icon: "mdi:mower",         available: true },
-  { id: "trailer",     label: "Trailer",       icon: "mdi:truck-trailer", available: true },
+import inventory from "@/lib/inventory";
+
+const ALL_ITEMS = [...inventory.wheels, ...inventory.tires];
+const availableCategoryIds = new Set(ALL_ITEMS.map(item => item.vehicle_type));
+
+const CATEGORY_DEFS = [
+  { id: "golf_cart",   label: "Golf Cart",     icon: "mdi:golf-cart"     },
+  { id: "industrial",  label: "Industrial",    icon: "mdi:tractor"       },
+  { id: "atv",         label: "ATV / UTV",     icon: "mdi:atv"           },
+  { id: "lawn_garden", label: "Lawn & Garden", icon: "mdi:mower"         },
+  { id: "trailer",     label: "Trailer",       icon: "mdi:truck-trailer" },
 ];
+
+const CATEGORIES = CATEGORY_DEFS.map(cat => ({
+  ...cat,
+  available: availableCategoryIds.has(cat.id),
+}));
 
 const PRIMARY_HEX = "527333";
 const DARK_HEX = "0a0a0a";
