@@ -54,7 +54,7 @@ export default function Inventory({ onProductClick, category }) {
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Editorial header */}
         <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary mb-3">
-          June 2026 Catalog
+          {categoryLabel}
         </p>
         <h2 className="text-[28px] sm:text-4xl lg:text-[44px] font-extrabold tracking-[-0.025em] leading-[1.05]">
           <button
@@ -81,9 +81,6 @@ export default function Inventory({ onProductClick, category }) {
             </span>
           </button>
         </h2>
-        <p className="mt-2 text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
-          Golf Cart · Catalog Edition June 2026
-        </p>
 
         {!hasInventory ? <EmptyState /> : (
           <>

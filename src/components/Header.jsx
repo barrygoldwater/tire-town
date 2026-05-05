@@ -5,8 +5,11 @@ export default function Header({ onQuoteClick }) {
   return (
     <header className="sticky top-0 z-30 bg-white/96 backdrop-blur border-b border-border">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 h-14 sm:h-[72px] flex items-center justify-between gap-3">
-        <a href="#" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center">
-          <Logo className="h-20 sm:h-24" />
+        <a href="#" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-3 sm:gap-4">
+          <Logo className="h-7 sm:h-9" />
+          <span className="hidden sm:inline-block text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground border-l border-border pl-3 sm:pl-4">
+            June 2026 Catalog
+          </span>
         </a>
         <div className="flex items-center gap-2 sm:gap-4">
           <a
