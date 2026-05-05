@@ -1,12 +1,17 @@
 function GolfCartIcon({ className }) {
   return (
     <svg viewBox="0 0 96 64" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <circle cx="26" cy="52" r="7" />
-      <circle cx="72" cy="52" r="7" />
-      <path d="M19 52H10M33 52h32M79 52h7" />
-      <path d="M14 44V32h44v12" />
-      <path d="M58 32V18h12l8 14v12h-6" />
-      <path d="M22 32V22h28v10" />
+      {/* Canopy frame: back pillar + roof + front pillar */}
+      <path d="M22 42V16h48v26" />
+      {/* Front cowl protruding past front pillar */}
+      <path d="M70 32l12 4v6" />
+      {/* Body floor (deck) */}
+      <path d="M14 42h68" />
+      {/* Seat back */}
+      <path d="M46 42v-14" />
+      {/* Wheels */}
+      <circle cx="28" cy="52" r="6" />
+      <circle cx="68" cy="52" r="6" />
     </svg>
   );
 }
