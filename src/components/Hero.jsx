@@ -15,9 +15,9 @@ export default function Hero() {
       {/* Top hairline */}
       <div className="absolute top-0 inset-x-0 h-px bg-white/10" />
 
-      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-16 sm:pt-24 lg:pt-32 pb-16 sm:pb-20 lg:pb-24">
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-10 sm:pt-14 lg:pt-16 pb-10 sm:pb-12 lg:pb-14">
         {/* Eyebrow */}
-        <div className="flex items-center gap-3 mb-6 sm:mb-8">
+        <div className="flex items-center gap-3 mb-5 sm:mb-6">
           <div className="h-px w-8 bg-primary" />
           <p className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.22em] text-primary">
             Independent · Family-Owned Since 1976
@@ -31,12 +31,12 @@ export default function Hero() {
         </h1>
 
         {/* Subhead */}
-        <p className="mt-6 sm:mt-8 text-white/60 text-[15px] sm:text-[17px] leading-relaxed max-w-xl">
+        <p className="mt-5 sm:mt-6 text-white/60 text-[15px] sm:text-[17px] leading-relaxed max-w-xl">
           Same-day quotes, dealer pricing, and fast freight nationwide. Stock programs for shops, fleets, and resellers.
         </p>
 
         {/* Single primary CTA + quiet phone link */}
-        <div className="mt-8 sm:mt-10 flex items-center gap-5 sm:gap-7">
+        <div className="mt-7 sm:mt-8 flex items-center gap-5 sm:gap-7">
           <a
             href="#wheels"
             className="bg-primary text-white text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.1em] px-6 sm:px-7 py-3.5 rounded-[2px] active:bg-primary/80 hover:bg-primary/90 transition-colors flex items-center gap-2.5 group"
@@ -54,8 +54,8 @@ export default function Hero() {
         </div>
 
         {/* Brand marquee */}
-        <div className="mt-14 sm:mt-20 lg:mt-24 pt-8 sm:pt-10 border-t border-white/10">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/35 mb-5 sm:mb-6">
+        <div className="mt-10 sm:mt-12 pt-6 sm:pt-7 border-t border-white/10">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/35 mb-4 sm:mb-5">
             Authorized Distributor
           </p>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-3 sm:gap-x-10 lg:gap-x-14">
