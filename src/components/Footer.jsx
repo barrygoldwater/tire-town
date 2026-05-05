@@ -3,12 +3,12 @@ import { Phone } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a0a0a]" style={{paddingBottom: "max(28px, calc(env(safe-area-inset-bottom) + 80px))"}}>
+    <footer className="bg-[#0a0a0a]">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-12 sm:py-14">
         <div className="grid grid-cols-1 sm:grid-cols-[1.4fr_1fr_1fr] gap-8 sm:gap-10">
           {/* Logo + tagline */}
           <div>
-            <Logo className="h-10 sm:h-12 w-auto brightness-0 invert" />
+            <Logo className="h-14 sm:h-16 w-auto brightness-0 invert" />
             <p className="text-white/50 text-sm mt-3 leading-relaxed">
               Wholesale Golf Cart Wheels & Tires. Family-owned since 1976.
             </p>
