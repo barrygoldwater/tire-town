@@ -16,7 +16,7 @@ export default function Header({ onQuoteClick }) {
     <header className="sticky top-0 z-50 bg-white border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-20">
         <a href="#" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <Logo className="h-20 w-auto" />
+          <Logo className="h-28 w-auto" />
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
