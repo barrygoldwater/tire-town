@@ -4,18 +4,44 @@ import { Flag, GraduationCap, Building2, Handshake, HardHat, Wrench, Phone } fro
 
 function Hero() {
   return (
-    <section className="bg-[#0a0a0a] py-24 text-center px-5">
-      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary mb-5">
-        About Us
-      </p>
-      <h1 className="text-[40px] sm:text-[56px] font-extrabold tracking-[-0.025em] leading-[1.05] max-w-3xl mx-auto">
-        <span className="text-white">Built On A Specialty.</span>
-        <br />
-        <span className="text-primary">Backed By Half A Century.</span>
-      </h1>
-      <p className="mt-6 text-[17px] sm:text-[18px] text-white/70 max-w-[720px] mx-auto leading-relaxed">
-        Affordable Turf &amp; Specialty Tire has been the source for hard-to-find wheels and tires since 1976. Family-owned, dealer-focused, and stocked deep across every category our customers operate in.
-      </p>
+    <section className="relative w-full h-[520px] sm:h-[640px] bg-[#0a0a0a] overflow-hidden">
+      {/* Background video */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <iframe
+          src="https://www.youtube.com/embed/R4oUUhmSxKY?autoplay=1&mute=1&loop=1&playlist=R4oUUhmSxKY&controls=0&showinfo=0&modestbranding=1&iv_load_policy=3&playsinline=1&rel=0&disablekb=1&fs=0"
+          title="Affordable Turf & Specialty Tire"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          frameBorder="0"
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            width: '100vw',
+            height: '56.25vw',
+            minHeight: '100%',
+            minWidth: '177.78vh',
+            transform: 'translate(-50%, -50%)',
+            pointerEvents: 'none',
+          }}
+        />
+      </div>
+
+      {/* Dark overlay for text legibility */}
+      <div className="absolute inset-0 bg-black/55 pointer-events-none" />
+
+      {/* Hero content */}
+      <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 max-w-4xl mx-auto">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary mb-6">
+          About Us
+        </p>
+        <h1 className="text-[44px] sm:text-[56px] font-extrabold leading-[1.05] tracking-[-0.025em]">
+          <span className="block text-white">Built On A Specialty.</span>
+          <span className="block text-primary">Backed By Half A Century.</span>
+        </h1>
+        <p className="mt-6 text-[16px] sm:text-[18px] text-white/80 max-w-[720px] leading-relaxed">
+          Affordable Turf &amp; Specialty Tire has been the source for hard-to-find wheels and tires since 1976. Family-owned, dealer-focused, and stocked deep across every category our customers operate in.
+        </p>
+      </div>
     </section>
   );
 }
