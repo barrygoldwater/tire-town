@@ -11,7 +11,7 @@ export default function ProductModal({ product, open, onClose, onQuoteClick }) {
   return (
     <Dialog open={open} onOpenChange={onClose}>
       <DialogContent
-        className="p-0 gap-0 max-w-[1080px] w-full sm:w-[calc(100%-32px)] h-[92vh] sm:h-auto sm:max-h-[90vh] rounded-t-[16px] sm:rounded-[6px] data-[state=open]:slide-in-from-bottom sm:data-[state=open]:slide-in-from-bottom-0 fixed bottom-0 left-0 right-0 sm:left-1/2 sm:bottom-auto sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 translate-x-0 translate-y-0 overflow-hidden flex flex-col"
+        className="p-0 gap-0 max-w-[1080px] w-full sm:w-[calc(100%-32px)] h-[92vh] sm:h-auto sm:max-h-[90vh] rounded-t-[16px] sm:rounded-[6px] data-[state=open]:slide-in-from-bottom sm:data-[state=open]:slide-in-from-bottom-0 fixed bottom-0 left-0 right-0 sm:left-1/2 sm:bottom-auto sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 translate-x-0 translate-y-0 overflow-hidden flex flex-col [&>button:last-of-type]:hidden"
       >
         {/* Sticky header */}
         <div className="flex items-center justify-between px-5 sm:px-7 py-3.5 sm:py-4 border-b border-border bg-[#fafaf9] flex-shrink-0">
