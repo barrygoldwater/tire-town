@@ -189,7 +189,7 @@ function LocationsBlock() {
     {
       region: "EAST",
       city: "Greenville, South Carolina",
-      address: ["[Address TBD — to be confirmed]", "Greenville, SC"],
+      address: ["200 Arcadia Drive", "Greenville, SC 29609"],
       coverage: "1-day shipping across the Carolinas, Georgia, Tennessee, and Virginia.",
     },
   ];
