@@ -1,10 +1,13 @@
 const CATEGORIES = [
-  { id: "golf_cart",   label: "Golf Cart",     image: "/categories/golf-cart.png", available: true  },
-  { id: "industrial",  label: "Industrial",    image: "/categories/tractor.png",   available: false },
-  { id: "atv",         label: "ATV / UTV",     image: "/categories/atv.png",       available: false },
-  { id: "lawn_garden", label: "Lawn & Garden", image: "/categories/mower.png",     available: false },
-  { id: "trailer",     label: "Trailer",       image: "/categories/trailer.png",   available: false },
+  { id: "golf_cart",   label: "Golf Cart",     icon: "mdi:golf-cart",     available: true  },
+  { id: "industrial",  label: "Industrial",    icon: "mdi:tractor",       available: false },
+  { id: "atv",         label: "ATV / UTV",     icon: "mdi:atv",           available: false },
+  { id: "lawn_garden", label: "Lawn & Garden", icon: "mdi:mower",         available: false },
+  { id: "trailer",     label: "Trailer",       icon: "mdi:truck-trailer", available: false },
 ];
+
+const PRIMARY_HEX = "527333";
+const DARK_HEX = "0a0a0a";
 
 export default function CategoryStrip({ selected, onSelect }) {
   return (
@@ -13,6 +16,9 @@ export default function CategoryStrip({ selected, onSelect }) {
         <div className="flex gap-3 sm:gap-4 overflow-x-auto py-5 sm:py-7 -mx-4 px-4 sm:mx-0 sm:px-0 snap-x snap-mandatory sm:snap-none [&::-webkit-scrollbar]:hidden">
           {CATEGORIES.map((cat) => {
             const isSelected = selected === cat.id;
+            const iconColor = isSelected ? PRIMARY_HEX : DARK_HEX;
+            const iconUrl = `https://api.iconify.design/${cat.icon}.svg?color=%23${iconColor}`;
+
             return (
               <button
                 key={cat.id}
@@ -35,11 +41,17 @@ export default function CategoryStrip({ selected, onSelect }) {
                 `}
               >
                 <img
-                  src={cat.image}
+                  src={iconUrl}
                   alt=""
-                  className={`w-12 h-12 sm:w-14 sm:h-14 mb-3 object-contain transition-opacity ${isSelected ? "opacity-100" : "opacity-70 group-hover:opacity-100"}`}
+                  className={`w-12 h-12 sm:w-14 sm:h-14 mb-3 transition-opacity ${
+                    !cat.available ? "opacity-50" : ""
+                  }`}
                 />
-                <div className="text-[11px] sm:text-[12px] font-bold text-[#0a0a0a] uppercase tracking-[0.08em] text-center leading-tight">
+                <div
+                  className={`text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.08em] text-center leading-tight transition-colors ${
+                    isSelected ? "text-primary" : "text-[#0a0a0a]"
+                  }`}
+                >
                   {cat.label}
                 </div>
                 {!cat.available && (
