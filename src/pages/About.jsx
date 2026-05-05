@@ -213,8 +213,7 @@ function LocationsBlock() {
               <div className="text-[16px] text-muted-foreground space-y-0.5">
                 {loc.address.map((line) => <p key={line}>{line}</p>)}
               </div>
-              <div className="h-px w-full bg-border my-5" />
-              <p className="text-[15px] text-muted-foreground leading-relaxed">{loc.coverage}</p>
+
             </div>
           ))}
         </div>
