@@ -35,26 +35,8 @@ export default function Hero() {
           Same-day quotes, dealer pricing, and fast freight nationwide. Stock programs for shops, fleets, and resellers.
         </p>
 
-        {/* Single primary CTA + quiet phone link */}
-        <div className="mt-7 sm:mt-8 flex items-center gap-5 sm:gap-7">
-          <a
-            href="#wheels"
-            className="bg-primary text-white text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.1em] px-6 sm:px-7 py-3.5 rounded-[2px] active:bg-primary/80 hover:bg-primary/90 transition-colors flex items-center gap-2.5 group"
-          >
-            Browse Catalog
-            <span className="transition-transform group-hover:translate-x-0.5">→</span>
-          </a>
-          <a
-            href="tel:619-954-0034"
-            className="hidden sm:flex items-center gap-2 text-white/55 hover:text-white text-[13px] font-medium transition-colors"
-          >
-            <Phone className="w-3.5 h-3.5" />
-            or call 619-954-0034
-          </a>
-        </div>
-
         {/* Brand marquee */}
-        <div className="mt-10 sm:mt-12 pt-6 sm:pt-7 border-t border-white/10">
+        <div className="mt-8 sm:mt-10 pt-5 sm:pt-6 border-t border-white/10">
           <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/35 mb-4 sm:mb-5">
             Authorized Distributor
           </p>

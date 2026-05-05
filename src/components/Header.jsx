@@ -8,24 +8,28 @@ export default function Header({ onQuoteClick }) {
         <a href="#" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center">
           <Logo className="h-20 sm:h-24" />
         </a>
-        <div className="flex items-center gap-2 sm:gap-6">
-          <nav className="hidden sm:flex items-center gap-7">
-            <a href="#wheels" className="text-sm font-medium text-[#404040] hover:text-[#0a0a0a] transition-colors">Wheels</a>
-            <a href="#tires" className="text-sm font-medium text-[#404040] hover:text-[#0a0a0a] transition-colors">Tires</a>
-          </nav>
+        <div className="flex items-center gap-2 sm:gap-4">
+          <a
+            href="tel:619-954-0034"
+            className="hidden sm:flex items-center gap-2 px-2 py-2 text-[13px] font-semibold text-primary hover:text-primary/80 transition-colors whitespace-nowrap"
+          >
+            <Phone className="w-3.5 h-3.5" />
+            Call 619-954-0034
+          </a>
           <a
             href="tel:619-954-0034"
             aria-label="Call sales"
-            className="sm:hidden w-10 h-10 rounded-full bg-[#fafaf9] border border-border flex items-center justify-center active:bg-[#0a0a0a] active:text-white transition-colors"
+            className="sm:hidden w-10 h-10 rounded-full bg-[#fafaf9] border border-border flex items-center justify-center active:bg-[#0a0a0a] active:text-white"
           >
             <Phone className="w-4 h-4" />
           </a>
-          <button
-            onClick={onQuoteClick}
+          <a
+            href="#contact"
             className="bg-[#0a0a0a] text-white text-[11px] sm:text-[13px] font-semibold uppercase tracking-[0.06em] sm:tracking-[0.08em] px-3.5 sm:px-5 py-2.5 rounded-[2px] active:bg-primary hover:bg-primary transition-colors whitespace-nowrap"
           >
-            Request<span className="hidden sm:inline"> Quote</span>
-          </button>
+            <span className="sm:hidden">Quote</span>
+            <span className="hidden sm:inline">Request Quote</span>
+          </a>
         </div>
       </div>
     </header>
