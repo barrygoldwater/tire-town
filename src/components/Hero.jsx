@@ -26,7 +26,7 @@ export default function Hero() {
         <div className="flex items-center gap-3 mb-6 sm:mb-8">
           <div className="h-px w-8 bg-primary" />
           <p className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.22em] text-primary">
-            Southern California · Est. 1976
+            Independent · Family-Owned Since 1976
           </p>
         </div>
 
