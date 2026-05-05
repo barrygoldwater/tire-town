@@ -24,7 +24,7 @@ export default function Header({ onQuoteClick }) {
             onClick={onQuoteClick}
             className="bg-[#0a0a0a] text-white text-[11px] sm:text-[13px] font-semibold uppercase tracking-[0.06em] sm:tracking-[0.08em] px-3.5 sm:px-5 py-2.5 rounded-[2px] active:bg-primary hover:bg-primary transition-colors whitespace-nowrap"
           >
-            Quote<span className="hidden sm:inline"> Request</span>
+            Request<span className="hidden sm:inline"> Quote</span>
           </button>
         </div>
       </div>
