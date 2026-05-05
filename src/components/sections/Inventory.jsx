@@ -56,45 +56,40 @@ export default function Inventory({ onProductClick, category }) {
         <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary mb-3">
           June 2026 Catalog
         </p>
-        <h2 className="text-[28px] sm:text-4xl lg:text-[44px] font-extrabold tracking-[-0.025em] text-[#0a0a0a]">
-          {categoryLabel} Wheels &amp; Tires
+        <h2 className="text-[28px] sm:text-4xl lg:text-[44px] font-extrabold tracking-[-0.025em] leading-[1.05]">
+          <button
+            onClick={() => setType("wheels")}
+            className={`transition-colors ${
+              type === "wheels" ? "text-[#0a0a0a]" : "text-[#0a0a0a]/25 hover:text-[#0a0a0a]/55"
+            }`}
+          >
+            Wheels
+            <span className="ml-2 text-[16px] sm:text-xl font-semibold align-baseline">
+              {allWheels.length}
+            </span>
+          </button>
+          <span className="text-[#0a0a0a]/15 mx-3 sm:mx-4 font-light">/</span>
+          <button
+            onClick={() => setType("tires")}
+            className={`transition-colors ${
+              type === "tires" ? "text-[#0a0a0a]" : "text-[#0a0a0a]/25 hover:text-[#0a0a0a]/55"
+            }`}
+          >
+            Tires
+            <span className="ml-2 text-[16px] sm:text-xl font-semibold align-baseline">
+              {allTires.length}
+            </span>
+          </button>
         </h2>
-        <p className="mt-2 text-muted-foreground text-[15px] sm:text-base max-w-2xl">
-          Same-day quotes on stocking orders. Dealer pricing available — call or submit a request below.
+        <p className="mt-2 text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
+          Golf Cart · Catalog Edition June 2026
         </p>
-        <span className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-          Catalog Edition · June 2026
-        </span>
 
         {!hasInventory ? <EmptyState /> : (
           <>
-            {/* Type tabs */}
-            <div className="flex gap-2 mt-8 mb-6">
-              <button
-                onClick={() => setType("wheels")}
-                className={`px-6 py-3 rounded-[3px] text-[13px] font-bold uppercase tracking-[0.08em] transition-all ${
-                  type === "wheels"
-                    ? "bg-[#0a0a0a] text-white"
-                    : "bg-white text-[#0a0a0a] border border-border hover:border-[#0a0a0a]"
-                }`}
-              >
-                Wheels <span className="ml-1.5 opacity-60">({allWheels.length})</span>
-              </button>
-              <button
-                onClick={() => setType("tires")}
-                className={`px-6 py-3 rounded-[3px] text-[13px] font-bold uppercase tracking-[0.08em] transition-all ${
-                  type === "tires"
-                    ? "bg-[#0a0a0a] text-white"
-                    : "bg-white text-[#0a0a0a] border border-border hover:border-[#0a0a0a]"
-                }`}
-              >
-                Tires <span className="ml-1.5 opacity-60">({allTires.length})</span>
-              </button>
-            </div>
-
             {/* Brand filter */}
             {products.length > 0 && (
-              <div className="flex gap-2 overflow-x-auto pb-2 -mx-5 px-5 sm:mx-0 sm:px-0 sm:flex-wrap scrollbar-hide mb-6">
+              <div className="flex gap-2 overflow-x-auto pb-2 -mx-5 px-5 sm:mx-0 sm:px-0 sm:flex-wrap scrollbar-hide mt-8 mb-6">
                 <BrandFilter
                   brands={brandsForType.filter(b => b !== "All")}
                   activeBrand={activeBrand}
