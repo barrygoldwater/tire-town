@@ -20,8 +20,8 @@ export default function Home() {
   return (
     <div className="min-h-screen pb-20 sm:pb-0">
 <Header onQuoteClick={scrollToQuote} />
-      <CategoryStrip selected={category} onSelect={setCategory} />
       <HowToOrder />
+      <CategoryStrip selected={category} onSelect={setCategory} />
       <Inventory onProductClick={setSelectedProduct} category={category} />
       <ContactSection quoteFormRef={quoteFormRef} />
       <Footer />
