@@ -38,7 +38,7 @@ export default function Hero() {
 
         {/* Subhead */}
         <p className="mt-6 sm:mt-8 text-white/60 text-[15px] sm:text-[17px] leading-relaxed max-w-xl">
-          Independent distribution for golf cart, turf, and specialty markets. Excel, Achieva, Arisun, Wanda, Innova, and Wheel Mate — in stock and ready to ship.
+          Same-day quotes, dealer pricing, and fast freight nationwide. Stock programs for shops, fleets, and resellers.
         </p>
 
         {/* Single primary CTA + quiet phone link */}
