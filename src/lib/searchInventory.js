@@ -1,3 +1,45 @@
+// All known color/finish words. When a query token matches one of these,
+// we filter strictly on visualTags instead of fuzzy-matching variant data.
+const COLOR_WORDS = new Set([
+  'chrome', 'polished', 'silver', 'mirror',
+  'machined', 'machined_black',
+  'black', 'matte', 'matte_black', 'gloss', 'gloss_black',
+  'gunmetal', 'gray', 'grey', 'dark_gray',
+  'white', 'ivory',
+  'red', 'maroon', 'burgundy', 'crimson',
+  'blue', 'navy',
+  'gold', 'bronze', 'brass',
+  'green', 'olive',
+  'yellow',
+  'two_tone',
+]);
+
+// Loaded once at module init. If the file isn't there yet, the strict filter is skipped gracefully.
+let _visualTagsCache = null;
+async function loadVisualTags() {
+  if (_visualTagsCache !== null) return _visualTagsCache;
+  try {
+    const r = await fetch('/visual_tags.json');
+    if (r.ok) {
+      _visualTagsCache = await r.json();
+    } else {
+      _visualTagsCache = {};
+    }
+  } catch {
+    _visualTagsCache = {};
+  }
+  return _visualTagsCache;
+}
+
+// Synchronous accessor — returns whatever has loaded so far.
+function getVisualTags(productId) {
+  if (!_visualTagsCache) return null;
+  return _visualTagsCache[productId]?.tags || [];
+}
+
+// Trigger load on module import. Search results refresh once this resolves.
+loadVisualTags();
+
 // Color synonym map — wider terms expand to canonical color words
 // found in product finish strings.
 const COLOR_SYNONYMS = {
@@ -108,6 +150,21 @@ function scoreProduct(product, query) {
 
   let totalScore = 0;
   for (const token of tokens) {
+    // STRICT COLOR FILTER: if token is a color word, the product MUST have it in visualTags
+    if (COLOR_WORDS.has(token)) {
+      const visualTags = getVisualTags(product.id);
+      if (visualTags !== null && visualTags.length > 0) {
+        // Check if token or its synonyms are in visualTags
+        const synonyms = COLOR_SYNONYMS[token] || [token];
+        const matches = [token, ...synonyms].some(s => visualTags.includes(s));
+        if (matches) {
+          totalScore += 12;
+          continue;
+        }
+      }
+      // If visual tags not loaded or color not found, fall through to fuzzy match
+    }
+
     let tokenMatched = false;
     let tokenScore = 0;
 
