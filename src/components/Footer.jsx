@@ -36,9 +36,13 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 sm:mt-12 pt-5 sm:pt-6 border-t border-white/10">
-          <p className="text-white/30 text-[12px] text-center">
-            © 2026 Affordable Tires. All rights reserved.
+          <p className="text-center text-[12px] font-medium uppercase tracking-[0.08em] text-[#a3a3a3] mb-6">
+            Family-Owned Since 1976 · Authorized Distributor · Same-Day Quotes · Net Terms Available
           </p>
+          <div className="flex items-center justify-between gap-4">
+            <p className="text-white/30 text-[12px]">© 2026 Affordable Tires</p>
+            <p className="text-white/30 text-[12px] text-right">Wholesale dealer pricing available</p>
+          </div>
         </div>
       </div>
     </footer>

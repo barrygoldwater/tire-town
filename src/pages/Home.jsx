@@ -1,6 +1,5 @@
 import { useState, useRef } from "react";
 import Header from "@/components/Header";
-import TrustStrip from "@/components/TrustStrip";
 import HowToOrder from "@/components/HowToOrder";
 import CategoryStrip from "@/components/CategoryStrip";
 import Inventory from "@/components/sections/Inventory";
@@ -21,7 +20,6 @@ export default function Home() {
   return (
     <div className="min-h-screen pb-20 sm:pb-0">
 <Header onQuoteClick={scrollToQuote} />
-      <TrustStrip />
       <CategoryStrip selected={category} onSelect={setCategory} />
       <HowToOrder />
       <Inventory onProductClick={setSelectedProduct} category={category} />
