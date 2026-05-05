@@ -13,8 +13,9 @@ export default function WheelsSection({ onProductClick }) {
   return (
     <section id="wheels" className="py-16 sm:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <h2 className="text-3xl sm:text-4xl font-extrabold uppercase tracking-[-0.02em] text-[#0a0a0a]">
-          WHEELS
+        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">Wheels</p>
+        <h2 className="text-3xl sm:text-4xl font-extrabold uppercase tracking-[-0.02em] text-[#0a0a0a] mt-1">
+          ALUMINUM & STEEL WHEELS
         </h2>
         <p className="mt-2 text-muted-foreground text-base max-w-2xl">
           {inventory.categories.wheels.description}

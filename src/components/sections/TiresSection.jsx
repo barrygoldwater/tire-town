@@ -8,13 +8,14 @@ export default function TiresSection({ onProductClick }) {
 
   const tires = inventory.tires;
   const filtered = activeBrand === "All" ? tires : tires.filter(t => t.brand === activeBrand);
-  const brands = ["Excel", "Wanda", "Innova", "Arisun", "Multiple"];
+  const brands = ["Excel", "Wanda", "Innova", "Arisun"];
 
   return (
-    <section id="tires" className="py-16 sm:py-20 bg-[#f5f5f4]">
+    <section id="tires" className="py-16 sm:py-20 bg-[#fafaf9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <h2 className="text-3xl sm:text-4xl font-extrabold uppercase tracking-[-0.02em] text-[#0a0a0a]">
-          TIRES
+        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">Tires</p>
+        <h2 className="text-3xl sm:text-4xl font-extrabold uppercase tracking-[-0.02em] text-[#0a0a0a] mt-1">
+          STREET, TURF & ALL-TERRAIN TIRES
         </h2>
         <p className="mt-2 text-muted-foreground text-base max-w-2xl">
           Street, turf, all-terrain and trail patterns. DOT-approved options for street-legal builds.
