@@ -48,9 +48,17 @@ const CATEGORY_ALIASES = {
 function normalizeQuery(q) {
   return q
     .toLowerCase()
-    .replace(/(\d+)\s*(?:inch|in\.?|")\s*/g, '$1x')          // "14 inch" → "14x"
-    .replace(/(\d+)\s*(?:by|x)\s*(\d+)/g, '$1x$2')           // "14 by 7" / "14 x 7" → "14x7"
-    .replace(/[^\w\s\/.\-x+]/g, ' ')                          // strip punctuation except / . - x +
+    // "14 inch" / "14in" / "14in." / "14\"" → "14x " (note trailing space — preserves token break)
+    .replace(/(\d+)\s*(?:inch|in\.?|")\s*/gi, '$1x ')
+    // "14 by 7" / "14 x 7" / "14X7" → "14x7"
+    .replace(/(\d+)\s*(?:by|x)\s*(\d+)/gi, '$1x$2')
+    // Common size shorthand: "14\"7" or "14'7" → "14x7"
+    .replace(/(\d+)['"`](\d+)/g, '$1x$2')
+    // Hyphenated sizes "14-7" → "14x7" (only when both sides are digits)
+    .replace(/(\d+)\-(\d+)\b/g, '$1x$2')
+    // Strip leftover punctuation except / . - x +
+    .replace(/[^\w\s\/.\-x+]/g, ' ')
+    // Collapse multiple spaces to one
     .replace(/\s+/g, ' ')
     .trim();
 }
