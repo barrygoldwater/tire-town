@@ -483,6 +483,7 @@ const inventory = {
       brand: "Wheel Mate",
       model: "C-Series",
       category: "wheel",
+      image_url: "https://rm-cart.com/cdn/shop/products/LSI_3_12_2018_Windshields-wheels-34_copy_2048x.jpg?v=1550528535",
       variants: [
         { size: "10x7", finish: "Black Machined", offset: "-15.5", part_number: "WM10580B" },
         { size: "10x7", finish: "Silver Machined", offset: "-15.5", part_number: "WM10580M" },
