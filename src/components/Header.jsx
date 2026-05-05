@@ -30,8 +30,7 @@ export default function Header({ onQuoteClick }) {
       >
         {/* Left: Logo + catalog label */}
         <a
-          href="#"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          href="/"
           className="flex items-center"
         >
           <Logo
