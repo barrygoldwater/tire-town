@@ -36,14 +36,14 @@ export default function Header({ onQuoteClick }) {
         >
           <Logo
             className={`w-auto transition-all duration-200 ${
-              scrolled ? "h-8" : "h-10 sm:h-14"
+              scrolled ? "h-9" : "h-12 sm:h-16"
             }`}
           />
           <span
             className="hidden sm:flex items-center gap-2 ml-4 pl-4"
             style={{ borderLeft: "1px solid #d4d4d4", height: "16px" }}
           >
-            <span className="text-[12px] font-semibold text-[#525252] uppercase tracking-[0.1em] whitespace-nowrap">
+            <span className="text-[10px] font-semibold text-[#525252] uppercase tracking-[0.1em] whitespace-nowrap">
               June 2026 Catalog
             </span>
             <button
