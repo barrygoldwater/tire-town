@@ -8,7 +8,7 @@ export default function TiresSection({ onProductClick }) {
 
   const tires = inventory.tires;
   const filtered = activeBrand === "All" ? tires : tires.filter(t => t.brand === activeBrand);
-  const brands = ["Excel", "Wanda", "Innova", "Arisun"];
+  const brands = ["Excel", "Wanda", "Innova", "Arisun", "Multiple"];
 
   return (
     <section id="tires" className="py-16 sm:py-20 bg-[#f5f5f4]">
