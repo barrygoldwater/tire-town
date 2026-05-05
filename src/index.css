@@ -88,3 +88,8 @@
     scroll-behavior: smooth;
   }
 }
+
+@keyframes heroZoom {
+  0%   { transform: scale(1);    }
+  100% { transform: scale(1.08); }
+}

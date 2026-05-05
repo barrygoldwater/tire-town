@@ -4,41 +4,46 @@ import { Flag, GraduationCap, Building2, Handshake, HardHat, Wrench, Phone } fro
 
 function Hero() {
   return (
-    <section className="relative w-full h-[520px] sm:h-[640px] bg-[#0a0a0a] overflow-hidden">
-      {/* Background video */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <iframe
-          src="https://www.youtube.com/embed/R4oUUhmSxKY?autoplay=1&mute=1&loop=1&playlist=R4oUUhmSxKY&controls=0&showinfo=0&modestbranding=1&iv_load_policy=3&playsinline=1&rel=0&disablekb=1&fs=0"
-          title="Affordable Turf & Specialty Tire"
-          allow="autoplay; encrypted-media; picture-in-picture"
-          frameBorder="0"
-          style={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            width: '100vw',
-            height: '56.25vw',
-            minHeight: '100%',
-            minWidth: '177.78vh',
-            transform: 'translate(-50%, -50%)',
-            pointerEvents: 'none',
-          }}
-        />
-      </div>
+    <section
+      className="relative w-full h-[520px] sm:h-[640px] overflow-hidden bg-[#0a0a0a]"
+      style={{
+        backgroundImage: "url('/about-hero.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      {/* Ken Burns zoom layer */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: "url('/about-hero.jpg')",
+          animation: 'heroZoom 18s ease-in-out infinite alternate',
+        }}
+      />
 
-      {/* Dark overlay for text legibility */}
-      <div className="absolute inset-0 bg-black/55 pointer-events-none" />
+      {/* Gradient overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            'linear-gradient(90deg, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.7) 45%, rgba(10,10,10,0.4) 100%)',
+        }}
+      />
+
+      {/* Bottom fade to white */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white pointer-events-none" />
 
       {/* Hero content */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 max-w-4xl mx-auto">
+      <div className="relative z-10 h-full flex flex-col items-start justify-center text-left px-8 sm:px-16 lg:px-24 max-w-4xl">
         <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary mb-6">
           About Us
         </p>
-        <h1 className="text-[44px] sm:text-[56px] font-extrabold leading-[1.05] tracking-[-0.025em]">
+        <h1 className="text-[44px] sm:text-[60px] font-extrabold leading-[1.05] tracking-[-0.025em]">
           <span className="block text-white">Built On A Specialty.</span>
           <span className="block text-primary">Backed By Half A Century.</span>
         </h1>
-        <p className="mt-6 text-[16px] sm:text-[18px] text-white/80 max-w-[720px] leading-relaxed">
+        <p className="mt-6 text-[16px] sm:text-[18px] text-white/85 max-w-[640px] leading-relaxed">
           Affordable Turf &amp; Specialty Tire has been the source for hard-to-find wheels and tires since 1976. Family-owned, dealer-focused, and stocked deep across every category our customers operate in.
         </p>
       </div>
