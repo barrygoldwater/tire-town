@@ -1,9 +1,19 @@
 import { useState, useEffect } from "react";
-import { Phone, Download } from "lucide-react";
+import { Phone, Download, Loader2 } from "lucide-react";
 import Logo from "./Logo";
 
 export default function Header({ onQuoteClick }) {
   const [scrolled, setScrolled] = useState(false);
+  const [generating, setGenerating] = useState(false);
+
+  const handleDownload = async (e) => {
+    e.stopPropagation();
+    if (generating) return;
+    setGenerating(true);
+    const { generateCatalogPdf } = await import("@/lib/generateCatalogPdf");
+    generateCatalogPdf();
+    setGenerating(false);
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 80);
@@ -36,18 +46,18 @@ export default function Header({ onQuoteClick }) {
             <span className="text-[12px] font-semibold text-[#525252] uppercase tracking-[0.1em] whitespace-nowrap">
               June 2026 Catalog
             </span>
-            <a
-              href="/catalog.pdf"
-              download="Affordable-Tires-Catalog.pdf"
-              target="_blank"
-              rel="noopener"
+            <button
+              onClick={handleDownload}
+              disabled={generating}
               aria-label="Download catalog PDF"
               title="Download PDF"
-              className="text-primary hover:bg-primary/10 rounded-sm p-0.5 transition-colors"
-              onClick={(e) => e.stopPropagation()}
+              className="text-primary hover:bg-primary/10 rounded-sm p-0.5 transition-colors disabled:opacity-50"
             >
-              <Download className="w-3.5 h-3.5" />
-            </a>
+              {generating
+                ? <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                : <Download className="w-3.5 h-3.5" />
+              }
+            </button>
           </span>
         </a>
 
