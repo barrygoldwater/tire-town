@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Logo + tagline */}
           <div>
-            <Logo className="text-lg text-white" />
+            <Logo className="h-10 w-auto brightness-0 invert" />
             <p className="text-white/50 text-sm mt-3 leading-relaxed">
               Wholesale Golf Cart Wheels & Tires. Family-owned since 1976.
             </p>

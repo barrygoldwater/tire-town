@@ -4,7 +4,7 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-extrabold text-white uppercase tracking-[-0.02em] leading-[1.05]">
           WHOLESALE GOLF CART<br />
-          WHEELS <span className="text-primary">&</span> TIRES
+          WHEELS <span className="text-primary font-extrabold">&</span> TIRES
         </h1>
         <p className="mt-5 text-white/70 text-base sm:text-lg max-w-2xl leading-relaxed">
           The full Excel, Achieva, Arisun, Wanda, Innova and Wheel Mate catalog — in stock and ready to ship.
