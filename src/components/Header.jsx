@@ -26,18 +26,14 @@ export default function Header({ onQuoteClick }) {
         >
           <Logo
             className={`w-auto transition-all duration-200 ${
-              scrolled ? "h-8" : "h-9 sm:h-11"
+              scrolled ? "h-8" : "h-10 sm:h-14"
             }`}
           />
           <span
             className="hidden sm:flex items-center gap-2 ml-4 pl-4"
-            style={{ borderLeft: "1px solid #d4d4d4", height: "24px" }}
+            style={{ borderLeft: "1px solid #d4d4d4", height: "16px" }}
           >
-            <span
-              className={`text-[#525252] font-medium uppercase tracking-[0.1em] whitespace-nowrap transition-all duration-200 ${
-                scrolled ? "text-[12px]" : "text-[14px]"
-              }`}
-            >
+            <span className="text-[12px] font-semibold text-[#525252] uppercase tracking-[0.1em] whitespace-nowrap">
               June 2026 Catalog
             </span>
             <a
@@ -50,7 +46,7 @@ export default function Header({ onQuoteClick }) {
               className="text-primary hover:bg-primary/10 rounded-sm p-0.5 transition-colors"
               onClick={(e) => e.stopPropagation()}
             >
-              <Download className={scrolled ? "w-4 h-4" : "w-[18px] h-[18px]"} />
+              <Download className="w-3.5 h-3.5" />
             </a>
           </span>
         </a>
@@ -59,7 +55,7 @@ export default function Header({ onQuoteClick }) {
         <div className="flex items-center gap-2 sm:gap-4">
           <a
             href="tel:619-954-0034"
-            className="hidden sm:flex items-center gap-2 px-2 py-2 text-[14px] font-semibold text-primary hover:text-primary/80 transition-colors whitespace-nowrap"
+            className="hidden sm:flex items-center gap-2 px-2 py-2 text-[13px] font-semibold text-primary hover:text-primary/80 transition-colors whitespace-nowrap"
           >
             <Phone className="w-4 h-4" />
             Call 619-954-0034
@@ -73,9 +69,7 @@ export default function Header({ onQuoteClick }) {
           </a>
           <a
             href="#contact"
-            className={`bg-[#0a0a0a] text-white text-[11px] sm:text-[13px] font-semibold uppercase tracking-[0.06em] sm:tracking-[0.08em] px-3.5 sm:px-5 rounded-[2px] active:bg-primary hover:bg-primary transition-colors whitespace-nowrap flex items-center ${
-              scrolled ? "h-10" : "h-10 sm:h-11"
-            }`}
+            className="bg-[#0a0a0a] text-white text-[11px] sm:text-[13px] font-semibold uppercase tracking-[0.06em] sm:tracking-[0.08em] px-3.5 sm:px-5 py-2.5 rounded-[2px] active:bg-primary hover:bg-primary transition-colors whitespace-nowrap"
           >
             <span className="sm:hidden">Quote</span>
             <span className="hidden sm:inline">Request Quote</span>
