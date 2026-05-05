@@ -5,7 +5,7 @@ import { Flag, GraduationCap, Building2, Handshake, HardHat, Wrench, Phone } fro
 function Hero() {
   return (
     <section
-      className="relative w-full h-[520px] sm:h-[640px] overflow-hidden bg-[#0a0a0a]"
+      className="relative w-full h-[320px] sm:h-[380px] overflow-hidden bg-[#0a0a0a]"
       style={{
         backgroundImage: "url('/about-hero.jpg')",
         backgroundSize: 'cover',
