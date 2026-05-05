@@ -2,8 +2,7 @@ import { useState, useRef } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import CategoryStrip from "@/components/CategoryStrip";
-import WheelsSection from "@/components/sections/WheelsSection";
-import TiresSection from "@/components/sections/TiresSection";
+import Inventory from "@/components/sections/Inventory";
 import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/Footer";
 import ProductModal from "@/components/ProductModal";
@@ -23,8 +22,7 @@ export default function Home() {
 <Header onQuoteClick={scrollToQuote} />
       <Hero />
       <CategoryStrip selected={category} onSelect={setCategory} />
-      <WheelsSection onProductClick={setSelectedProduct} category={category} />
-      <TiresSection onProductClick={setSelectedProduct} category={category} />
+      <Inventory onProductClick={setSelectedProduct} category={category} />
       <ContactSection quoteFormRef={quoteFormRef} />
       <Footer />
 
