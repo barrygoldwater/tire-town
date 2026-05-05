@@ -51,7 +51,7 @@ export default function Header({ onQuoteClick }) {
               disabled={generating}
               aria-label="Download catalog PDF"
               title="Download PDF"
-              className="text-primary hover:bg-primary/10 rounded-sm p-0.5 transition-colors disabled:opacity-50"
+              className="text-primary hover:bg-primary/10 rounded-sm p-0.5 transition-colors disabled:opacity-50 outline-none"
             >
               {generating
                 ? <Loader2 className="w-3.5 h-3.5 animate-spin" />
@@ -65,7 +65,7 @@ export default function Header({ onQuoteClick }) {
         <div className="flex items-center gap-2 sm:gap-4">
           <a
             href="/about"
-            className="hidden sm:inline text-[13px] font-semibold uppercase tracking-[0.06em] text-[#525252] hover:text-[#c8102e] px-3 py-2 transition-colors whitespace-nowrap"
+            className="hidden sm:inline text-[13px] font-semibold uppercase tracking-[0.06em] text-[#525252] hover:text-primary px-3 py-2 transition-colors whitespace-nowrap"
           >
             About
           </a>
