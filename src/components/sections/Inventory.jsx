@@ -14,6 +14,15 @@ const CATEGORY_LABELS = {
   accessories: 'Accessories',
 };
 
+// Set to false for categories that have no wheel inventory
+const CATEGORY_HAS_WHEELS = {
+  golf_cart:   true,
+  industrial:  false,
+  lawn_garden: false,
+  trailer:     false,
+  accessories: false,
+};
+
 const EmptyState = () => (
   <div className="py-20 text-center">
     <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary mb-3">Coming Soon</p>
@@ -93,7 +102,7 @@ export default function Inventory({ onProductClick, category }) {
           {categoryLabel}
         </p>
 
-        {/* Tab headers — for Accessories category, only show one tab */}
+        {/* Tab headers */}
         <h2 className="text-[28px] sm:text-4xl lg:text-[44px] font-extrabold tracking-[-0.025em] leading-[1.05]">
           {isAccessoryCategory ? (
             <button
@@ -105,18 +114,22 @@ export default function Inventory({ onProductClick, category }) {
           ) : (
             <>
               <button
-                onClick={() => setType('wheels')}
-                className={`transition-colors ${type === 'wheels' ? 'text-[#0a0a0a]' : 'text-[#0a0a0a]/25 hover:text-[#0a0a0a]/55'}`}
-              >
-                Wheels<span className="ml-2 text-[16px] sm:text-xl font-semibold align-baseline">{allWheels.length}</span>
-              </button>
-              <span className="text-[#0a0a0a]/15 mx-3 sm:mx-4 font-light">/</span>
-              <button
                 onClick={() => setType('tires')}
                 className={`transition-colors ${type === 'tires' ? 'text-[#0a0a0a]' : 'text-[#0a0a0a]/25 hover:text-[#0a0a0a]/55'}`}
               >
                 Tires<span className="ml-2 text-[16px] sm:text-xl font-semibold align-baseline">{allTires.length}</span>
               </button>
+              {CATEGORY_HAS_WHEELS[vehicleType] && (
+                <>
+                  <span className="text-[#0a0a0a]/15 mx-3 sm:mx-4 font-light">/</span>
+                  <button
+                    onClick={() => setType('wheels')}
+                    className={`transition-colors ${type === 'wheels' ? 'text-[#0a0a0a]' : 'text-[#0a0a0a]/25 hover:text-[#0a0a0a]/55'}`}
+                  >
+                    Wheels<span className="ml-2 text-[16px] sm:text-xl font-semibold align-baseline">{allWheels.length}</span>
+                  </button>
+                </>
+              )}
             </>
           )}
         </h2>
