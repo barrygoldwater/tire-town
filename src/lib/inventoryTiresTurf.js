@@ -1,3 +1,5 @@
-// Placeholder — will be replaced with full data in messages 2–4
-const tiresTurf = [];
+import tiresTurfA from './inventoryTiresTurfA';
+import tiresTurfB from './inventoryTiresTurfB';
+
+const tiresTurf = [...tiresTurfA, ...tiresTurfB];
 export default tiresTurf;
