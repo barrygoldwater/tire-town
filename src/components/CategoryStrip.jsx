@@ -64,8 +64,8 @@ export default function CategoryStrip({ selected, onSelect }) {
         }
         .vroom-smoke {
           position: absolute;
-          left: 8%;
-          bottom: 4%;
+          left: 2px;
+          bottom: 2px;
           border-radius: 50%;
           background: rgba(130,130,130,0.65);
           filter: blur(4px);
@@ -113,24 +113,25 @@ export default function CategoryStrip({ selected, onSelect }) {
                       : "cursor-not-allowed opacity-55"}
                   `}
                 >
-                  {/* Smoke puffs */}
-                  {isVrooming && (
-                    <>
-                      <div className="vroom-smoke vroom-smoke-1" />
-                      <div className="vroom-smoke vroom-smoke-2" />
-                      <div className="vroom-smoke vroom-smoke-3" />
-                      <div className="vroom-smoke vroom-smoke-4" />
-                      <div className="vroom-smoke vroom-smoke-5" />
-                    </>
-                  )}
-
-                  <img
-                    src={iconUrl}
-                    alt=""
-                    className={`w-12 h-12 sm:w-14 sm:h-14 mb-3 transition-opacity ${
-                      !cat.available ? "opacity-50" : ""
-                    } ${isVrooming ? "vroom-icon" : ""}`}
-                  />
+                  <div className="relative mb-3">
+                    {/* Smoke puffs — positioned relative to icon */}
+                    {isVrooming && (
+                      <>
+                        <div className="vroom-smoke vroom-smoke-1" />
+                        <div className="vroom-smoke vroom-smoke-2" />
+                        <div className="vroom-smoke vroom-smoke-3" />
+                        <div className="vroom-smoke vroom-smoke-4" />
+                        <div className="vroom-smoke vroom-smoke-5" />
+                      </>
+                    )}
+                    <img
+                      src={iconUrl}
+                      alt=""
+                      className={`w-12 h-12 sm:w-14 sm:h-14 transition-opacity ${
+                        !cat.available ? "opacity-50" : ""
+                      } ${isVrooming ? "vroom-icon" : ""}`}
+                    />
+                  </div>
                   <div
                     className={`text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.08em] text-center leading-tight transition-colors ${
                       isSelected ? "text-primary" : "text-[#0a0a0a]"
