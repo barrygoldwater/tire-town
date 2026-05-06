@@ -34,16 +34,15 @@ export default function CategoryStrip({ selected, onSelect }) {
   function handleClick(cat) {
     if (!cat.available) return;
 
-    if (cat.vroom && cat.id !== selected) {
-      // Cancel any in-flight animation
+    if (cat.vroom) {
+      // Always animate — cancel any in-flight animation first
       if (timerRef.current) clearTimeout(timerRef.current);
       setVroomId(cat.id);
       timerRef.current = setTimeout(() => {
         setVroomId(null);
-        onSelect(cat.id);
-      }, VROOM_MS - 80); // select slightly before animation ends
+        onSelect(cat.id); // no-op if already selected, but animation still fires
+      }, VROOM_MS - 80);
     } else {
-      setVroomId(null);
       onSelect(cat.id);
     }
   }
@@ -53,8 +52,8 @@ export default function CategoryStrip({ selected, onSelect }) {
       <style>{`
         @keyframes smokePuff {
           0%   { opacity: 0; transform: translate(0, 0) scale(0.5); }
-          35%  { opacity: 0.55; }
-          100% { opacity: 0; transform: translate(var(--sx), -14px) scale(1.4); }
+          35%  { opacity: 0.5; }
+          100% { opacity: 0; transform: translate(var(--sx), var(--sy)) scale(1.5); }
         }
         @keyframes vroomIcon {
           0%   { transform: rotate(0deg) translateY(0px); }
@@ -65,18 +64,19 @@ export default function CategoryStrip({ selected, onSelect }) {
         }
         .vroom-smoke {
           position: absolute;
-          bottom: 14px;
+          left: 14%;
+          bottom: 10%;
           width: 10px;
           height: 10px;
           border-radius: 50%;
-          background: rgba(150,150,150,0.55);
+          background: rgba(140,140,140,0.55);
           filter: blur(3px);
           pointer-events: none;
-          animation: smokePuff 320ms ease-out forwards;
+          animation: smokePuff 340ms ease-out forwards;
         }
-        .vroom-smoke-1 { left: 28%; --sx: -8px; animation-delay: 0ms; }
-        .vroom-smoke-2 { left: 44%; --sx: 0px;  animation-delay: 40ms; }
-        .vroom-smoke-3 { left: 58%; --sx: 8px;  animation-delay: 80ms; }
+        .vroom-smoke-1 { --sx: -10px; --sy: -8px;  animation-delay: 0ms;  }
+        .vroom-smoke-2 { --sx: -14px; --sy: -14px; animation-delay: 55ms; }
+        .vroom-smoke-3 { --sx: -8px;  --sy: -20px; animation-delay: 110ms; }
         .vroom-icon {
           animation: vroomIcon ${VROOM_MS}ms cubic-bezier(0.4,0,0.8,1) forwards;
         }
