@@ -64,7 +64,7 @@ export default function CategoryStrip({ selected, onSelect }) {
         }
         .vroom-smoke {
           position: absolute;
-          left: 2px;
+          left: -6px;
           bottom: 2px;
           border-radius: 50%;
           background: rgba(130,130,130,0.65);
