@@ -1,6 +1,6 @@
+import { useState, useRef } from "react";
 import inventory from "@/lib/inventory";
 
-// Combine all products (wheels, tires, accessories) to determine which categories have inventory
 const ALL_ITEMS = [
   ...inventory.wheels,
   ...inventory.tires,
@@ -9,11 +9,11 @@ const ALL_ITEMS = [
 const availableCategoryIds = new Set(ALL_ITEMS.map((item) => item.vehicle_type));
 
 const CATEGORY_DEFS = [
-  { id: "golf_cart",   label: "Golf Cart",     icon: "mdi:golf-cart"      },
-  { id: "industrial",  label: "Industrial",    icon: "mdi:tractor"        },
-  { id: "lawn_garden", label: "Lawn & Garden", icon: "mdi:mower"          },
-  { id: "trailer",     label: "Trailer",       icon: "mdi:truck-trailer"  },
-  { id: "accessories", label: "Accessories",   icon: "mdi:nut"            },
+  { id: "golf_cart",   label: "Golf Cart",     icon: "mdi:golf-cart",     vroom: true  },
+  { id: "industrial",  label: "Industrial",    icon: "mdi:tractor",       vroom: true  },
+  { id: "lawn_garden", label: "Lawn & Garden", icon: "mdi:mower",         vroom: true  },
+  { id: "trailer",     label: "Trailer",       icon: "mdi:truck-trailer", vroom: true  },
+  { id: "accessories", label: "Accessories",   icon: "mdi:nut",           vroom: false },
 ];
 
 const CATEGORIES = CATEGORY_DEFS.map((cat) => ({
@@ -24,56 +24,124 @@ const CATEGORIES = CATEGORY_DEFS.map((cat) => ({
 const PRIMARY_HEX = "527333";
 const DARK_HEX = "0a0a0a";
 
-export default function CategoryStrip({ selected, onSelect }) {
-  return (
-    <section className="bg-white border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex gap-3 sm:gap-4 overflow-x-auto py-5 sm:py-7 -mx-4 px-4 sm:mx-0 sm:px-0 snap-x snap-mandatory sm:snap-none [&::-webkit-scrollbar]:hidden">
-          {CATEGORIES.map((cat) => {
-            const isSelected = selected === cat.id;
-            const iconColor = isSelected ? PRIMARY_HEX : DARK_HEX;
-            const iconUrl = `https://api.iconify.design/${cat.icon}.svg?color=%23${iconColor}`;
+// Vroom animation duration in ms
+const VROOM_MS = 700;
 
-            return (
-              <button
-                key={cat.id}
-                type="button"
-                onClick={() => cat.available && onSelect(cat.id)}
-                aria-pressed={isSelected}
-                disabled={!cat.available}
-                className={`
-                  group relative flex-shrink-0 snap-start sm:flex-1
-                  w-[128px] sm:w-auto
-                  flex flex-col items-center justify-center
-                  px-3 py-5 sm:px-5 sm:py-6
-                  rounded-[6px] border transition-all duration-150
-                  ${isSelected
-                    ? "border-primary bg-primary/[0.04]"
-                    : "border-border bg-white"}
-                  ${cat.available
-                    ? "cursor-pointer hover:border-[#0a0a0a] hover:-translate-y-0.5 active:scale-[0.98]"
-                    : "cursor-not-allowed opacity-55"}
-                `}
-              >
-                <img
-                  src={iconUrl}
-                  alt=""
-                  className={`w-12 h-12 sm:w-14 sm:h-14 mb-3 transition-opacity ${
-                    !cat.available ? "opacity-50" : ""
-                  }`}
-                />
-                <div
-                  className={`text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.08em] text-center leading-tight transition-colors ${
-                    isSelected ? "text-primary" : "text-[#0a0a0a]"
-                  }`}
+export default function CategoryStrip({ selected, onSelect }) {
+  const [vroomId, setVroomId] = useState(null);
+  const timerRef = useRef(null);
+
+  function handleClick(cat) {
+    if (!cat.available) return;
+
+    if (cat.vroom && cat.id !== selected) {
+      // Cancel any in-flight animation
+      if (timerRef.current) clearTimeout(timerRef.current);
+      setVroomId(cat.id);
+      timerRef.current = setTimeout(() => {
+        setVroomId(null);
+        onSelect(cat.id);
+      }, VROOM_MS - 80); // select slightly before animation ends
+    } else {
+      setVroomId(null);
+      onSelect(cat.id);
+    }
+  }
+
+  return (
+    <>
+      <style>{`
+        @keyframes smokePuff {
+          0%   { opacity: 0; transform: translate(0, 0) scale(0.5); }
+          35%  { opacity: 0.55; }
+          100% { opacity: 0; transform: translate(var(--sx), -14px) scale(1.4); }
+        }
+        @keyframes vroomIcon {
+          0%   { transform: rotate(0deg) translateY(0px); }
+          22%  { transform: rotate(-18deg) translateY(-3px); }
+          48%  { transform: rotate(-18deg) translateY(-3px); }
+          65%  { transform: rotate(0deg) translateY(0px); }
+          100% { transform: translateX(72px); opacity: 0; }
+        }
+        .vroom-smoke {
+          position: absolute;
+          bottom: 14px;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: rgba(150,150,150,0.55);
+          filter: blur(3px);
+          pointer-events: none;
+          animation: smokePuff 320ms ease-out forwards;
+        }
+        .vroom-smoke-1 { left: 28%; --sx: -8px; animation-delay: 0ms; }
+        .vroom-smoke-2 { left: 44%; --sx: 0px;  animation-delay: 40ms; }
+        .vroom-smoke-3 { left: 58%; --sx: 8px;  animation-delay: 80ms; }
+        .vroom-icon {
+          animation: vroomIcon ${VROOM_MS}ms cubic-bezier(0.4,0,0.8,1) forwards;
+        }
+      `}</style>
+
+      <section className="bg-white border-b border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex gap-3 sm:gap-4 overflow-x-auto py-5 sm:py-7 -mx-4 px-4 sm:mx-0 sm:px-0 snap-x snap-mandatory sm:snap-none [&::-webkit-scrollbar]:hidden">
+            {CATEGORIES.map((cat) => {
+              const isSelected = selected === cat.id;
+              const isVrooming = vroomId === cat.id;
+              const iconColor = isSelected ? PRIMARY_HEX : DARK_HEX;
+              const iconUrl = `https://api.iconify.design/${cat.icon}.svg?color=%23${iconColor}`;
+
+              return (
+                <button
+                  key={cat.id}
+                  type="button"
+                  onClick={() => handleClick(cat)}
+                  aria-pressed={isSelected}
+                  disabled={!cat.available}
+                  className={`
+                    group relative flex-shrink-0 snap-start sm:flex-1
+                    w-[128px] sm:w-auto
+                    flex flex-col items-center justify-center
+                    px-3 py-5 sm:px-5 sm:py-6
+                    rounded-[6px] border transition-all duration-150
+                    overflow-visible
+                    ${isSelected
+                      ? "border-primary bg-primary/[0.04]"
+                      : "border-border bg-white"}
+                    ${cat.available
+                      ? "cursor-pointer hover:border-[#0a0a0a] hover:-translate-y-0.5 active:scale-[0.98]"
+                      : "cursor-not-allowed opacity-55"}
+                  `}
                 >
-                  {cat.label}
-                </div>
-              </button>
-            );
-          })}
+                  {/* Smoke puffs */}
+                  {isVrooming && (
+                    <>
+                      <div className="vroom-smoke vroom-smoke-1" />
+                      <div className="vroom-smoke vroom-smoke-2" />
+                      <div className="vroom-smoke vroom-smoke-3" />
+                    </>
+                  )}
+
+                  <img
+                    src={iconUrl}
+                    alt=""
+                    className={`w-12 h-12 sm:w-14 sm:h-14 mb-3 transition-opacity ${
+                      !cat.available ? "opacity-50" : ""
+                    } ${isVrooming ? "vroom-icon" : ""}`}
+                  />
+                  <div
+                    className={`text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.08em] text-center leading-tight transition-colors ${
+                      isSelected ? "text-primary" : "text-[#0a0a0a]"
+                    }`}
+                  >
+                    {cat.label}
+                  </div>
+                </button>
+              );
+            })}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
