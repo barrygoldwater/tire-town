@@ -1,71 +1,70 @@
-// All known color/finish words. When a query token matches one of these,
-// we filter strictly on visualTags instead of fuzzy-matching variant data.
-const COLOR_WORDS = new Set([
-  'chrome', 'polished', 'silver', 'mirror',
-  'machined', 'machined_black',
-  'black', 'matte', 'matte_black', 'gloss', 'gloss_black',
-  'gunmetal', 'gray', 'grey', 'dark_gray',
-  'white', 'ivory',
-  'red', 'maroon', 'burgundy', 'crimson',
-  'blue', 'navy',
-  'gold', 'bronze', 'brass',
-  'green', 'olive',
-  'yellow',
-  'two_tone',
-]);
+// ────────────────────────────────────────────────────────────────────────────
+// searchInventory.js
+//
+// Smart inventory search.
+//   - Color queries filter STRICTLY on each product's `visual_tags` field
+//     (which describes what's actually shown in the product photo, not what
+//     finish variants exist in the data).
+//   - Size, brand, model, part-number queries fuzzy-match across product
+//     variant data as before.
+//   - Mixed queries (e.g. "14 inch chrome wheel") apply BOTH: strict color
+//     filter for the "chrome" token, fuzzy match for "14x" and "wheel".
+//
+// Add or edit `visual_tags: [...]` on a product in inventory.js to control
+// which color queries return that product.
+// ────────────────────────────────────────────────────────────────────────────
 
-// Loaded once at module init. If the file isn't there yet, the strict filter is skipped gracefully.
-let _visualTagsCache = null;
-async function loadVisualTags() {
-  if (_visualTagsCache !== null) return _visualTagsCache;
-  try {
-    const r = await fetch('/visual_tags.json');
-    if (r.ok) {
-      _visualTagsCache = await r.json();
-    } else {
-      _visualTagsCache = {};
-    }
-  } catch {
-    _visualTagsCache = {};
-  }
-  return _visualTagsCache;
-}
-
-// Synchronous accessor — returns whatever has loaded so far.
-function getVisualTags(productId) {
-  if (!_visualTagsCache) return null;
-  return _visualTagsCache[productId]?.tags || [];
-}
-
-// Trigger load on module import. Search results refresh once this resolves.
-loadVisualTags();
-
-// Color synonym map — wider terms expand to canonical color words
-// found in product finish strings.
-const COLOR_SYNONYMS = {
-  red: ['red', 'maroon', 'burgundy', 'crimson', 'scarlet', 'ruby'],
-  blue: ['blue', 'navy', 'azure', 'cobalt', 'sapphire'],
-  green: ['green', 'olive', 'emerald', 'forest'],
-  black: ['black', 'matte', 'gloss black', 'jet', 'noir'],
-  white: ['white', 'ivory', 'cream', 'pearl'],
-  silver: ['silver', 'chrome', 'polished', 'machined', 'mirror'],
-  gold: ['gold', 'brass', 'bronze'],
-  gray: ['gray', 'grey', 'gunmetal', 'slate', 'charcoal'],
-  dark: ['black', 'matte', 'gunmetal', 'gloss black', 'charcoal'],
-  light: ['white', 'polished', 'chrome', 'machined', 'pearl'],
+// Color word vocabulary. When a query token matches one of these, we apply
+// the strict visual_tags filter. Each entry maps to the set of canonical
+// visual_tag values that should match that query word.
+const COLOR_TAG_MATCHES = {
+  chrome:         ['chrome', 'polished', 'silver', 'mirror'],
+  polished:       ['polished', 'chrome', 'silver', 'mirror'],
+  silver:         ['silver', 'chrome', 'polished', 'mirror', 'machined'],
+  mirror:         ['mirror', 'chrome', 'polished', 'silver'],
+  machined:       ['machined', 'machined_black', 'chrome', 'polished'],
+  machined_black: ['machined_black', 'machined'],
+  black:          ['black', 'matte_black', 'gloss_black', 'machined_black'],
+  matte:          ['matte_black', 'black'],
+  matte_black:    ['matte_black', 'black'],
+  gloss:          ['gloss_black', 'black'],
+  gloss_black:    ['gloss_black', 'black'],
+  gunmetal:       ['gunmetal', 'dark_gray', 'gray'],
+  gray:           ['gray', 'gunmetal', 'dark_gray'],
+  grey:           ['gray', 'gunmetal', 'dark_gray'],
+  dark:           ['black', 'gunmetal', 'matte_black', 'gloss_black', 'machined_black', 'dark_gray'],
+  light:          ['chrome', 'polished', 'silver', 'mirror', 'white'],
+  white:          ['white', 'ivory'],
+  ivory:          ['ivory', 'white'],
+  red:            ['red', 'maroon', 'burgundy', 'crimson'],
+  maroon:         ['red', 'maroon', 'burgundy'],
+  burgundy:       ['red', 'maroon', 'burgundy'],
+  crimson:        ['red', 'crimson'],
+  blue:           ['blue', 'navy'],
+  navy:           ['blue', 'navy'],
+  gold:           ['gold', 'bronze', 'brass'],
+  bronze:         ['bronze', 'gold'],
+  brass:          ['brass', 'gold', 'bronze'],
+  green:          ['green', 'olive'],
+  olive:          ['olive', 'green'],
+  yellow:         ['yellow', 'gold'],
+  two_tone:       ['two_tone'],
+  twotone:        ['two_tone'],
 };
+
+const COLOR_WORDS = new Set(Object.keys(COLOR_TAG_MATCHES));
 
 // Brand fuzzy aliases — common misspellings or partial matches
 const BRAND_ALIASES = {
-  'carlisle': ['carlisle', 'carlile', 'carlysle'],
-  'achieva':  ['achieva', 'achiva', 'achieve'],
-  'wanda':    ['wanda', 'wonda'],
-  'arisun':   ['arisun', 'arison'],
-  'innova':   ['innova', 'inova'],
-  'itp':      ['itp'],
-  'excel':    ['excel'],
+  'carlisle':   ['carlisle', 'carlile', 'carlysle'],
+  'achieva':    ['achieva', 'achiva', 'achieve'],
+  'wanda':      ['wanda', 'wonda'],
+  'arisun':     ['arisun', 'arison'],
+  'innova':     ['innova', 'inova'],
+  'itp':        ['itp'],
+  'excel':      ['excel'],
   'wheel mate': ['wheel mate', 'wheelmate'],
-  'galaxy':   ['galaxy'],
+  'galaxy':     ['galaxy'],
   'garden pro': ['garden pro', 'gardenpro'],
 };
 
@@ -84,23 +83,22 @@ const CATEGORY_ALIASES = {
   tire:  ['tire', 'tires', 'tyre', 'tyres'],
 };
 
-// Normalize a query for matching:
-// - lowercase
-// - replace " by ", " x ", "in.", "inch", '"' with consistent size syntax
+// ─── Query normalization ────────────────────────────────────────────────────
+
 function normalizeQuery(q) {
   return q
     .toLowerCase()
-    // "14 inch" / "14in" / "14in." / "14\"" → "14x " (note trailing space — preserves token break)
+    // "14 inch" / "14in" / "14in." / "14\"" → "14x " (trailing space preserves token break)
     .replace(/(\d+)\s*(?:inch|in\.?|")\s*/gi, '$1x ')
     // "14 by 7" / "14 x 7" / "14X7" → "14x7"
     .replace(/(\d+)\s*(?:by|x)\s*(\d+)/gi, '$1x$2')
-    // Common size shorthand: "14\"7" or "14'7" → "14x7"
+    // "14\"7" or "14'7" → "14x7"
     .replace(/(\d+)['"`](\d+)/g, '$1x$2')
-    // Hyphenated sizes "14-7" → "14x7" (only when both sides are digits)
+    // "14-7" → "14x7" (only when both sides are digits)
     .replace(/(\d+)\-(\d+)\b/g, '$1x$2')
     // Strip leftover punctuation except / . - x +
     .replace(/[^\w\s\/.\-x+]/g, ' ')
-    // Collapse multiple spaces to one
+    // Collapse multiple spaces
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -109,31 +107,59 @@ function tokensFromQuery(q) {
   return normalizeQuery(q).split(/\s+/).filter(Boolean);
 }
 
-// Expand a single token into possible matching strings
-function expandToken(token) {
-  const expansions = new Set([token]);
-  // Color expansions
-  if (COLOR_SYNONYMS[token]) {
-    COLOR_SYNONYMS[token].forEach(c => expansions.add(c));
+// ─── Strict color filter ────────────────────────────────────────────────────
+
+function colorTokenMatches(token, product) {
+  // Returns true if `token` (a color word) should match this product based on
+  // its visual_tags. Returns false otherwise (strict — no fall-through).
+  const allowed = COLOR_TAG_MATCHES[token];
+  if (!allowed) return false;
+  const tags = product.visual_tags || [];
+  if (tags.length === 0) {
+    // Untagged product: cannot match a color query (forces correctness)
+    return false;
   }
-  // Brand expansions
-  for (const [canonical, aliases] of Object.entries(BRAND_ALIASES)) {
-    if (aliases.includes(token)) {
-      expansions.add(canonical);
-      aliases.forEach(a => expansions.add(a));
-    }
-  }
-  return Array.from(expansions);
+  return allowed.some(t => tags.includes(t));
 }
 
-// Score a product against a query. Higher score = better match.
-// Returns 0 if the product fails the AND-match across tokens.
+// ─── Fuzzy matching for non-color tokens ────────────────────────────────────
+
+function fuzzyTokenMatches(token, product, haystack) {
+  // Direct substring
+  if (haystack.includes(token)) return 10;
+
+  // Brand alias
+  for (const [, aliases] of Object.entries(BRAND_ALIASES)) {
+    if (aliases.includes(token)) {
+      if (aliases.some(a => haystack.includes(a))) return 6;
+    }
+  }
+
+  // Vehicle alias
+  for (const [vt, aliases] of Object.entries(VEHICLE_ALIASES)) {
+    if (aliases.some(a => a === token || a.includes(token) || token.includes(a))) {
+      if ((product.vehicle_type || 'golf_cart') === vt) return 8;
+    }
+  }
+
+  // Category alias
+  for (const [cat, aliases] of Object.entries(CATEGORY_ALIASES)) {
+    if (aliases.includes(token)) {
+      if ((product.category || '') === cat) return 8;
+    }
+  }
+
+  return 0;
+}
+
+// ─── Score a product ────────────────────────────────────────────────────────
+
 function scoreProduct(product, query) {
   const tokens = tokensFromQuery(query);
   if (tokens.length === 0) return 1;
 
-  // Build a single searchable string from product
-  const haystackParts = [
+  // Build a single haystack string from product text fields
+  const parts = [
     product.brand || '',
     product.model || '',
     product.category || '',
@@ -141,86 +167,45 @@ function scoreProduct(product, query) {
     product.type || '',
   ];
   for (const v of (product.variants || [])) {
-    haystackParts.push(v.size, v.finish, v.part_number, v.tread_pattern, v.tread_depth, v.brand, v.ply, v.load_rating);
+    parts.push(v.size, v.finish, v.part_number, v.tread_pattern, v.tread_depth, v.brand, v.ply, v.load_rating);
   }
   if (product.features) {
-    haystackParts.push(...(Array.isArray(product.features) ? product.features : [product.features]));
+    parts.push(...(Array.isArray(product.features) ? product.features : [product.features]));
   }
-  const haystack = haystackParts.filter(Boolean).join(' | ').toLowerCase();
+  const haystack = parts.filter(Boolean).join(' | ').toLowerCase();
 
   let totalScore = 0;
   for (const token of tokens) {
-    // STRICT COLOR FILTER: if token is a color word, the product MUST have it in visualTags
     if (COLOR_WORDS.has(token)) {
-      const visualTags = getVisualTags(product.id);
-      if (visualTags !== null && visualTags.length > 0) {
-        // Check if token or its synonyms are in visualTags
-        const synonyms = COLOR_SYNONYMS[token] || [token];
-        const matches = [token, ...synonyms].some(s => visualTags.includes(s));
-        if (matches) {
-          totalScore += 12;
-          continue;
-        }
-      }
-      // If visual tags not loaded or color not found, fall through to fuzzy match
+      // STRICT: color tokens MUST match the product's visual_tags
+      if (!colorTokenMatches(token, product)) return 0;
+      totalScore += 12;
+      continue;
     }
 
-    let tokenMatched = false;
-    let tokenScore = 0;
+    const score = fuzzyTokenMatches(token, product, haystack);
+    if (score === 0) return 0;  // every non-color token must match something
+    totalScore += score;
 
-    // Direct substring match — strongest signal
-    if (haystack.includes(token)) {
-      tokenScore = 10;
-      tokenMatched = true;
-    } else {
-      // Expanded synonym match (color, brand alias)
-      for (const expansion of expandToken(token)) {
-        if (haystack.includes(expansion)) {
-          tokenScore = Math.max(tokenScore, 6);
-          tokenMatched = true;
-        }
-      }
-      // Vehicle alias match
-      for (const [vt, aliases] of Object.entries(VEHICLE_ALIASES)) {
-        if (aliases.some(a => a === token || a.includes(token) || token.includes(a))) {
-          if ((product.vehicle_type || 'golf_cart') === vt) {
-            tokenScore = Math.max(tokenScore, 8);
-            tokenMatched = true;
-          }
-        }
-      }
-      // Category alias
-      for (const [cat, aliases] of Object.entries(CATEGORY_ALIASES)) {
-        if (aliases.includes(token)) {
-          if ((product.category || '') === cat) {
-            tokenScore = Math.max(tokenScore, 8);
-            tokenMatched = true;
-          }
-        }
-      }
-    }
-
-    if (!tokenMatched) return 0;  // every token must match something
-    totalScore += tokenScore;
-
-    // Bonus: brand match in brand field specifically
+    // Bonus: brand or model exact-field match
     if (product.brand && product.brand.toLowerCase().includes(token)) totalScore += 3;
-    // Bonus: model match in model field
     if (product.model && product.model.toLowerCase().includes(token)) totalScore += 3;
   }
   return totalScore;
 }
 
+// ─── Public API ─────────────────────────────────────────────────────────────
+
 export function searchInventory(query, products) {
-  if (!query || !query.trim()) return products.map(p => ({ product: p, score: 1 }));
-  const scored = products
+  if (!query || !query.trim()) {
+    return products.map(p => ({ product: p, score: 1 }));
+  }
+  return products
     .map(p => ({ product: p, score: scoreProduct(p, query) }))
     .filter(x => x.score > 0)
     .sort((a, b) => b.score - a.score);
-  return scored;
 }
 
-// Suggested example queries for the empty-state dropdown
 export const SEARCH_SUGGESTIONS = [
   '14 inch chrome wheel',
   'red golf cart wheel',

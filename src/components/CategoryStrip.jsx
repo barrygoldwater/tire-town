@@ -1,17 +1,22 @@
 import inventory from "@/lib/inventory";
 
-const ALL_ITEMS = [...inventory.wheels, ...inventory.tires];
-const availableCategoryIds = new Set(ALL_ITEMS.map(item => item.vehicle_type));
+// Combine all products (wheels, tires, accessories) to determine which categories have inventory
+const ALL_ITEMS = [
+  ...inventory.wheels,
+  ...inventory.tires,
+  ...(inventory.accessories || []),
+];
+const availableCategoryIds = new Set(ALL_ITEMS.map((item) => item.vehicle_type));
 
 const CATEGORY_DEFS = [
-  { id: "golf_cart",   label: "Golf Cart",     icon: "mdi:golf-cart"     },
-  { id: "industrial",  label: "Industrial",    icon: "mdi:tractor"       },
-  { id: "atv",         label: "ATV / UTV",     icon: "mdi:atv"           },
-  { id: "lawn_garden", label: "Lawn & Garden", icon: "mdi:mower"         },
-  { id: "trailer",     label: "Trailer",       icon: "mdi:truck-trailer" },
+  { id: "golf_cart",   label: "Golf Cart",     icon: "mdi:golf-cart"      },
+  { id: "industrial",  label: "Industrial",    icon: "mdi:tractor"        },
+  { id: "lawn_garden", label: "Lawn & Garden", icon: "mdi:mower"          },
+  { id: "trailer",     label: "Trailer",       icon: "mdi:truck-trailer"  },
+  { id: "accessories", label: "Accessories",   icon: "mdi:nut"            },
 ];
 
-const CATEGORIES = CATEGORY_DEFS.map(cat => ({
+const CATEGORIES = CATEGORY_DEFS.map((cat) => ({
   ...cat,
   available: availableCategoryIds.has(cat.id),
 }));
@@ -64,7 +69,6 @@ export default function CategoryStrip({ selected, onSelect }) {
                 >
                   {cat.label}
                 </div>
-
               </button>
             );
           })}
