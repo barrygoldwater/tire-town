@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, Phone, CheckCircle, MapPin, Package } from "lucide-react";
+import { X, Phone, CheckCircle, MapPin, Package, DollarSign } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { parseSize } from "@/lib/parseSize";
 
@@ -124,20 +124,22 @@ export default function ProductModal({ product, open, onClose, onQuoteClick }) {
               )}
 
               {/* Logistics inline bar */}
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-4 mb-5 py-2.5 border-y border-border text-[12px] text-[#555]">
+              <div className="flex flex-wrap items-center justify-between gap-x-2 gap-y-2 mt-4 mb-5 py-2.5 border-y border-border text-[12px] text-[#555]">
                 <span className="flex items-center gap-1.5">
                   <CheckCircle className="w-3.5 h-3.5 text-primary flex-shrink-0" />
                   In stock — ships next business day
                 </span>
-                <span className="text-border hidden sm:inline">·</span>
                 <span className="flex items-center gap-1.5">
                   <MapPin className="w-3.5 h-3.5 text-muted-foreground flex-shrink-0" />
                   {product.ships_from || "Phoenix, AZ or Greenville, SC"}
                 </span>
-                <span className="text-border hidden sm:inline">·</span>
                 <span className="flex items-center gap-1.5">
                   <Package className="w-3.5 h-3.5 text-muted-foreground flex-shrink-0" />
                   No minimum order
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <DollarSign className="w-3.5 h-3.5 text-muted-foreground flex-shrink-0" />
+                  Volume pricing available
                 </span>
               </div>
 
