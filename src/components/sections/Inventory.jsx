@@ -123,22 +123,24 @@ export default function Inventory({ onProductClick, category }) {
 
         {!hasInventory ? <EmptyState /> : (
           <>
-            {/* Premium AI search bar */}
-            <div className="mt-10 mb-6">
-              <InventorySearch
-                value={searchQuery}
-                onChange={setSearchQuery}
-                resultCount={filtered.length}
-                totalCount={brandFiltered.length}
-                isAiSearching={isAiSearching}
-                aiInterpretation={aiResults?.interpretation}
-                contextLabel={`${categoryLabel.toLowerCase()} ${type}`}
-              />
-            </div>
+            {/* Search bar — hidden until functional */}
+            {false && (
+              <div className="mt-10 mb-6">
+                <InventorySearch
+                  value={searchQuery}
+                  onChange={setSearchQuery}
+                  resultCount={filtered.length}
+                  totalCount={brandFiltered.length}
+                  isAiSearching={isAiSearching}
+                  aiInterpretation={aiResults?.interpretation}
+                  contextLabel={`${categoryLabel.toLowerCase()} ${type}`}
+                />
+              </div>
+            )}
 
             {/* Brand filter pills */}
             {products.length > 0 && (
-              <div className="flex gap-2 overflow-x-auto pb-2 -mx-5 px-5 sm:mx-0 sm:px-0 sm:flex-wrap scrollbar-hide mb-8 justify-center">
+              <div className="flex gap-2 overflow-x-auto pb-2 -mx-5 px-5 sm:mx-0 sm:px-0 sm:flex-wrap scrollbar-hide mt-8 mb-8 justify-center">
                 <BrandFilter
                   brands={brandsForType.filter(b => b !== 'All')}
                   active={activeBrand}
