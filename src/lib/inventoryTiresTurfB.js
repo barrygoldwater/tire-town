@@ -6,7 +6,7 @@ const tiresTurfB = [
           model: "Sawtooth",
           category: "tire",
           vehicle_type: "lawn_garden",
-          image_url: "/products/sawtooth.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/sawtooth.jpg",
           visual_tags: ["black"],
           features: ["Multi-brand turf and sport tire", "Great for towmaster and trail applications"],
           variants: [
@@ -49,7 +49,7 @@ const tiresTurfB = [
           model: "Smooth Tread Tires",
           category: "tire",
           vehicle_type: "lawn_garden",
-          image_url: "/products/smooth-tread.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/smooth-tread.jpg",
           visual_tags: ["black"],
           features: ["Smooth tread for low resistance applications", "Multi-brand selection"],
           variants: [
@@ -87,7 +87,7 @@ const tiresTurfB = [
           model: "Knobby",
           category: "tire",
           vehicle_type: "lawn_garden",
-          image_url: "/products/carlisle-knobby.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/carlisle-knobby.jpg",
           visual_tags: ["black"],
           features: ["Aggressive knobby tread for off-road"],
           variants: [
@@ -102,7 +102,7 @@ const tiresTurfB = [
           model: "AT489 Tires",
           category: "tire",
           vehicle_type: "lawn_garden",
-          image_url: "/products/at489.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/at489.jpg",
           visual_tags: ["black"],
           features: ["Great shock absorption capabilities", "Outstanding traction for both 2WD and 4WD applications"],
           variants: [
@@ -130,7 +130,7 @@ const tiresTurfB = [
           model: "Straight Rib",
           category: "tire",
           vehicle_type: "lawn_garden",
-          image_url: "/products/straight-rib.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/straight-rib.jpg",
           visual_tags: ["black"],
           features: ["Tread grooves channel moisture away from contact patch", "Slight lateral traction for mild inclines"],
           variants: [
@@ -154,7 +154,7 @@ const tiresTurfB = [
           model: "All Trail II",
           category: "tire",
           vehicle_type: "lawn_garden",
-          image_url: "/products/all-trail-ii.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/all-trail-ii.jpg",
           visual_tags: ["black"],
           features: ["Designed for hard surface and paved applications", "Smooth ride, more responsive handling, extra long life on hard surfaces compared to standard knobby"],
           variants: [
@@ -182,7 +182,7 @@ const tiresTurfB = [
           model: "HD Field Trax",
           category: "tire",
           vehicle_type: "lawn_garden",
-          image_url: "/products/hd-field-trax.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/hd-field-trax.jpg",
           visual_tags: ["black"],
           features: ["Wide profile providing stability on hard-packed surfaces", "Non-directional tread, long-lasting", "Smooth comfortable ride, resistant to cuts/chips/abrasions"],
           variants: [
@@ -199,7 +199,7 @@ const tiresTurfB = [
           model: "Mighty Mow TS",
           category: "tire",
           vehicle_type: "lawn_garden",
-          image_url: "/products/galaxy-mighty-mow-ts.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/galaxy-mighty-mow-ts.jpg",
           visual_tags: ["black"],
           features: ["Premium turf mower tire", "Enhanced traction"],
           variants: [
@@ -221,7 +221,7 @@ const tiresTurfB = [
           model: "Turf Special",
           category: "tire",
           vehicle_type: "lawn_garden",
-          image_url: "/products/galaxy-turf-special.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/galaxy-turf-special.jpg",
           visual_tags: ["black"],
           features: ["Heavy-duty turf tire", "Premium tread design"],
           variants: [
@@ -243,7 +243,7 @@ const tiresTurfB = [
           model: "Mighty Mow Turf Tires",
           category: "tire",
           vehicle_type: "lawn_garden",
-          image_url: "/products/galaxy-mighty-mow.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/galaxy-mighty-mow.jpg",
           visual_tags: ["black"],
           features: ["Premium turf tire for grounds maintenance"],
           variants: [
@@ -266,7 +266,7 @@ const tiresTurfB = [
           model: "Ultra Trac",
           category: "tire",
           vehicle_type: "lawn_garden",
-          image_url: "/products/ultra-trac.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/ultra-trac.jpg",
           visual_tags: ["black"],
           features: ["Heavy-duty all-conditions traction"],
           variants: [
@@ -292,7 +292,7 @@ const tiresTurfB = [
           model: "Garden Pro R3 Pro",
           category: "tire",
           vehicle_type: "lawn_garden",
-          image_url: "/products/garden-pro-r3.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/garden-pro-r3.jpg",
           visual_tags: ["black"],
           features: ["Garden Pro premium tread", "All-around performance"],
           variants: [
@@ -324,7 +324,7 @@ const tiresTurfB = [
           model: "350 Mag",
           category: "tire",
           vehicle_type: "lawn_garden",
-          image_url: "/products/otr-350-mag.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/otr-350-mag.jpg",
           visual_tags: ["black"],
           features: ["OTR 350 series ATV/UTV mag tire"],
           variants: [
@@ -339,7 +339,7 @@ const tiresTurfB = [
           model: "Tru Power",
           category: "tire",
           vehicle_type: "lawn_garden",
-          image_url: "/products/tru-power.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/tru-power.jpg",
           visual_tags: ["black"],
           features: ["Most often found on garden tractors, tillers, trenchers", "Powerful line for substantial traction"],
           variants: [

@@ -7,7 +7,7 @@ const wheels = [
           model: "E106",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/excel-e106.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/excel-e106.jpg",
           visual_tags: ["black", "machined_black"],
           variants: [
             {
@@ -60,7 +60,7 @@ const wheels = [
           model: "E117",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/excel-e117.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/excel-e117.jpg",
           visual_tags: ["black", "machined_black"],
           variants: [
             {
@@ -107,7 +107,7 @@ const wheels = [
           model: "E118",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/excel-e118.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/excel-e118.jpg",
           visual_tags: ["black", "machined_black"],
           variants: [
             {
@@ -154,7 +154,7 @@ const wheels = [
           model: "E124",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/excel-e124.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/excel-e124.jpg",
           visual_tags: ["black"],
           variants: [
             {
@@ -201,7 +201,7 @@ const wheels = [
           model: "E121",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/excel-e121.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/excel-e121.jpg",
           visual_tags: ["black", "machined_black"],
           variants: [
             {
@@ -248,7 +248,7 @@ const wheels = [
           model: "E114",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/excel-e114.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/excel-e114.jpg",
           visual_tags: ["black", "machined_black"],
           variants: [
             {
@@ -295,7 +295,7 @@ const wheels = [
           model: "E116",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/excel-e116.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/excel-e116.jpg",
           visual_tags: ["black", "machined_black"],
           variants: [
             {
@@ -318,7 +318,7 @@ const wheels = [
           model: "E108",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/excel-e108.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/excel-e108.jpg",
           visual_tags: ["chrome", "polished"],
           variants: [
             {
@@ -342,7 +342,7 @@ const wheels = [
           model: "AR681",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/achieva-ar681.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/achieva-ar681.jpg",
           visual_tags: ["chrome", "gold", "two_tone"],
           variants: [
             {
@@ -431,7 +431,7 @@ const wheels = [
           model: "AR588",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/achieva-ar588.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/achieva-ar588.jpg",
           visual_tags: ["black"],
           variants: [
             {
@@ -484,7 +484,7 @@ const wheels = [
           model: "AR538",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/achieva-ar538.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/achieva-ar538.jpg",
           visual_tags: ["chrome", "machined_black"],
           variants: [
             {
@@ -531,7 +531,7 @@ const wheels = [
           model: "AR598",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/achieva-ar598.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/achieva-ar598.jpg",
           visual_tags: ["black", "machined_black"],
           variants: [
             {
@@ -578,7 +578,7 @@ const wheels = [
           model: "AR599",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/achieva-ar599.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/achieva-ar599.jpg",
           visual_tags: ["black", "machined_black"],
           variants: [
             {
@@ -625,7 +625,7 @@ const wheels = [
           model: "AR128",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/achieva-ar128.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/achieva-ar128.jpg",
           visual_tags: ["chrome", "blue", "two_tone"],
           variants: [
             {
@@ -648,7 +648,7 @@ const wheels = [
           model: "AR508",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/achieva-ar508.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/achieva-ar508.jpg",
           visual_tags: ["chrome"],
           variants: [
             {
@@ -671,7 +671,7 @@ const wheels = [
           model: "AR218",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/achieva-ar218.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/achieva-ar218.jpg",
           visual_tags: ["chrome", "machined_black"],
           variants: [
             {
@@ -694,7 +694,7 @@ const wheels = [
           model: "AR658",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/achieva-ar658.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/achieva-ar658.jpg",
           visual_tags: ["chrome", "black", "red", "two_tone"],
           variants: [
             {
@@ -759,7 +759,7 @@ const wheels = [
           model: "AR138",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/achieva-ar138.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/achieva-ar138.jpg",
           visual_tags: ["black", "machined_black"],
           variants: [
             {
@@ -794,7 +794,7 @@ const wheels = [
           model: "AR558",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/achieva-ar558.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/achieva-ar558.jpg",
           visual_tags: ["black", "machined_black"],
           variants: [
             {
@@ -841,7 +841,7 @@ const wheels = [
           model: "AR682",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/achieva-ar682.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/achieva-ar682.jpg",
           visual_tags: ["black", "machined_black"],
           variants: [
             {
@@ -876,7 +876,7 @@ const wheels = [
           model: "AR738",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/achieva-ar738.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/achieva-ar738.jpg",
           visual_tags: ["chrome", "black", "red", "two_tone"],
           variants: [
             {
@@ -941,7 +941,7 @@ const wheels = [
           model: "638",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/achieva-638.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/achieva-638.jpg",
           visual_tags: ["black", "machined_black"],
           variants: [
             {
@@ -964,7 +964,7 @@ const wheels = [
           model: "AR688",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/achieva-ar688.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/achieva-ar688.jpg",
           visual_tags: ["black"],
           variants: [
             {
@@ -987,7 +987,7 @@ const wheels = [
           model: "AR518",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/achieva-ar518.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/achieva-ar518.jpg",
           visual_tags: ["blue", "black", "two_tone"],
           variants: [
             {
@@ -1010,7 +1010,7 @@ const wheels = [
           model: "AR528",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/achieva-ar528.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/achieva-ar528.jpg",
           visual_tags: ["black"],
           variants: [
             {
@@ -1033,7 +1033,7 @@ const wheels = [
           model: "AR578",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/achieva-ar578.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/achieva-ar578.jpg",
           visual_tags: ["black"],
           variants: [
             {
@@ -1056,7 +1056,7 @@ const wheels = [
           model: "AR618",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/achieva-ar618.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/achieva-ar618.jpg",
           visual_tags: ["black"],
           variants: [
             {
@@ -1079,7 +1079,7 @@ const wheels = [
           model: "AR718",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/achieva-ar718.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/achieva-ar718.jpg",
           visual_tags: ["chrome"],
           variants: [
             {
@@ -1145,7 +1145,7 @@ const wheels = [
           model: "Model 56",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/arisun-model-56.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/arisun-model-56.jpg",
           visual_tags: ["black", "machined_black"],
           variants: [
             {
@@ -1174,7 +1174,7 @@ const wheels = [
           model: "Model 75",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/arisun-model-75.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/arisun-model-75.jpg",
           visual_tags: ["gunmetal"],
           variants: [
             {
@@ -1203,7 +1203,7 @@ const wheels = [
           model: "Model 74",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/arisun-model-74.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/arisun-model-74.jpg",
           visual_tags: ["black"],
           variants: [
             {
@@ -1238,7 +1238,7 @@ const wheels = [
           model: "Model 57",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/arisun-model-57.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/arisun-model-57.jpg",
           visual_tags: ["black", "machined_black"],
           variants: [
             {
@@ -1316,7 +1316,7 @@ const wheels = [
           model: "C-Series Black Machined",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/wheelmate-c-black-machined.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wheelmate-c-black-machined.jpg",
           visual_tags: ["black", "machined_black"],
           variants: [
             {
@@ -1339,7 +1339,7 @@ const wheels = [
           model: "C-Series Silver Machined",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/wheelmate-c-silver-machined.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wheelmate-c-silver-machined.jpg",
           visual_tags: ["chrome", "silver"],
           variants: [
             {
@@ -1362,7 +1362,7 @@ const wheels = [
           model: "C-Series Bronze Clear",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/wheelmate-c-bronze-clear.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wheelmate-c-bronze-clear.jpg",
           visual_tags: ["bronze", "gold"],
           variants: [
             {
@@ -1379,7 +1379,7 @@ const wheels = [
           model: "C-Series Black Smoke",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/wheelmate-c-black-smoke.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wheelmate-c-black-smoke.jpg",
           visual_tags: ["black", "machined_black"],
           variants: [
             {
@@ -1396,7 +1396,7 @@ const wheels = [
           model: "R-Series Black Machined",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/wheelmate-r-black-machined.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wheelmate-r-black-machined.jpg",
           visual_tags: ["black"],
           variants: [
             {
@@ -1419,7 +1419,7 @@ const wheels = [
           model: "R-Series Silver Machined",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/wheelmate-r-silver-machined.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wheelmate-r-silver-machined.jpg",
           visual_tags: ["chrome", "silver"],
           variants: [
             {
@@ -1442,7 +1442,7 @@ const wheels = [
           model: "R-Series Bronze Clear",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/wheelmate-r-bronze-clear.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wheelmate-r-bronze-clear.jpg",
           visual_tags: ["bronze", "gold"],
           variants: [
             {
@@ -1465,7 +1465,7 @@ const wheels = [
           model: "R-Series All Satin Black",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/wheelmate-r-satin-black.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wheelmate-r-satin-black.jpg",
           visual_tags: ["black", "machined_black"],
           variants: [
             {
@@ -1488,7 +1488,7 @@ const wheels = [
           model: "R-Series All Gloss Black",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/wheelmate-r-gloss-black.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wheelmate-r-gloss-black.jpg",
           visual_tags: ["black", "machined_black"],
           variants: [
             {
@@ -1505,7 +1505,7 @@ const wheels = [
           model: "R-Series Black w/Mach Edge",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/wheelmate-r-black-mach-edge.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wheelmate-r-black-mach-edge.jpg",
           visual_tags: ["black"],
           variants: [
             {
@@ -1528,7 +1528,7 @@ const wheels = [
           model: "R-Series White w/Mach Edge",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/wheelmate-r-white-mach-edge.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wheelmate-r-white-mach-edge.jpg",
           visual_tags: ["black", "machined_black"],
           variants: [
             {
@@ -1545,7 +1545,7 @@ const wheels = [
           model: "R-Series Black Smoke",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/wheelmate-r-black-smoke.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wheelmate-r-black-smoke.jpg",
           visual_tags: ["black", "machined_black"],
           variants: [
             {
@@ -1562,7 +1562,7 @@ const wheels = [
           model: "J-Series Black Machined",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/wheelmate-j-black-machined.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wheelmate-j-black-machined.jpg",
           visual_tags: ["black"],
           variants: [
             {
@@ -1591,7 +1591,7 @@ const wheels = [
           model: "J-Series Silver Machined",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/wheelmate-j-silver-machined.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wheelmate-j-silver-machined.jpg",
           visual_tags: ["chrome", "silver"],
           variants: [
             {
@@ -1620,7 +1620,7 @@ const wheels = [
           model: "J-Series Chrome Plate",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/wheelmate-j-chrome-plate.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wheelmate-j-chrome-plate.jpg",
           visual_tags: ["chrome"],
           variants: [
             {
@@ -1649,7 +1649,7 @@ const wheels = [
           model: "J-Series White Machined",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/wheelmate-j-white-machined.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wheelmate-j-white-machined.jpg",
           visual_tags: ["white", "chrome"],
           variants: [
             {
@@ -1666,7 +1666,7 @@ const wheels = [
           model: "J-Series All Satin Black",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/wheelmate-j-satin-black.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wheelmate-j-satin-black.jpg",
           visual_tags: ["black", "machined_black"],
           variants: [
             {
@@ -1695,7 +1695,7 @@ const wheels = [
           model: "J-Series Black w/Mach Groove",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/wheelmate-j-black-mach-groove.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wheelmate-j-black-mach-groove.jpg",
           visual_tags: ["black", "machined_black"],
           variants: [
             {
@@ -1718,7 +1718,7 @@ const wheels = [
           model: "J-Series Bronze w/Mach Groove",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/wheelmate-j-bronze-mach-groove.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wheelmate-j-bronze-mach-groove.jpg",
           visual_tags: ["bronze", "gold"],
           variants: [
             {
@@ -1742,7 +1742,7 @@ const wheels = [
           model: "Steel Wheels",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "/products/excel-steel-12.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/excel-steel-12.jpg",
           visual_tags: ["black", "white"],
           variants: [
             {

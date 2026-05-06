@@ -8,7 +8,7 @@ const tiresGolf = [
           category: "tire",
           vehicle_type: "golf_cart",
           type: "All Terrain",
-          image_url: "/products/excel-sahara-classic.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/excel-sahara-classic.jpg",
           visual_tags: ["black"],
           features: ["All Terrain tread", "On or Off the Road", "DOT for street legal use", "Smooth Ride"],
           variants: [
@@ -81,7 +81,7 @@ const tiresGolf = [
           category: "tire",
           vehicle_type: "golf_cart",
           type: "Street/Turf Low Profile",
-          image_url: "/products/excel-classic.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/excel-classic.jpg",
           visual_tags: ["black"],
           features: ["Low profile Classic look", "Street or Course", "DOT for street legal use", "Smooth Ride", "Quiet Operation"],
           variants: [
@@ -160,7 +160,7 @@ const tiresGolf = [
           category: "tire",
           vehicle_type: "golf_cart",
           type: "Street Radial",
-          image_url: "/products/excel-street-fox-radial.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/excel-street-fox-radial.jpg",
           visual_tags: ["black"],
           features: ["Lightweight aggressive Radial construction", "Large footprint for superior traction", "Street or Golf Course", "DOT for street legal use", "Smooth Ride and quiet operation"],
           variants: [
@@ -227,7 +227,7 @@ const tiresGolf = [
           category: "tire",
           vehicle_type: "golf_cart",
           type: "OEM Replacement",
-          image_url: "/products/excel-golf-pro.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/excel-golf-pro.jpg",
           visual_tags: ["black"],
           features: ["Original Equipment replacement size", "Street or Golf Course", "DOT for street legal use", "Economical", "Quiet operation"],
           variants: [
@@ -251,7 +251,7 @@ const tiresGolf = [
           category: "tire",
           vehicle_type: "golf_cart",
           type: "Low Profile Metric",
-          image_url: "/products/excel-golf-pro-ii.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/excel-golf-pro-ii.jpg",
           visual_tags: ["black"],
           features: ["Low profile metric sizing", "Street or Golf Course", "DOT for street legal use", "Smooth Ride", "Quiet operation"],
           variants: [
@@ -276,7 +276,7 @@ const tiresGolf = [
           category: "tire",
           vehicle_type: "golf_cart",
           type: "All Terrain",
-          image_url: "/products/excel-atx-trail.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/excel-atx-trail.jpg",
           visual_tags: ["black"],
           features: ["Light weight all purpose tread", "Street, Dirt or Turf", "DOT for street legal use", "Smooth Ride", "Quiet operation"],
           variants: [
@@ -324,7 +324,7 @@ const tiresGolf = [
           category: "tire",
           vehicle_type: "golf_cart",
           type: "Low Profile Metric",
-          image_url: "/products/excel-endura.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/excel-endura.jpg",
           visual_tags: ["black"],
           features: ["Low profile metric sizing", "Street or Golf Course", "DOT for street legal use", "Smooth Ride", "Quiet operation"],
           variants: [
@@ -367,7 +367,7 @@ const tiresGolf = [
           category: "tire",
           vehicle_type: "golf_cart",
           type: "Steel Belted Radial",
-          image_url: "/products/wanda-wr028.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wanda-wr028.jpg",
           visual_tags: ["black"],
           features: ["Lightweight, smooth-riding all purpose tread", "Great price", "4 ply carcass", "DOT Approved Spec", "High Load ratings"],
           variants: [
@@ -409,7 +409,7 @@ const tiresGolf = [
           model: "WG07",
           category: "tire",
           vehicle_type: "golf_cart",
-          image_url: "/products/wanda-wg07.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wanda-wg07.jpg",
           visual_tags: ["black"],
           features: ["Center rib design improves stability", "Variable pitch pattern reduces tire noise", "Circular arc shoulder prevents partial wear"],
           variants: [
@@ -427,7 +427,7 @@ const tiresGolf = [
           model: "P3118",
           category: "tire",
           vehicle_type: "golf_cart",
-          image_url: "/products/wanda-p3118.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wanda-p3118.jpg",
           visual_tags: ["black"],
           features: ["Non-directional tread pattern design", "High-land ratio with multi-angle pattern blocks", "Reduced tire noise during driving", "Steel sheet between pattern blocks"],
           variants: [
@@ -463,7 +463,7 @@ const tiresGolf = [
           model: "WG02",
           category: "tire",
           vehicle_type: "golf_cart",
-          image_url: "/products/wanda-wg02.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wanda-wg02.jpg",
           visual_tags: ["black"],
           features: ["Variable pitch design reduces tire noise", "High land ratio improves wear resistance", "Excellent maneuverability", "Large pattern blocks improve handling"],
           variants: [
@@ -511,7 +511,7 @@ const tiresGolf = [
           model: "GFX P825",
           category: "tire",
           vehicle_type: "golf_cart",
-          image_url: "/products/wanda-gfx-p825.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wanda-gfx-p825.jpg",
           visual_tags: ["black"],
           features: ["Lightweight, smooth-riding", "DOT Approved Spec", "High Load ratings", "4 ply carcass"],
           variants: [
@@ -552,7 +552,7 @@ const tiresGolf = [
           model: "Knobby P322",
           category: "tire",
           vehicle_type: "golf_cart",
-          image_url: "/products/wanda-knobby-p322.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wanda-knobby-p322.jpg",
           visual_tags: ["black"],
           features: ["Enhanced performance for most conditions", "4 ply design"],
           variants: [
@@ -569,7 +569,7 @@ const tiresGolf = [
           model: "Sport P340",
           category: "tire",
           vehicle_type: "golf_cart",
-          image_url: "/products/wanda-sport-p340.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wanda-sport-p340.jpg",
           visual_tags: ["black"],
           features: ["Industry leading materials", "Fusion of well balanced design", "Safe comfortable ride", "4 ply design"],
           variants: [
@@ -586,7 +586,7 @@ const tiresGolf = [
           model: "Turf P332",
           category: "tire",
           vehicle_type: "golf_cart",
-          image_url: "/products/wanda-turf-p332.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wanda-turf-p332.jpg",
           visual_tags: ["black"],
           features: ["Industry leading materials", "Fusion of well balanced design", "Safe comfortable ride", "4 ply design"],
           variants: [
@@ -603,7 +603,7 @@ const tiresGolf = [
           model: "Lug P311",
           category: "tire",
           vehicle_type: "golf_cart",
-          image_url: "/products/wanda-lug-p311.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wanda-lug-p311.jpg",
           visual_tags: ["black"],
           features: ["Industry leading materials", "Fusion of well balanced design", "Safe comfortable ride", "4 ply design"],
           variants: [
@@ -620,7 +620,7 @@ const tiresGolf = [
           model: "P3077",
           category: "tire",
           vehicle_type: "golf_cart",
-          image_url: "/products/wanda-p3077.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wanda-p3077.jpg",
           visual_tags: ["black"],
           features: ["8 ply design", "Specially designed for this market"],
           variants: [
@@ -638,7 +638,7 @@ const tiresGolf = [
           model: "Caymen AT IA-8028",
           category: "tire",
           vehicle_type: "golf_cart",
-          image_url: "/products/innova-caymen-at.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/innova-caymen-at.jpg",
           visual_tags: ["black"],
           features: ["All trails tread pattern", "Diamond side lugs for ruts and obstacles", "Double cut micro knurling for traction", "OEM replacement tire for popular SxS vehicles"],
           variants: [
@@ -698,7 +698,7 @@ const tiresGolf = [
           model: "Driver IA-8018",
           category: "tire",
           vehicle_type: "golf_cart",
-          image_url: "/products/innova-driver-ia8018.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/innova-driver-ia8018.jpg",
           visual_tags: ["black"],
           features: ["Designed for transport/utility vehicles", "Higher load capacity, extended service life", "Double Eagle style tread, golf course approved", "Reinforced carcass for added stability", "Rounded shoulder, turf friendly", "DOT rated for street", "Multi-purpose: trailer to golf carts"],
           variants: [
@@ -746,7 +746,7 @@ const tiresGolf = [
           model: "Driver Pro IA-8018",
           category: "tire",
           vehicle_type: "golf_cart",
-          image_url: "/products/innova-driver-pro-ia8018.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/innova-driver-pro-ia8018.jpg",
           visual_tags: ["black"],
           features: ["Premium golf tires with Radial construction", "Lower rolling resistance, wide footprint", "DOT rated for street and golf course", "15\" sets a new standard for custom Golf Cars"],
           variants: [
@@ -789,7 +789,7 @@ const tiresGolf = [
           model: "Cruze",
           category: "tire",
           vehicle_type: "golf_cart",
-          image_url: "/products/arisun-cruze.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/arisun-cruze.jpg",
           visual_tags: ["black"],
           features: ["Smooth, quiet ride", "Non directional tread pattern", "Lightweight carcass", "DOT approved", "Turf safe"],
           variants: [
@@ -843,7 +843,7 @@ const tiresGolf = [
           model: "X-Trail AT",
           category: "tire",
           vehicle_type: "golf_cart",
-          image_url: "/products/arisun-xtrail-at.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/arisun-xtrail-at.jpg",
           visual_tags: ["black"],
           features: ["All terrain golf cart tire", "Excellent traction in wet and dry on most trails (gravel, dirt)"],
           variants: [
@@ -880,7 +880,7 @@ const tiresGolf = [
           model: "Classic Golf Cart Tires",
           category: "tire",
           vehicle_type: "golf_cart",
-          image_url: "/products/multi-golf-cart-classics.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/multi-golf-cart-classics.jpg",
           visual_tags: ["black"],
           features: ["Hole N1, Tour Max, Links, Fairway Pro, Tow Master, D268 patterns", "Multi-brand classic golf cart selection"],
           variants: [

@@ -6,7 +6,7 @@ const tiresTurfA = [
           model: "Turf Saver",
           category: "tire",
           vehicle_type: "lawn_garden",
-          image_url: "/products/turf-saver.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/turf-saver.jpg",
           visual_tags: ["black"],
           features: ["Classic square shouldered design", "Industry leader for residential lawn mowers", "At prole and chevron tread for excellent traction", "Versatile in both applications and treatment"],
           variants: [
@@ -56,7 +56,7 @@ const tiresTurfA = [
           model: "Multi Track Tires",
           category: "tire",
           vehicle_type: "lawn_garden",
-          image_url: "/products/multi-track-tires.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/multi-track-tires.jpg",
           visual_tags: ["black"],
           features: ["Professional grade tires with deep tread lugs in a profile optimized for stability and traction", "Multi-Trac C/S compound is our most durable"],
           variants: [
@@ -115,7 +115,7 @@ const tiresTurfA = [
           model: "Turf Armor",
           category: "tire",
           vehicle_type: "lawn_garden",
-          image_url: "/products/turf-armor.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/turf-armor.jpg",
           visual_tags: ["black"],
           features: ["Commercial grade durable tread compound", "Deep elements optimized for stability and traction"],
           variants: [
@@ -133,7 +133,7 @@ const tiresTurfA = [
           model: "Turf Master",
           category: "tire",
           vehicle_type: "lawn_garden",
-          image_url: "/products/turf-master.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/turf-master.jpg",
           visual_tags: ["black"],
           features: ["Professional grade with most durable compound", "Deep tread lugs in profile optimized for stability and traction"],
           variants: [
@@ -169,7 +169,7 @@ const tiresTurfA = [
           model: "Turf Trac RS",
           category: "tire",
           vehicle_type: "lawn_garden",
-          image_url: "/products/turf-trac-rs.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/turf-trac-rs.jpg",
           visual_tags: ["black"],
           features: ["All-around best performance in residential product line", "Applications include grounds care equipment, zero turn mowers, utility vehicles"],
           variants: [

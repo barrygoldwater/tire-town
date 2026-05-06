@@ -6,7 +6,7 @@ const accessories = [
           model: "Lug Nuts",
           category: "accessory",
           vehicle_type: "accessories",
-          image_url: "/products/excel-lug-nuts.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/excel-lug-nuts.jpg",
           visual_tags: ["black", "chrome"],
           variants: [
             {

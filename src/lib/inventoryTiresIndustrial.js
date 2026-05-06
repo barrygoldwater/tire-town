@@ -7,7 +7,7 @@ const tiresIndustrial = [
           model: "Industrial Trax",
           category: "tire",
           vehicle_type: "industrial",
-          image_url: "/products/industrial-trax.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/industrial-trax.jpg",
           visual_tags: ["black"],
           features: ["Designed for hard surface utility vehicle applications", "Concession vehicles on golf courses"],
           variants: [
@@ -54,7 +54,7 @@ const tiresIndustrial = [
           model: "Industrial Tires",
           category: "tire",
           vehicle_type: "industrial",
-          image_url: "/products/industrial-tires.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/industrial-tires.jpg",
           visual_tags: ["black"],
           features: ["Heavy-duty industrial applications", "Skid steer and forklift compatible"],
           variants: [
@@ -310,7 +310,7 @@ const tiresIndustrial = [
           model: "Ground Force 400",
           category: "tire",
           vehicle_type: "industrial",
-          image_url: "/products/ground-force-400.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/ground-force-400.jpg",
           visual_tags: ["black"],
           features: ["Robust sidewall design", "Tread compound for general duty skid steer applications"],
           variants: [
@@ -371,7 +371,7 @@ const tiresIndustrial = [
           model: "Trac Chief",
           category: "tire",
           vehicle_type: "industrial",
-          image_url: "/products/trac-chief.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/trac-chief.jpg",
           visual_tags: ["black"],
           features: ["Rugged tread compound, flat profile increases traction and stability", "General duty skid steer and compact tractor applications"],
           variants: [
@@ -544,7 +544,7 @@ const tiresIndustrial = [
           model: "Specialty Tires",
           category: "tire",
           vehicle_type: "industrial",
-          image_url: "/products/specialty-tires.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/specialty-tires.jpg",
           visual_tags: ["black"],
           features: ["Specialty applications: industrial, ag, construction"],
           variants: [
@@ -668,7 +668,7 @@ const tiresIndustrial = [
           model: "Trailer Tires",
           category: "tire",
           vehicle_type: "trailer",
-          image_url: "/products/trailer-tires.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/trailer-tires.jpg",
           visual_tags: ["black"],
           features: ["Radial Trail HD, Sport Trail, Sport Trail LH, USA Trail patterns", "Boat, cargo, horse, stock, utility, specialty trailers", "Increased tire life, durable bias and radial construction"],
           variants: [
