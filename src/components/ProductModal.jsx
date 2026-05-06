@@ -1,35 +1,7 @@
 import { useState } from "react";
 import { X, Phone } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
-
-// ── Size breakdown helper ─────────────────────────────────────────────────────
-
-function getSizeBreakdown(sizeStr = "", isWheel = false) {
-  const s = sizeStr.trim();
-
-  if (isWheel) {
-    // Wheel: "10x7 4/4" or "12x6 4/4" — first two numbers are diameter × width
-    const m = s.match(/^(\d+(?:\.\d+)?)[xX](\d+(?:\.\d+)?)/);
-    if (m) return `${m[1]}" diameter · ${m[2]}" wide`;
-    return null;
-  }
-
-  // Imperial tire: "22X11-10" or "18x8.50-8" or "22X11.00-10"
-  const imp = s.match(/^(\d+(?:\.\d+)?)[xX](\d+(?:\.\d+)?)-(\d+)/);
-  if (imp) {
-    return `Fits ${imp[3]}" rim · ${imp[1]}" tall · ${imp[2]}" wide`;
-  }
-
-  // Metric tire: "205/50-10" or "205/50R10" or "ST205/75R15"
-  const met = s.match(/^(?:ST|LT)?(\d{3})\/(\d+)[RrDd\-](\d+)/i);
-  if (met) {
-    const widthMm = parseInt(met[1]);
-    const widthIn = (widthMm / 25.4).toFixed(1);
-    return `Fits ${met[3]}" rim · ${widthMm}mm wide (${widthIn}") · ${met[2]}% aspect`;
-  }
-
-  return null;
-}
+import { parseSize } from "@/lib/parseSize";
 
 // ── Type pill label ───────────────────────────────────────────────────────────
 
@@ -174,7 +146,8 @@ export default function ProductModal({ product, open, onClose, onQuoteClick }) {
                 </div>
                 <div className="space-y-2">
                   {product.variants.map((v, i) => {
-                    const breakdown = getSizeBreakdown(v.size, isWheel);
+                    const parsed = parseSize(v.size);
+                    const breakdown = parsed.formatted;
                     const sub = isWheel
                       ? [v.finish, v.offset].filter(Boolean).join(" · ")
                       : [v.ply ? `${v.ply} ply` : null, v.load_rating, v.tread_pattern].filter(Boolean).join(" · ");
