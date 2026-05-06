@@ -64,19 +64,19 @@ export default function CategoryStrip({ selected, onSelect }) {
         }
         .vroom-smoke {
           position: absolute;
-          left: 14%;
-          bottom: 10%;
-          width: 10px;
-          height: 10px;
+          left: 8%;
+          bottom: 4%;
           border-radius: 50%;
-          background: rgba(140,140,140,0.55);
-          filter: blur(3px);
+          background: rgba(130,130,130,0.65);
+          filter: blur(4px);
           pointer-events: none;
-          animation: smokePuff 340ms ease-out forwards;
+          animation: smokePuff 380ms ease-out forwards;
         }
-        .vroom-smoke-1 { --sx: -10px; --sy: -8px;  animation-delay: 0ms;  }
-        .vroom-smoke-2 { --sx: -14px; --sy: -14px; animation-delay: 55ms; }
-        .vroom-smoke-3 { --sx: -8px;  --sy: -20px; animation-delay: 110ms; }
+        .vroom-smoke-1 { width: 13px; height: 13px; --sx: -12px; --sy: -6px;  animation-delay: 0ms;  }
+        .vroom-smoke-2 { width: 11px; height: 11px; --sx: -16px; --sy: -13px; animation-delay: 50ms; }
+        .vroom-smoke-3 { width: 14px; height: 14px; --sx: -10px; --sy: -19px; animation-delay: 100ms; }
+        .vroom-smoke-4 { width: 10px; height: 10px; --sx: -18px; --sy: -8px;  animation-delay: 30ms; }
+        .vroom-smoke-5 { width: 12px; height: 12px; --sx: -8px;  --sy: -24px; animation-delay: 150ms; }
         .vroom-icon {
           animation: vroomIcon ${VROOM_MS}ms cubic-bezier(0.4,0,0.8,1) forwards;
         }
@@ -119,6 +119,8 @@ export default function CategoryStrip({ selected, onSelect }) {
                       <div className="vroom-smoke vroom-smoke-1" />
                       <div className="vroom-smoke vroom-smoke-2" />
                       <div className="vroom-smoke vroom-smoke-3" />
+                      <div className="vroom-smoke vroom-smoke-4" />
+                      <div className="vroom-smoke vroom-smoke-5" />
                     </>
                   )}
 
