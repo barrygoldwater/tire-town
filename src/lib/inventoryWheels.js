@@ -694,7 +694,7 @@ const wheels = [
           model: "AR658",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/Achieva-AR658.jpg.jpeg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/Achieva-AR658.jpeg",
           visual_tags: ["chrome", "black", "red", "two_tone"],
           variants: [
             {
@@ -876,7 +876,7 @@ const wheels = [
           model: "AR738",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/Achieva-AR738.jpg.jpeg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/Achieva-AR738.jpeg",
           visual_tags: ["chrome", "black", "red", "two_tone"],
           variants: [
             {
@@ -1079,7 +1079,7 @@ const wheels = [
           model: "AR718",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/Achieva-AR718.jpg.jpeg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/Achieva-AR718.jpeg",
           visual_tags: ["chrome"],
           variants: [
             {
