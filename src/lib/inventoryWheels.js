@@ -694,7 +694,7 @@ const wheels = [
           model: "AR658",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/achieva-ar658.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/Achieva-AR658.jpg.jpeg",
           visual_tags: ["chrome", "black", "red", "two_tone"],
           variants: [
             {
@@ -876,7 +876,7 @@ const wheels = [
           model: "AR738",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/achieva-ar738.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/Achieva-AR738.jpg.jpeg",
           visual_tags: ["chrome", "black", "red", "two_tone"],
           variants: [
             {
@@ -1079,7 +1079,7 @@ const wheels = [
           model: "AR718",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/achieva-ar718.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/Achieva-AR718.jpg.jpeg",
           visual_tags: ["chrome"],
           variants: [
             {
@@ -1528,7 +1528,7 @@ const wheels = [
           model: "R-Series White w/Mach Edge",
           category: "wheel",
           vehicle_type: "golf_cart",
-          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wheelmate-r-white-mach-edge.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/WheelMate-RSeries-WhiteMachEdge.png",
           visual_tags: ["black", "machined_black"],
           variants: [
             {
