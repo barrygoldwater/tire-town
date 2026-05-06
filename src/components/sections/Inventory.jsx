@@ -30,14 +30,14 @@ export default function Inventory({ onProductClick, category }) {
 
   // For accessories category, default tab is 'accessories' (only one tab)
   // For other categories, default tab is 'wheels'
-  const [type, setType] = useState(isAccessoryCategory ? 'accessories' : 'wheels');
+  const [type, setType] = useState(isAccessoryCategory ? 'accessories' : 'tires');
   const [activeBrand, setActiveBrand] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [aiResults, setAiResults] = useState(null);
   const [isAiSearching, setIsAiSearching] = useState(false);
 
   useEffect(() => {
-    setType(isAccessoryCategory ? 'accessories' : 'wheels');
+    setType(isAccessoryCategory ? 'accessories' : 'tires');
     setActiveBrand('All');
     setSearchQuery('');
     setAiResults(null);
