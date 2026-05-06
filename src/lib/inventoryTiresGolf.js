@@ -8,7 +8,7 @@ const tiresGolf = [
           category: "tire",
           vehicle_type: "golf_cart",
           type: "All Terrain",
-          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/excel-sahara-classic.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/Excel-Sahara-Classic.webp",
           visual_tags: ["black"],
           features: ["All Terrain tread", "On or Off the Road", "DOT for street legal use", "Smooth Ride"],
           variants: [
@@ -81,7 +81,7 @@ const tiresGolf = [
           category: "tire",
           vehicle_type: "golf_cart",
           type: "Street/Turf Low Profile",
-          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/excel-classic.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/Excel-Classic.webp",
           visual_tags: ["black"],
           features: ["Low profile Classic look", "Street or Course", "DOT for street legal use", "Smooth Ride", "Quiet Operation"],
           variants: [
@@ -569,7 +569,7 @@ const tiresGolf = [
           model: "Sport P340",
           category: "tire",
           vehicle_type: "golf_cart",
-          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wanda-sport-p340.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/Wanda-Sport-P340.avif",
           visual_tags: ["black"],
           features: ["Industry leading materials", "Fusion of well balanced design", "Safe comfortable ride", "4 ply design"],
           variants: [
@@ -620,7 +620,7 @@ const tiresGolf = [
           model: "P3077",
           category: "tire",
           vehicle_type: "golf_cart",
-          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/wanda-p3077.jpg",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/Wanda-P3077.jpg",
           visual_tags: ["black"],
           features: ["8 ply design", "Specially designed for this market"],
           variants: [
