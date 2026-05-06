@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, Phone } from "lucide-react";
+import { X, Phone, CheckCircle, MapPin, Package } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { parseSize } from "@/lib/parseSize";
 
@@ -58,7 +58,7 @@ export default function ProductModal({ product, open, onClose, onQuoteClick }) {
   return (
     <Dialog open={open} onOpenChange={onClose}>
       <DialogContent
-        className="p-0 gap-0 max-w-[1080px] w-full sm:w-[calc(100%-32px)] h-[92vh] sm:h-auto sm:max-h-[90vh] rounded-t-[16px] sm:rounded-[6px] data-[state=open]:slide-in-from-bottom sm:data-[state=open]:slide-in-from-bottom-0 fixed bottom-0 left-0 right-0 sm:left-1/2 sm:bottom-auto sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 translate-x-0 translate-y-0 overflow-hidden flex flex-col [&>button:last-of-type]:hidden"
+        className="p-0 gap-0 max-w-[1100px] w-full sm:w-[calc(100%-32px)] h-[92vh] sm:h-[85vh] rounded-t-[16px] sm:rounded-[6px] data-[state=open]:slide-in-from-bottom sm:data-[state=open]:slide-in-from-bottom-0 fixed bottom-0 left-0 right-0 sm:left-1/2 sm:bottom-auto sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 translate-x-0 translate-y-0 overflow-hidden flex flex-col [&>button:last-of-type]:hidden"
       >
         {/* Sticky header */}
         <div className="flex items-center justify-between px-5 sm:px-7 py-3.5 sm:py-4 border-b border-border bg-[#fafaf9] flex-shrink-0">
@@ -68,23 +68,23 @@ export default function ProductModal({ product, open, onClose, onQuoteClick }) {
           </button>
         </div>
 
-        {/* Body */}
-        <div className="flex-1 overflow-y-auto overscroll-contain">
-          <div className="grid sm:grid-cols-[1fr_1.15fr] sm:min-h-[480px]">
+        {/* Body — mobile: single scroll column; desktop: image fixed left, details scroll right */}
+        <div className="flex-1 overflow-y-auto sm:overflow-hidden overscroll-contain flex flex-col sm:flex-row">
 
-            {/* Image */}
-            <div className={`aspect-square sm:aspect-auto flex items-center justify-center relative ${showImage ? 'bg-[#f5f5f4]' : 'bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a]'}`}>
-              {showImage ? (
-                <img src={product.image_url} alt={product.model} onError={() => setImgError(true)} className="w-full h-full object-contain p-6 sm:p-9" />
-              ) : (
-                <>
-                  <div className="w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] border border-white/14 rounded-full absolute" />
-                  <span className="relative text-white/92 text-[24px] sm:text-[32px] font-extrabold uppercase tracking-[0.18em] text-center px-4">{product.brand}</span>
-                </>
-              )}
-            </div>
+          {/* Image — full width on mobile, fixed left column on desktop */}
+          <div className={`aspect-square sm:aspect-auto sm:w-[44%] flex-shrink-0 flex items-center justify-center relative ${showImage ? 'bg-[#f5f5f4]' : 'bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a]'}`}>
+            {showImage ? (
+              <img src={product.image_url} alt={product.model} onError={() => setImgError(true)} className="w-full h-full object-contain p-6 sm:p-9" />
+            ) : (
+              <>
+                <div className="w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] border border-white/14 rounded-full absolute" />
+                <span className="relative text-white/92 text-[24px] sm:text-[32px] font-extrabold uppercase tracking-[0.18em] text-center px-4">{product.brand}</span>
+              </>
+            )}
+          </div>
 
-            {/* Details */}
+          {/* Details — scrolls independently on desktop */}
+          <div className="flex-1 sm:overflow-y-auto overscroll-contain min-w-0">
             <div className="p-5 sm:p-9 min-w-0">
 
               {/* Title + type pill */}
@@ -123,20 +123,22 @@ export default function ProductModal({ product, open, onClose, onQuoteClick }) {
                 </div>
               )}
 
-              {/* Logistics chips */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mt-5 mb-6">
-                <div className="rounded-md border border-black/8 bg-[#fafaf9] px-3.5 py-2.5">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">Lead Time</p>
-                  <p className="text-[12px] font-medium text-[#0a0a0a] mt-0.5">In stock — ships next business day</p>
-                </div>
-                <div className="rounded-md border border-black/8 bg-[#fafaf9] px-3.5 py-2.5">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">Ships From</p>
-                  <p className="text-[12px] font-medium text-[#0a0a0a] mt-0.5">{product.ships_from || "Phoenix, AZ or Greenville, SC"}</p>
-                </div>
-                <div className="rounded-md border border-black/8 bg-[#fafaf9] px-3.5 py-2.5">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">Min Order</p>
-                  <p className="text-[12px] font-medium text-[#0a0a0a] mt-0.5">1 piece — no minimum</p>
-                </div>
+              {/* Logistics inline bar */}
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-4 mb-5 py-2.5 border-y border-border text-[12px] text-[#555]">
+                <span className="flex items-center gap-1.5">
+                  <CheckCircle className="w-3.5 h-3.5 text-primary flex-shrink-0" />
+                  In stock — ships next business day
+                </span>
+                <span className="text-border hidden sm:inline">·</span>
+                <span className="flex items-center gap-1.5">
+                  <MapPin className="w-3.5 h-3.5 text-muted-foreground flex-shrink-0" />
+                  {product.ships_from || "Phoenix, AZ or Greenville, SC"}
+                </span>
+                <span className="text-border hidden sm:inline">·</span>
+                <span className="flex items-center gap-1.5">
+                  <Package className="w-3.5 h-3.5 text-muted-foreground flex-shrink-0" />
+                  No minimum order
+                </span>
               </div>
 
               {/* Variants table — breakdown per row */}
