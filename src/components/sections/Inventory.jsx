@@ -39,14 +39,14 @@ export default function Inventory({ onProductClick, category }) {
 
   // For accessories category, default tab is 'accessories' (only one tab)
   // For other categories, default tab is 'wheels'
-  const [type, setType] = useState(isAccessoryCategory ? 'accessories' : 'tires');
+  const [type, setType] = useState(isAccessoryCategory ? 'accessories' : (CATEGORY_HAS_WHEELS[vehicleType] ? 'wheels' : 'tires'));
   const [activeBrand, setActiveBrand] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [aiResults, setAiResults] = useState(null);
   const [isAiSearching, setIsAiSearching] = useState(false);
 
   useEffect(() => {
-    setType(isAccessoryCategory ? 'accessories' : 'tires');
+    setType(isAccessoryCategory ? 'accessories' : (CATEGORY_HAS_WHEELS[vehicleType] ? 'wheels' : 'tires'));
     setActiveBrand('All');
     setSearchQuery('');
     setAiResults(null);
@@ -118,23 +118,23 @@ export default function Inventory({ onProductClick, category }) {
             </button>
           ) : (
             <>
-              <button
-                onClick={() => setType('tires')}
-                className={`transition-colors ${type === 'tires' ? 'text-[#0a0a0a]' : 'text-[#0a0a0a]/25 hover:text-[#0a0a0a]/55'}`}
-              >
-                Tires<span className="ml-2 text-[16px] sm:text-xl font-semibold align-baseline">{allTires.length}</span>
-              </button>
               {CATEGORY_HAS_WHEELS[vehicleType] && (
                 <>
-                  <span className="text-[#0a0a0a]/15 mx-3 sm:mx-4 font-light">/</span>
                   <button
                     onClick={() => setType('wheels')}
                     className={`transition-colors ${type === 'wheels' ? 'text-[#0a0a0a]' : 'text-[#0a0a0a]/25 hover:text-[#0a0a0a]/55'}`}
                   >
                     Wheels<span className="ml-2 text-[16px] sm:text-xl font-semibold align-baseline">{allWheels.length}</span>
                   </button>
+                  <span className="text-[#0a0a0a]/15 mx-3 sm:mx-4 font-light">/</span>
                 </>
               )}
+              <button
+                onClick={() => setType('tires')}
+                className={`transition-colors ${type === 'tires' ? 'text-[#0a0a0a]' : 'text-[#0a0a0a]/25 hover:text-[#0a0a0a]/55'}`}
+              >
+                Tires<span className="ml-2 text-[16px] sm:text-xl font-semibold align-baseline">{allTires.length}</span>
+              </button>
             </>
           )}
         </h2>
