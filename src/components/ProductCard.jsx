@@ -10,6 +10,11 @@ export default function ProductCard({ product, onClick }) {
           : uniqueSizes.join(", ");
       })()
     : product.size || "—";
+  // For single-variant products (one specific SKU per card), surface the finish
+  // and part number so cards stay visually distinct from one another.
+  const singleVariant = product.variants?.length === 1 ? product.variants[0] : null;
+  const finishLabel = singleVariant?.finish || null;
+  const partNumber = singleVariant?.part_number || null;
   const showImage = product.image_url && !imgError;
 
   return (
@@ -42,6 +47,12 @@ export default function ProductCard({ product, onClick }) {
         <p className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.12em] text-primary">{product.brand}</p>
         <p className="text-[15px] sm:text-base font-bold text-[#0a0a0a] mt-1 leading-tight">{product.model}</p>
         <p className="text-[12px] sm:text-[13px] text-muted-foreground mt-1 truncate">{sizesSummary}</p>
+        {finishLabel && (
+          <p className="text-[11px] sm:text-[12px] text-[#0a0a0a]/75 mt-1 leading-tight truncate">{finishLabel}</p>
+        )}
+        {partNumber && (
+          <p className="text-[10px] sm:text-[11px] font-mono text-muted-foreground/80 mt-1.5 truncate">{partNumber}</p>
+        )}
       </div>
     </button>
   );
