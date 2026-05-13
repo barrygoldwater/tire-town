@@ -51,7 +51,7 @@ export default function ProductCard({ product, onClick }) {
     >
       <div className={`aspect-square flex items-center justify-center overflow-hidden relative ${showImage ? 'bg-[#f5f5f4]' : 'bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a]'}`}>
         {product.is_new && (
-          <div className="absolute top-2 left-2 z-10 px-2 py-0.5 bg-primary text-white text-[9px] font-bold uppercase tracking-[0.12em] rounded-sm shadow-sm">
+          <div className="absolute top-2.5 left-2.5 z-10 px-2.5 py-1 bg-primary text-white text-[11px] font-bold uppercase tracking-[0.12em] rounded shadow-sm">
             New
           </div>
         )}
