@@ -50,6 +50,11 @@ export default function ProductCard({ product, onClick }) {
       className="text-left bg-white border border-border rounded-[4px] overflow-hidden transition-all duration-200 active:scale-[0.98] hover:-translate-y-0.5 hover:shadow-[0_12px_24px_-8px_rgba(0,0,0,0.08),0_4px_8px_-4px_rgba(0,0,0,0.04)] hover:border-[#0a0a0a]"
     >
       <div className={`aspect-square flex items-center justify-center overflow-hidden relative ${showImage ? 'bg-[#f5f5f4]' : 'bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a]'}`}>
+        {product.is_new && (
+          <div className="absolute top-2 left-2 z-10 px-2 py-0.5 bg-primary text-white text-[9px] font-bold uppercase tracking-[0.12em] rounded-sm shadow-sm">
+            New
+          </div>
+        )}
         {showImage ? (
           <img
             src={product.image_url}

@@ -62,7 +62,12 @@ export default function Inventory({ onProductClick, category }) {
     type === 'tires' ? allTires :
     allAccessories;
   const brandsForType = ['All', ...new Set(products.map(p => p.brand))];
-  const brandFiltered = activeBrand === 'All' ? products : products.filter(p => p.brand === activeBrand);
+  const brandFilteredRaw = activeBrand === 'All' ? products : products.filter(p => p.brand === activeBrand);
+  const brandFiltered = [...brandFilteredRaw].sort((a, b) => {
+    if (a.is_new && !b.is_new) return -1;
+    if (!a.is_new && b.is_new) return 1;
+    return 0;
+  });
 
   // Client-side smart search
   const clientResults = useMemo(() => {
