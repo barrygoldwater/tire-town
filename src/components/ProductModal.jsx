@@ -72,9 +72,14 @@ export default function ProductModal({ product, open, onClose, onQuoteClick }) {
         <div className="flex-1 overflow-y-auto sm:overflow-hidden overscroll-contain flex flex-col sm:flex-row">
 
           {/* Image — full width on mobile, fixed left column on desktop */}
-          <div className={`aspect-square sm:aspect-auto sm:w-[44%] flex-shrink-0 flex items-center justify-center relative ${showImage ? 'bg-[#f5f5f4]' : 'bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a]'}`}>
+          <div className={`aspect-square sm:aspect-auto sm:w-[44%] flex-shrink-0 flex flex-col items-center justify-center relative ${showImage ? 'bg-[#f5f5f4]' : 'bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a]'}`}>
             {showImage ? (
-              <img src={product.image_url} alt={product.model} onError={() => setImgError(true)} className="w-full h-full object-contain p-6 sm:p-9" />
+              <>
+                <img src={product.image_url} alt={product.model} onError={() => setImgError(true)} className="w-full h-full object-contain p-6 sm:p-9" />
+                {product.image_note && (
+                  <p className="text-[10px] italic text-muted-foreground px-4 pb-3 text-center">{product.image_note}</p>
+                )}
+              </>
             ) : (
               <>
                 <div className="w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] border border-white/14 rounded-full absolute" />
