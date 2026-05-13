@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { X, Phone, CheckCircle, MapPin, Package, DollarSign, ChevronLeft, ChevronRight } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { parseSize } from "@/lib/parseSize";
@@ -46,30 +46,40 @@ function getTypePill(product) {
 
 export default function ProductModal({ product, open, onClose, onQuoteClick }) {
   const [imgError, setImgError] = useState(false);
-  const [galleryIndex, setGalleryIndex] = useState(0);
-  
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Build the unified images array: hero first, then gallery (dedup)
+  const allImages = product
+    ? [product.image_url, ...(product.gallery_images || [])].filter((url, i, arr) => url && arr.indexOf(url) === i)
+    : [];
+  const hasMultiple = allImages.length > 1;
+  const currentImage = allImages[currentImageIndex] || product?.image_url;
+
+  // Reset to first image whenever the modal opens or the product changes
+  useEffect(() => {
+    setCurrentImageIndex(0);
+    setImgError(false);
+  }, [product?.id, open]);
+
   if (!product) return null;
 
   const isWheel = product.category === "wheel";
-  const showImage = product.image_url && !imgError;
+  const showImage = currentImage && !imgError;
   const typePill = getTypePill(product);
-  
-  // Determine which image to show
-  const allImages = product.gallery_images?.length > 0 
-    ? [product.image_url, ...product.gallery_images]
-    : [product.image_url];
-  const currentImage = allImages[galleryIndex] || product.image_url;
-  
-  const handlePrevImage = () => {
-    setGalleryIndex(prev => (prev - 1 + allImages.length) % allImages.length);
-  };
-  
-  const handleNextImage = () => {
-    setGalleryIndex(prev => (prev + 1) % allImages.length);
-  };
 
   // Collect shared ply ratings across variants (for tires)
   const plies = !isWheel ? [...new Set(product.variants.map(v => v.ply).filter(Boolean))] : [];
+
+  const goPrev = (e) => {
+    e.stopPropagation();
+    setImgError(false);
+    setCurrentImageIndex((i) => (i - 1 + allImages.length) % allImages.length);
+  };
+  const goNext = (e) => {
+    e.stopPropagation();
+    setImgError(false);
+    setCurrentImageIndex((i) => (i + 1) % allImages.length);
+  };
 
   return (
     <Dialog open={open} onOpenChange={onClose}>
@@ -91,27 +101,45 @@ export default function ProductModal({ product, open, onClose, onQuoteClick }) {
           <div className={`aspect-square sm:aspect-auto sm:w-[44%] flex-shrink-0 flex flex-col items-center justify-center relative ${showImage ? 'bg-[#f5f5f4]' : 'bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a]'}`}>
             {showImage ? (
               <>
-                <img src={currentImage} alt={product.model} onError={() => setImgError(true)} className="w-full h-full object-contain p-6 sm:p-9" />
-                
-                {/* Gallery navigation */}
-                {allImages.length > 1 && (
-                  <div className="absolute inset-x-0 bottom-4 flex justify-center gap-2 px-4">
-                    <button onClick={handlePrevImage} className="p-2 rounded-full bg-white/80 hover:bg-white text-[#0a0a0a] transition-colors">
-                      <ChevronLeft className="w-4 h-4" />
+                <img src={currentImage} alt={`${product.model} ${currentImageIndex + 1} of ${allImages.length}`} onError={() => setImgError(true)} className="w-full h-full object-contain p-6 sm:p-9" />
+
+                {/* Carousel controls — only when more than one image */}
+                {hasMultiple && (
+                  <>
+                    <button
+                      onClick={goPrev}
+                      aria-label="Previous image"
+                      className="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/90 hover:bg-white border border-border shadow-sm flex items-center justify-center active:scale-95 transition-all"
+                    >
+                      <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 text-[#0a0a0a]" />
                     </button>
-                    <div className="flex items-center gap-1">
+                    <button
+                      onClick={goNext}
+                      aria-label="Next image"
+                      className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/90 hover:bg-white border border-border shadow-sm flex items-center justify-center active:scale-95 transition-all"
+                    >
+                      <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#0a0a0a]" />
+                    </button>
+
+                    <div className="absolute top-3 right-3 px-2 py-1 rounded-full bg-black/60 backdrop-blur-sm text-white text-[10px] font-semibold tracking-wide">
+                      {currentImageIndex + 1} / {allImages.length}
+                    </div>
+
+                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
                       {allImages.map((_, i) => (
-                        <button key={i} onClick={() => setGalleryIndex(i)} className={`w-2 h-2 rounded-full transition-colors ${i === galleryIndex ? 'bg-[#0a0a0a]' : 'bg-white/50'}`} />
+                        <button
+                          key={i}
+                          onClick={(e) => { e.stopPropagation(); setImgError(false); setCurrentImageIndex(i); }}
+                          aria-label={`Go to image ${i + 1}`}
+                          className={`h-1.5 rounded-full transition-all ${i === currentImageIndex ? 'w-5 bg-[#0a0a0a]' : 'w-1.5 bg-black/30 hover:bg-black/50'}`}
+                        />
                       ))}
                     </div>
-                    <button onClick={handleNextImage} className="p-2 rounded-full bg-white/80 hover:bg-white text-[#0a0a0a] transition-colors">
-                      <ChevronRight className="w-4 h-4" />
-                    </button>
-                  </div>
+                  </>
                 )}
-                
+
                 {product.image_note && (
-                  <p className="text-[10px] italic text-muted-foreground px-4 pb-3 text-center">{product.image_note}</p>
+                  <p className="text-[10px] italic text-muted-foreground px-4 pb-3 pt-1 text-center">{product.image_note}</p>
                 )}
               </>
             ) : (
@@ -166,7 +194,7 @@ export default function ProductModal({ product, open, onClose, onQuoteClick }) {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 mt-4 mb-5 py-2.5 border-y border-border text-[12px] text-[#555]">
                 <span className="flex items-center gap-1.5">
                   <CheckCircle className="w-3.5 h-3.5 text-primary flex-shrink-0" />
-                  In stock — ships next business day
+                  In stock, ships next business day
                 </span>
                 <span className="flex items-center gap-1.5">
                   <MapPin className="w-3.5 h-3.5 text-muted-foreground flex-shrink-0" />
