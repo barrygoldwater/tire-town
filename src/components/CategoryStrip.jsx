@@ -72,11 +72,11 @@ export default function CategoryStrip({ selected, onSelect }) {
           pointer-events: none;
           animation: smokePuff 380ms ease-out forwards;
         }
-        .vroom-smoke-1 { width: 13px; height: 13px; --sx: -12px; --sy: -6px;  animation-delay: 0ms;  }
-        .vroom-smoke-2 { width: 11px; height: 11px; --sx: -16px; --sy: -13px; animation-delay: 50ms; }
-        .vroom-smoke-3 { width: 14px; height: 14px; --sx: -10px; --sy: -19px; animation-delay: 100ms; }
-        .vroom-smoke-4 { width: 10px; height: 10px; --sx: -18px; --sy: -8px;  animation-delay: 30ms; }
-        .vroom-smoke-5 { width: 12px; height: 12px; --sx: -8px;  --sy: -24px; animation-delay: 150ms; }
+        .vroom-smoke-1 { width: 13px; height: 13px; --sx: -28px; --sy: -6px;  animation-delay: 0ms;  }
+        .vroom-smoke-2 { width: 11px; height: 11px; --sx: -32px; --sy: -13px; animation-delay: 50ms; }
+        .vroom-smoke-3 { width: 14px; height: 14px; --sx: -26px; --sy: -19px; animation-delay: 100ms; }
+        .vroom-smoke-4 { width: 10px; height: 10px; --sx: -34px; --sy: -8px;  animation-delay: 30ms; }
+        .vroom-smoke-5 { width: 12px; height: 12px; --sx: -24px;  --sy: -24px; animation-delay: 150ms; }
         .vroom-icon {
           animation: vroomIcon ${VROOM_MS}ms cubic-bezier(0.4,0,0.8,1) forwards;
         }
