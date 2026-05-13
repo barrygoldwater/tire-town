@@ -1309,6 +1309,145 @@ const wheels = [
             }
           ]
         },
+    {
+          id: "arisun-s1",
+          brand: "Arisun",
+          model: "S1",
+          category: "wheel",
+          vehicle_type: "golf_cart",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5416.jpeg",
+          gallery_images: [
+            "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5418.jpeg"
+          ],
+          image_note: "Hero photo shown in 14X7 Paint w/Machined Face. All 9 size and finish combinations available below; swipe through the gallery to see other angles and finishes.",
+          visual_tags: ["black", "machined_black", "chrome"],
+          variants: [
+            { size: "10X7", finish: "Full Paint", offset: "-15", part_number: "S1-10741-15-FP" },
+            { size: "10X7", finish: "Paint w/Machined Face", offset: "-15", part_number: "S1-10741-15-PMF" },
+            { size: "10X7", finish: "PVD Chrome", offset: "-15", part_number: "S1-10741-15-CHR" },
+            { size: "12X7", finish: "Full Paint", offset: "-15", part_number: "S1-12741-15-FP" },
+            { size: "12X7", finish: "Paint w/Machined Face", offset: "-15", part_number: "S1-12741-15-PMF" },
+            { size: "12X7", finish: "PVD Chrome", offset: "-15", part_number: "S1-12741-15-CHR" },
+            { size: "14X7", finish: "Full Paint", offset: "-15", part_number: "S1-14741-15-FP" },
+            { size: "14X7", finish: "Paint w/Machined Face", offset: "-15", part_number: "S1-14741-15-PMF" },
+            { size: "14X7", finish: "PVD Chrome", offset: "-15", part_number: "S1-14741-15-CHR" }
+          ]
+        },
+    {
+          id: "arisun-s2",
+          brand: "Arisun",
+          model: "S2",
+          category: "wheel",
+          vehicle_type: "golf_cart",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5408.jpeg",
+          gallery_images: [
+            "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5422.jpeg",
+            "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5423.jpeg"
+          ],
+          image_note: "Hero photo shown in 12X7 Paint w/Machined Face. All 9 size and finish combinations available below; swipe through the gallery to see other angles and finishes.",
+          visual_tags: ["black", "machined_black", "chrome"],
+          variants: [
+            { size: "10X7", finish: "Full Paint", offset: "-15", part_number: "S2-10741-15-FP" },
+            { size: "10X7", finish: "Paint w/Machined Face", offset: "-15", part_number: "S2-10741-15-PMF" },
+            { size: "10X7", finish: "PVD Chrome", offset: "-15", part_number: "S2-10741-15-CHR" },
+            { size: "12X7", finish: "Full Paint", offset: "-15", part_number: "S2-12741-15-FP" },
+            { size: "12X7", finish: "Paint w/Machined Face", offset: "-15", part_number: "S2-12741-15-PMF" },
+            { size: "12X7", finish: "PVD Chrome", offset: "-15", part_number: "S2-12741-15-CHR" },
+            { size: "14X7", finish: "Full Paint", offset: "-15", part_number: "S2-14741-15-FP" },
+            { size: "14X7", finish: "Paint w/Machined Face", offset: "-15", part_number: "S2-14741-15-PMF" },
+            { size: "14X7", finish: "PVD Chrome", offset: "-15", part_number: "S2-14741-15-CHR" }
+          ]
+        },
+    {
+          id: "arisun-s3",
+          brand: "Arisun",
+          model: "S3",
+          category: "wheel",
+          vehicle_type: "golf_cart",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5414.jpeg",
+          gallery_images: [
+            "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5420.jpeg"
+          ],
+          image_note: "Hero photo shown in 14X7 Paint w/Machined Face. All 9 size and finish combinations available below; swipe through the gallery to see other angles and finishes.",
+          visual_tags: ["black", "machined_black", "chrome"],
+          variants: [
+            { size: "10X7", finish: "Full Paint", offset: "-15", part_number: "S3-10741-15-FP" },
+            { size: "10X7", finish: "Paint w/Machined Face", offset: "-15", part_number: "S3-10741-15-PMF" },
+            { size: "10X7", finish: "PVD Chrome", offset: "-15", part_number: "S3-10741-15-CHR" },
+            { size: "12X7", finish: "Full Paint", offset: "-15", part_number: "S3-12741-15-FP" },
+            { size: "12X7", finish: "Paint w/Machined Face", offset: "-15", part_number: "S3-12741-15-PMF" },
+            { size: "12X7", finish: "PVD Chrome", offset: "-15", part_number: "S3-12741-15-CHR" },
+            { size: "14X7", finish: "Full Paint", offset: "-15", part_number: "S3-14741-15-FP" },
+            { size: "14X7", finish: "Paint w/Machined Face", offset: "-15", part_number: "S3-14741-15-PMF" },
+            { size: "14X7", finish: "PVD Chrome", offset: "-15", part_number: "S3-14741-15-CHR" }
+          ]
+        },
+    {
+          id: "arisun-s4",
+          brand: "Arisun",
+          model: "S4",
+          category: "wheel",
+          vehicle_type: "golf_cart",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5415.jpeg",
+          gallery_images: [
+            "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5406.jpeg",
+            "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5419.jpeg"
+          ],
+          image_note: "Hero photo shown in 14X7 Paint w/Machined Face. All 9 size and finish combinations available below; swipe through the gallery to see other angles and finishes.",
+          visual_tags: ["black", "machined_black", "chrome"],
+          variants: [
+            { size: "10X7", finish: "Full Paint", offset: "-15", part_number: "S4-10741-15-FP" },
+            { size: "10X7", finish: "Paint w/Machined Face", offset: "-15", part_number: "S4-10741-15-PMF" },
+            { size: "10X7", finish: "PVD Chrome", offset: "-15", part_number: "S4-10741-15-CHR" },
+            { size: "12X7", finish: "Full Paint", offset: "-15", part_number: "S4-12741-15-FP" },
+            { size: "12X7", finish: "Paint w/Machined Face", offset: "-15", part_number: "S4-12741-15-PMF" },
+            { size: "12X7", finish: "PVD Chrome", offset: "-15", part_number: "S4-12741-15-CHR" },
+            { size: "14X7", finish: "Full Paint", offset: "-15", part_number: "S4-14741-15-FP" },
+            { size: "14X7", finish: "Paint w/Machined Face", offset: "-15", part_number: "S4-14741-15-PMF" },
+            { size: "14X7", finish: "PVD Chrome", offset: "-15", part_number: "S4-14741-15-CHR" }
+          ]
+        },
+    {
+          id: "arisun-s5",
+          brand: "Arisun",
+          model: "S5",
+          category: "wheel",
+          vehicle_type: "golf_cart",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5411.jpeg",
+          gallery_images: [
+            "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5413.jpeg",
+            "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5412.jpeg",
+            "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5409.jpeg",
+            "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5407.jpeg",
+            "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5421.jpeg"
+          ],
+          image_note: "Hero photo shown in 14X7 Paint w/Machined Face. All 9 size and finish combinations available below; swipe through the gallery to see other angles and finishes.",
+          visual_tags: ["black", "machined_black", "chrome"],
+          variants: [
+            { size: "10X7", finish: "Full Paint", offset: "-15", part_number: "S5-10741-15-FP" },
+            { size: "10X7", finish: "Paint w/Machined Face", offset: "-15", part_number: "S5-10741-15-PMF" },
+            { size: "10X7", finish: "PVD Chrome", offset: "-15", part_number: "S5-10741-15-CHR" },
+            { size: "12X7", finish: "Full Paint", offset: "-15", part_number: "S5-12741-15-FP" },
+            { size: "12X7", finish: "Paint w/Machined Face", offset: "-15", part_number: "S5-12741-15-PMF" },
+            { size: "12X7", finish: "PVD Chrome", offset: "-15", part_number: "S5-12741-15-CHR" },
+            { size: "14X7", finish: "Full Paint", offset: "-15", part_number: "S5-14741-15-FP" },
+            { size: "14X7", finish: "Paint w/Machined Face", offset: "-15", part_number: "S5-14741-15-PMF" },
+            { size: "14X7", finish: "PVD Chrome", offset: "-15", part_number: "S5-14741-15-CHR" }
+          ]
+        },
+    {
+          id: "arisun-78t",
+          brand: "Arisun",
+          model: "78T",
+          category: "wheel",
+          vehicle_type: "golf_cart",
+          image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/78T-spec.png",
+          image_note: "Manufacturer reference image from spec sheet. Real product photo coming soon.",
+          visual_tags: ["black", "machined_black"],
+          variants: [
+            { size: "10X7", finish: "Glossy Black w/Machined Face", offset: "-22", part_number: "78T-10741-22-BLKF" }
+          ]
+        },
     // ── GOLF CART WHEELS — WHEEL MATE ───────────────────────────────
     {
           id: "wheelmate-c-black-machined",
@@ -1813,53 +1952,6 @@ const wheels = [
             }
           ]
         },
-    // ── GOLF CART WHEELS — ARISUN (NEW S1–S5 + 78T) ──
-    { id: "arisun-s1-10-fp", brand: "Arisun", model: "S1", category: "wheel", vehicle_type: "golf_cart", diameter: 10, width: 7, size: "10x7", finish: "Full Paint", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5418.jpeg", image_note: "Photo shown in Paint w/Machined Face. This SKU is Full Paint (all gloss black)." },
-    { id: "arisun-s1-10-pmf", brand: "Arisun", model: "S1", category: "wheel", vehicle_type: "golf_cart", diameter: 10, width: 7, size: "10x7", finish: "Paint w/Machined Face", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5418.jpeg", image_note: null },
-    { id: "arisun-s1-10-chr", brand: "Arisun", model: "S1", category: "wheel", vehicle_type: "golf_cart", diameter: 10, width: 7, size: "10x7", finish: "PVD Chrome", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5418.jpeg", image_note: "Photo shown in Paint w/Machined Face. This SKU is PVD Chrome (full chrome)." },
-    { id: "arisun-s1-12-fp", brand: "Arisun", model: "S1", category: "wheel", vehicle_type: "golf_cart", diameter: 12, width: 7, size: "12x7", finish: "Full Paint", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5416.jpeg", image_note: "Photo shown is the same wheel design in 14x7 Paint w/Machined Face. This SKU is 12x7 in Full Paint (all gloss black)." },
-    { id: "arisun-s1-12-pmf", brand: "Arisun", model: "S1", category: "wheel", vehicle_type: "golf_cart", diameter: 12, width: 7, size: "12x7", finish: "Paint w/Machined Face", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5416.jpeg", image_note: "Photo shown is the same wheel in 14x7. This SKU is 12x7 in Paint w/Machined Face (black with machined accents)." },
-    { id: "arisun-s1-12-chr", brand: "Arisun", model: "S1", category: "wheel", vehicle_type: "golf_cart", diameter: 12, width: 7, size: "12x7", finish: "PVD Chrome", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5416.jpeg", image_note: "Photo shown is the same wheel design in 14x7 Paint w/Machined Face. This SKU is 12x7 in PVD Chrome (full chrome)." },
-    { id: "arisun-s1-14-fp", brand: "Arisun", model: "S1", category: "wheel", vehicle_type: "golf_cart", diameter: 14, width: 7, size: "14x7", finish: "Full Paint", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5416.jpeg", image_note: "Photo shown in Paint w/Machined Face. This SKU is Full Paint (all gloss black)." },
-    { id: "arisun-s1-14-pmf", brand: "Arisun", model: "S1", category: "wheel", vehicle_type: "golf_cart", diameter: 14, width: 7, size: "14x7", finish: "Paint w/Machined Face", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5416.jpeg", image_note: null },
-    { id: "arisun-s1-14-chr", brand: "Arisun", model: "S1", category: "wheel", vehicle_type: "golf_cart", diameter: 14, width: 7, size: "14x7", finish: "PVD Chrome", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5416.jpeg", image_note: "Photo shown in Paint w/Machined Face. This SKU is PVD Chrome (full chrome)." },
-    { id: "arisun-s2-10-fp", brand: "Arisun", model: "S2", category: "wheel", vehicle_type: "golf_cart", diameter: 10, width: 7, size: "10x7", finish: "Full Paint", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5422.jpeg", image_note: "Photo shown in Paint w/Machined Face. This SKU is Full Paint (all gloss black)." },
-    { id: "arisun-s2-10-pmf", brand: "Arisun", model: "S2", category: "wheel", vehicle_type: "golf_cart", diameter: 10, width: 7, size: "10x7", finish: "Paint w/Machined Face", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5422.jpeg", image_note: null },
-    { id: "arisun-s2-10-chr", brand: "Arisun", model: "S2", category: "wheel", vehicle_type: "golf_cart", diameter: 10, width: 7, size: "10x7", finish: "PVD Chrome", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5423.jpeg", image_note: null },
-    { id: "arisun-s2-12-fp", brand: "Arisun", model: "S2", category: "wheel", vehicle_type: "golf_cart", diameter: 12, width: 7, size: "12x7", finish: "Full Paint", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5408.jpeg", image_note: "Photo shown in Paint w/Machined Face. This SKU is Full Paint (all gloss black)." },
-    { id: "arisun-s2-12-pmf", brand: "Arisun", model: "S2", category: "wheel", vehicle_type: "golf_cart", diameter: 12, width: 7, size: "12x7", finish: "Paint w/Machined Face", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5408.jpeg", image_note: null },
-    { id: "arisun-s2-12-chr", brand: "Arisun", model: "S2", category: "wheel", vehicle_type: "golf_cart", diameter: 12, width: 7, size: "12x7", finish: "PVD Chrome", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5408.jpeg", image_note: "Photo shown in Paint w/Machined Face. This SKU is PVD Chrome (full chrome)." },
-    { id: "arisun-s2-14-fp", brand: "Arisun", model: "S2", category: "wheel", vehicle_type: "golf_cart", diameter: 14, width: 7, size: "14x7", finish: "Full Paint", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5408.jpeg", image_note: "Photo shown is the same wheel design in 12x7 Paint w/Machined Face. This SKU is 14x7 in Full Paint (all gloss black)." },
-    { id: "arisun-s2-14-pmf", brand: "Arisun", model: "S2", category: "wheel", vehicle_type: "golf_cart", diameter: 14, width: 7, size: "14x7", finish: "Paint w/Machined Face", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5408.jpeg", image_note: "Photo shown is the same wheel in 12x7. This SKU is 14x7 in Paint w/Machined Face (black with machined accents)." },
-    { id: "arisun-s2-14-chr", brand: "Arisun", model: "S2", category: "wheel", vehicle_type: "golf_cart", diameter: 14, width: 7, size: "14x7", finish: "PVD Chrome", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5423.jpeg", image_note: "Photo shown is the same wheel in 10x7. This SKU is 14x7 in PVD Chrome (full chrome)." },
-    { id: "arisun-s3-10-fp", brand: "Arisun", model: "S3", category: "wheel", vehicle_type: "golf_cart", diameter: 10, width: 7, size: "10x7", finish: "Full Paint", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5420.jpeg", image_note: "Photo shown in Paint w/Machined Face. This SKU is Full Paint (all gloss black)." },
-    { id: "arisun-s3-10-pmf", brand: "Arisun", model: "S3", category: "wheel", vehicle_type: "golf_cart", diameter: 10, width: 7, size: "10x7", finish: "Paint w/Machined Face", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5420.jpeg", image_note: null },
-    { id: "arisun-s3-10-chr", brand: "Arisun", model: "S3", category: "wheel", vehicle_type: "golf_cart", diameter: 10, width: 7, size: "10x7", finish: "PVD Chrome", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5420.jpeg", image_note: "Photo shown in Paint w/Machined Face. This SKU is PVD Chrome (full chrome)." },
-    { id: "arisun-s3-12-fp", brand: "Arisun", model: "S3", category: "wheel", vehicle_type: "golf_cart", diameter: 12, width: 7, size: "12x7", finish: "Full Paint", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5414.jpeg", image_note: "Photo shown is the same wheel design in 14x7 Paint w/Machined Face. This SKU is 12x7 in Full Paint (all gloss black)." },
-    { id: "arisun-s3-12-pmf", brand: "Arisun", model: "S3", category: "wheel", vehicle_type: "golf_cart", diameter: 12, width: 7, size: "12x7", finish: "Paint w/Machined Face", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5414.jpeg", image_note: "Photo shown is the same wheel in 14x7. This SKU is 12x7 in Paint w/Machined Face (black with machined accents)." },
-    { id: "arisun-s3-12-chr", brand: "Arisun", model: "S3", category: "wheel", vehicle_type: "golf_cart", diameter: 12, width: 7, size: "12x7", finish: "PVD Chrome", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5414.jpeg", image_note: "Photo shown is the same wheel design in 14x7 Paint w/Machined Face. This SKU is 12x7 in PVD Chrome (full chrome)." },
-    { id: "arisun-s3-14-fp", brand: "Arisun", model: "S3", category: "wheel", vehicle_type: "golf_cart", diameter: 14, width: 7, size: "14x7", finish: "Full Paint", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5414.jpeg", image_note: "Photo shown in Paint w/Machined Face. This SKU is Full Paint (all gloss black)." },
-    { id: "arisun-s3-14-pmf", brand: "Arisun", model: "S3", category: "wheel", vehicle_type: "golf_cart", diameter: 14, width: 7, size: "14x7", finish: "Paint w/Machined Face", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5414.jpeg", image_note: null },
-    { id: "arisun-s3-14-chr", brand: "Arisun", model: "S3", category: "wheel", vehicle_type: "golf_cart", diameter: 14, width: 7, size: "14x7", finish: "PVD Chrome", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5414.jpeg", image_note: "Photo shown in Paint w/Machined Face. This SKU is PVD Chrome (full chrome)." },
-    { id: "arisun-s4-10-fp", brand: "Arisun", model: "S4", category: "wheel", vehicle_type: "golf_cart", diameter: 10, width: 7, size: "10x7", finish: "Full Paint", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5419.jpeg", image_note: "Photo shown in Paint w/Machined Face. This SKU is Full Paint (all gloss black)." },
-    { id: "arisun-s4-10-pmf", brand: "Arisun", model: "S4", category: "wheel", vehicle_type: "golf_cart", diameter: 10, width: 7, size: "10x7", finish: "Paint w/Machined Face", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5419.jpeg", image_note: null },
-    { id: "arisun-s4-10-chr", brand: "Arisun", model: "S4", category: "wheel", vehicle_type: "golf_cart", diameter: 10, width: 7, size: "10x7", finish: "PVD Chrome", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5419.jpeg", image_note: "Photo shown in Paint w/Machined Face. This SKU is PVD Chrome (full chrome)." },
-    { id: "arisun-s4-12-fp", brand: "Arisun", model: "S4", category: "wheel", vehicle_type: "golf_cart", diameter: 12, width: 7, size: "12x7", finish: "Full Paint", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5406.jpeg", image_note: "Photo shown in Paint w/Machined Face. This SKU is Full Paint (all gloss black)." },
-    { id: "arisun-s4-12-pmf", brand: "Arisun", model: "S4", category: "wheel", vehicle_type: "golf_cart", diameter: 12, width: 7, size: "12x7", finish: "Paint w/Machined Face", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5406.jpeg", image_note: null },
-    { id: "arisun-s4-12-chr", brand: "Arisun", model: "S4", category: "wheel", vehicle_type: "golf_cart", diameter: 12, width: 7, size: "12x7", finish: "PVD Chrome", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5406.jpeg", image_note: "Photo shown in Paint w/Machined Face. This SKU is PVD Chrome (full chrome)." },
-    { id: "arisun-s4-14-fp", brand: "Arisun", model: "S4", category: "wheel", vehicle_type: "golf_cart", diameter: 14, width: 7, size: "14x7", finish: "Full Paint", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5415.jpeg", image_note: "Photo shown in Paint w/Machined Face. This SKU is Full Paint (all gloss black)." },
-    { id: "arisun-s4-14-pmf", brand: "Arisun", model: "S4", category: "wheel", vehicle_type: "golf_cart", diameter: 14, width: 7, size: "14x7", finish: "Paint w/Machined Face", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5415.jpeg", image_note: null },
-    { id: "arisun-s4-14-chr", brand: "Arisun", model: "S4", category: "wheel", vehicle_type: "golf_cart", diameter: 14, width: 7, size: "14x7", finish: "PVD Chrome", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5415.jpeg", image_note: "Photo shown in Paint w/Machined Face. This SKU is PVD Chrome (full chrome)." },
-    { id: "arisun-s5-10-fp", brand: "Arisun", model: "S5", category: "wheel", vehicle_type: "golf_cart", diameter: 10, width: 7, size: "10x7", finish: "Full Paint", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5421.jpeg", image_note: "Photo shown in Paint w/Machined Face. This SKU is Full Paint (all gloss black)." },
-    { id: "arisun-s5-10-pmf", brand: "Arisun", model: "S5", category: "wheel", vehicle_type: "golf_cart", diameter: 10, width: 7, size: "10x7", finish: "Paint w/Machined Face", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5421.jpeg", image_note: null },
-    { id: "arisun-s5-10-chr", brand: "Arisun", model: "S5", category: "wheel", vehicle_type: "golf_cart", diameter: 10, width: 7, size: "10x7", finish: "PVD Chrome", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5421.jpeg", image_note: "Photo shown in Paint w/Machined Face. This SKU is PVD Chrome (full chrome)." },
-    { id: "arisun-s5-12-fp", brand: "Arisun", model: "S5", category: "wheel", vehicle_type: "golf_cart", diameter: 12, width: 7, size: "12x7", finish: "Full Paint", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5409.jpeg", image_note: "Photo shown in Paint w/Machined Face. This SKU is Full Paint (all gloss black)." },
-    { id: "arisun-s5-12-pmf", brand: "Arisun", model: "S5", category: "wheel", vehicle_type: "golf_cart", diameter: 12, width: 7, size: "12x7", finish: "Paint w/Machined Face", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5409.jpeg", image_note: null },
-    { id: "arisun-s5-12-chr", brand: "Arisun", model: "S5", category: "wheel", vehicle_type: "golf_cart", diameter: 12, width: 7, size: "12x7", finish: "PVD Chrome", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5407.jpeg", image_note: null },
-    { id: "arisun-s5-14-fp", brand: "Arisun", model: "S5", category: "wheel", vehicle_type: "golf_cart", diameter: 14, width: 7, size: "14x7", finish: "Full Paint", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5413.jpeg", image_note: "Photo shown in Paint w/Machined Face. This SKU is Full Paint (all gloss black)." },
-    { id: "arisun-s5-14-pmf", brand: "Arisun", model: "S5", category: "wheel", vehicle_type: "golf_cart", diameter: 14, width: 7, size: "14x7", finish: "Paint w/Machined Face", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5411.jpeg", image_note: null },
-    { id: "arisun-s5-14-chr", brand: "Arisun", model: "S5", category: "wheel", vehicle_type: "golf_cart", diameter: 14, width: 7, size: "14x7", finish: "PVD Chrome", offset: -15, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/IMG_5412.jpeg", image_note: null },
-    { id: "arisun-78t-10-blkf", brand: "Arisun", model: "78T", category: "wheel", vehicle_type: "golf_cart", diameter: 10, width: 7, size: "10x7", finish: "Glossy Black w/Machined Face", offset: -22, bolt_pattern: "4x101.6", center_bore: 72, image_url: "https://cdn.jsdelivr.net/gh/barrygoldwater/tire-town@main/78T-spec.png", image_note: "Manufacturer reference image from spec sheet. Real product photo coming soon." },
 ];
 
 export default wheels;

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, Phone, CheckCircle, MapPin, Package, DollarSign } from "lucide-react";
+import { X, Phone, CheckCircle, MapPin, Package, DollarSign, ChevronLeft, ChevronRight } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { parseSize } from "@/lib/parseSize";
 
@@ -46,11 +46,27 @@ function getTypePill(product) {
 
 export default function ProductModal({ product, open, onClose, onQuoteClick }) {
   const [imgError, setImgError] = useState(false);
+  const [galleryIndex, setGalleryIndex] = useState(0);
+  
   if (!product) return null;
 
   const isWheel = product.category === "wheel";
   const showImage = product.image_url && !imgError;
   const typePill = getTypePill(product);
+  
+  // Determine which image to show
+  const allImages = product.gallery_images?.length > 0 
+    ? [product.image_url, ...product.gallery_images]
+    : [product.image_url];
+  const currentImage = allImages[galleryIndex] || product.image_url;
+  
+  const handlePrevImage = () => {
+    setGalleryIndex(prev => (prev - 1 + allImages.length) % allImages.length);
+  };
+  
+  const handleNextImage = () => {
+    setGalleryIndex(prev => (prev + 1) % allImages.length);
+  };
 
   // Collect shared ply ratings across variants (for tires)
   const plies = !isWheel ? [...new Set(product.variants.map(v => v.ply).filter(Boolean))] : [];
@@ -75,7 +91,25 @@ export default function ProductModal({ product, open, onClose, onQuoteClick }) {
           <div className={`aspect-square sm:aspect-auto sm:w-[44%] flex-shrink-0 flex flex-col items-center justify-center relative ${showImage ? 'bg-[#f5f5f4]' : 'bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a]'}`}>
             {showImage ? (
               <>
-                <img src={product.image_url} alt={product.model} onError={() => setImgError(true)} className="w-full h-full object-contain p-6 sm:p-9" />
+                <img src={currentImage} alt={product.model} onError={() => setImgError(true)} className="w-full h-full object-contain p-6 sm:p-9" />
+                
+                {/* Gallery navigation */}
+                {allImages.length > 1 && (
+                  <div className="absolute inset-x-0 bottom-4 flex justify-center gap-2 px-4">
+                    <button onClick={handlePrevImage} className="p-2 rounded-full bg-white/80 hover:bg-white text-[#0a0a0a] transition-colors">
+                      <ChevronLeft className="w-4 h-4" />
+                    </button>
+                    <div className="flex items-center gap-1">
+                      {allImages.map((_, i) => (
+                        <button key={i} onClick={() => setGalleryIndex(i)} className={`w-2 h-2 rounded-full transition-colors ${i === galleryIndex ? 'bg-[#0a0a0a]' : 'bg-white/50'}`} />
+                      ))}
+                    </div>
+                    <button onClick={handleNextImage} className="p-2 rounded-full bg-white/80 hover:bg-white text-[#0a0a0a] transition-colors">
+                      <ChevronRight className="w-4 h-4" />
+                    </button>
+                  </div>
+                )}
+                
                 {product.image_note && (
                   <p className="text-[10px] italic text-muted-foreground px-4 pb-3 text-center">{product.image_note}</p>
                 )}
