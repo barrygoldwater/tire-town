@@ -10,11 +10,37 @@ export default function ProductCard({ product, onClick }) {
           : uniqueSizes.join(", ");
       })()
     : product.size || "—";
-  // For single-variant products (one specific SKU per card), surface the finish
-  // and part number so cards stay visually distinct from one another.
-  const singleVariant = product.variants?.length === 1 ? product.variants[0] : null;
+
+  // Single-variant cards (one specific SKU): surface the finish + part number.
+  // Multi-variant cards: surface a finishes summary and the SKU count so each
+  // card is distinct even when models repeat across pages.
+  const variants = product.variants || [];
+  const isSingleVariant = variants.length === 1;
+  const singleVariant = isSingleVariant ? variants[0] : null;
   const finishLabel = singleVariant?.finish || null;
   const partNumber = singleVariant?.part_number || null;
+
+  const finishesSummary = (() => {
+    if (variants.length <= 1) return null;
+    const unique = [...new Set(variants.map(v => v.finish).filter(Boolean))];
+    if (unique.length === 0) return null;
+    const shorten = (f) =>
+      f === "Paint w/Machined Face" ? "Paint/Machined" :
+      f === "Glossy Black w/Machined Face" ? "Black/Machined" :
+      f === "Black w/Machined Face" ? "Black/Machined" :
+      f === "Gunmetal w/Machined Face" ? "Gunmetal/Machined" :
+      f === "Red w/Machined Face" ? "Red/Machined" :
+      f === "Black Machined w/Red Clear Coat" ? "Black/Red" :
+      f === "Black Machined w/Blue Clear Coat" ? "Black/Blue" :
+      f;
+    const labels = unique.map(shorten);
+    return labels.length > 3
+      ? labels.slice(0, 3).join(", ") + ` +${labels.length - 3}`
+      : labels.join(", ");
+  })();
+
+  const skuCount = variants.length > 1 ? variants.length : null;
+
   const showImage = product.image_url && !imgError;
 
   return (
@@ -50,8 +76,14 @@ export default function ProductCard({ product, onClick }) {
         {finishLabel && (
           <p className="text-[11px] sm:text-[12px] text-[#0a0a0a]/75 mt-1 leading-tight truncate">{finishLabel}</p>
         )}
+        {finishesSummary && (
+          <p className="text-[11px] sm:text-[12px] text-[#0a0a0a]/75 mt-1 leading-tight truncate">{finishesSummary}</p>
+        )}
         {partNumber && (
           <p className="text-[10px] sm:text-[11px] font-mono text-muted-foreground/80 mt-1.5 truncate">{partNumber}</p>
+        )}
+        {skuCount && (
+          <p className="text-[10px] sm:text-[11px] text-muted-foreground/70 mt-1.5 truncate">{skuCount} SKUs</p>
         )}
       </div>
     </button>
