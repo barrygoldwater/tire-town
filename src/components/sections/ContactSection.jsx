@@ -23,7 +23,7 @@ export default function ContactSection({ quoteFormRef }) {
     `;
 
     await base44.integrations.Core.SendEmail({
-      to: "john@affordabletiresusa.com",
+      to: "john.gregory@affordabletiresusa.com",
       subject: `Quote Request from ${form.name}`,
       body,
       from_name: "Affordable Tires Website"
