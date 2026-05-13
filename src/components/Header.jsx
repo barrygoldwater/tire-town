@@ -5,6 +5,7 @@ import Logo from "./Logo";
 export default function Header({ onQuoteClick }) {
   const [scrolled, setScrolled] = useState(false);
   const [generating, setGenerating] = useState(false);
+  const monthYear = new Date().toLocaleString('en-US', { month: 'long', year: 'numeric' });
 
   const handleDownload = async (e) => {
     e.stopPropagation();
@@ -35,7 +36,7 @@ export default function Header({ onQuoteClick }) {
         >
           <Logo
             className={`w-auto transition-all duration-200 ${
-              scrolled ? "h-9" : "h-12 sm:h-16"
+              scrolled ? "h-12" : "h-16 sm:h-24"
             }`}
           />
           <span
@@ -43,7 +44,7 @@ export default function Header({ onQuoteClick }) {
             style={{ borderLeft: "1px solid #d4d4d4", height: "16px" }}
           >
             <span className="text-[10px] font-semibold text-[#525252] uppercase tracking-[0.1em] whitespace-nowrap">
-              June 2026 Catalog
+              {monthYear} Catalog
             </span>
             <button
               onClick={handleDownload}
