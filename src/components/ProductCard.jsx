@@ -61,7 +61,7 @@ export default function ProductCard({ product, onClick }) {
             alt={product.model}
             loading="lazy"
             onError={() => setImgError(true)}
-            className="w-full h-full object-contain p-3 sm:p-4"
+            className="w-full h-full object-cover p-3 sm:p-4"
           />
         ) : (
           <>
