@@ -2,10 +2,14 @@ import { useState } from "react";
 
 export default function ProductCard({ product, onClick }) {
   const [imgError, setImgError] = useState(false);
-  const uniqueSizes = [...new Set(product.variants.map(v => v.size.split(" ")[0]))];
-  const sizesSummary = uniqueSizes.length > 3
-    ? uniqueSizes.slice(0, 3).join(", ") + ` +${uniqueSizes.length - 3}`
-    : uniqueSizes.join(", ");
+  const sizesSummary = product.variants 
+    ? (() => {
+        const uniqueSizes = [...new Set(product.variants.map(v => v.size.split(" ")[0]))];
+        return uniqueSizes.length > 3
+          ? uniqueSizes.slice(0, 3).join(", ") + ` +${uniqueSizes.length - 3}`
+          : uniqueSizes.join(", ");
+      })()
+    : product.size || "—";
   const showImage = product.image_url && !imgError;
 
   return (
