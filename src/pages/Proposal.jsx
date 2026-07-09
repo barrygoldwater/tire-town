@@ -50,11 +50,26 @@ const DealCard = ({ eyebrow, value, title, body }) => (
   </div>
 );
 
-const Phase = ({ weeks, title, body }) => (
-  <div className="border border-neutral-200 rounded-lg p-6 bg-white">
+const Milestone = ({ weeks, title, happens, delivered, fromYou }) => (
+  <div className="relative pl-8 sm:pl-10 pb-10 last:pb-0">
+    <div className="absolute left-0 top-1 w-3 h-3 rounded-full bg-primary" />
+    <div className="absolute left-[5px] top-5 bottom-0 w-px bg-neutral-200" />
     <div className="text-[12px] font-bold uppercase tracking-[0.18em] text-primary">{weeks}</div>
-    <div className="mt-2 text-[18px] font-extrabold text-neutral-900 tracking-[-0.02em]">{title}</div>
-    <p className="mt-2 text-[14px] leading-relaxed text-neutral-600">{body}</p>
+    <div className="mt-1 text-[22px] font-extrabold text-neutral-900 tracking-[-0.02em]">{title}</div>
+    <div className="mt-4 grid md:grid-cols-3 gap-4">
+      <div className="border border-neutral-200 rounded-lg bg-white p-5">
+        <div className="text-[11px] font-bold uppercase tracking-[0.16em] text-neutral-400">What happens</div>
+        <p className="mt-2 text-[14px] leading-relaxed text-neutral-600">{happens}</p>
+      </div>
+      <div className="border border-neutral-200 rounded-lg bg-white p-5">
+        <div className="text-[11px] font-bold uppercase tracking-[0.16em] text-neutral-400">Delivered to you</div>
+        <p className="mt-2 text-[14px] leading-relaxed text-neutral-600">{delivered}</p>
+      </div>
+      <div className="border border-neutral-200 rounded-lg bg-white p-5">
+        <div className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">What we need from you</div>
+        <p className="mt-2 text-[14px] leading-relaxed text-neutral-600">{fromYou}</p>
+      </div>
+    </div>
   </div>
 );
 
@@ -107,7 +122,7 @@ export default function Proposal() {
           <div className="mt-10 grid md:grid-cols-3 gap-4">
             <Leak
               number="1"
-              title="100,000+ customer emails, never contacted"
+              title="10,000+ customer emails, never contacted"
               body="Every one of these people has bought from you before. They have never received a single email. At your average order size, this list is the cheapest revenue you will ever generate, and it is sitting untouched."
             />
             <Leak
@@ -137,7 +152,7 @@ export default function Proposal() {
             <Feature title="Real photos on every product" body="Manufacturer image packs loaded across the catalog, with a drag and drop uploader for anything new. Customers buy what they can see." />
             <Feature title="Live inventory from TireShop" body="Stock levels and pricing sync automatically from TireShop for both locations. What is on the site is what is on the shelf." />
             <Feature title="Orders flow back into TireShop" body="A web order lands in your system automatically. No phone tag, no re-keying, no missed orders." />
-            <Feature title="Built for email campaigns" body="The platform connects to a professional email system so your 100,000 person list finally starts producing orders." />
+            <Feature title="Built for email campaigns" body="The platform connects to a professional email system so your 10,000 person list finally starts producing orders." />
           </div>
         </div>
       </section>
@@ -163,20 +178,20 @@ export default function Proposal() {
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-14 sm:py-20">
           <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary mb-3">The list you already own</p>
           <h2 className="text-[28px] sm:text-[38px] font-extrabold text-neutral-900 tracking-[-0.03em] leading-tight max-w-[760px]">
-            What 100,000 emails are worth when you actually use them.
+            What 10,000 customer emails are worth when you actually use them.
           </h2>
           <div className="mt-10 border border-neutral-200 rounded-lg bg-white p-7 sm:p-10 max-w-[900px]">
             <div className="grid sm:grid-cols-3 gap-6 items-center">
               <div>
-                <div className="text-[34px] font-extrabold text-neutral-900 tracking-[-0.03em] tabular-nums">100,000</div>
+                <div className="text-[34px] font-extrabold text-neutral-900 tracking-[-0.03em] tabular-nums">10,000</div>
                 <div className="mt-1 text-[13px] font-semibold uppercase tracking-[0.14em] text-neutral-500">Past customers on your list</div>
               </div>
               <div>
-                <div className="text-[34px] font-extrabold text-neutral-900 tracking-[-0.03em] tabular-nums">1 in 200</div>
+                <div className="text-[34px] font-extrabold text-neutral-900 tracking-[-0.03em] tabular-nums">1 in 100</div>
                 <div className="mt-1 text-[13px] font-semibold uppercase tracking-[0.14em] text-neutral-500">Placing one order per quarter</div>
               </div>
               <div>
-                <div className="text-[34px] font-extrabold text-primary tracking-[-0.03em] tabular-nums">$189,000</div>
+                <div className="text-[34px] font-extrabold text-primary tracking-[-0.03em] tabular-nums">$37,800</div>
                 <div className="mt-1 text-[13px] font-semibold uppercase tracking-[0.14em] text-neutral-500">In quarterly orders at your $378 average</div>
               </div>
             </div>
@@ -202,7 +217,7 @@ export default function Proposal() {
             </div>
             <CompareRow label="Product photos" them="No" us="Every product" />
             <CompareRow label="Edits and changes" them="Refused" us="Same week" />
-            <CompareRow label="Wholesale tier pricing" them="No" us="Four tiers, set by you" />
+            <CompareRow label="Wholesale tier pricing" them="Manual, by emailing TireTutor" us="Four tiers, set by you, applied instantly" />
             <CompareRow label="TireShop integration" them="No" us="Two way, automatic" />
             <CompareRow label="Email marketing" them="No" us="Built in" />
             <CompareRow label="Who owns it" them="They do" us="You do" last />
@@ -226,9 +241,9 @@ export default function Proposal() {
             />
             <DealCard
               eyebrow="Monthly"
-              value="$2,500"
-              title="Platform management"
-              body="Replaces what you pay TireTutor today. Not a new expense, a swap. Covers hosting, updates, catalog maintenance, and monthly email campaigns to your list."
+              value="$3,500"
+              title="Platform management and email program"
+              body="Part of this replaces what you pay TireTutor today. The rest funds the monthly email program that turns your customer list into orders, plus hosting, updates, and catalog maintenance."
             />
             <DealCard
               eyebrow="Performance"
@@ -239,7 +254,7 @@ export default function Proposal() {
           </div>
           <div className="mt-8 border border-white/10 bg-white/[0.03] rounded-lg p-7 max-w-[900px]">
             <p className="text-[16px] leading-relaxed text-neutral-300">
-              You are already spending the monthly number with a vendor who ignores you. Redirect it, and the downside is zero: if the platform does not produce, you are out nothing you were not already paying. And unlike TireTutor, everything we build is yours. The platform, the code, the customer accounts, and the email list are assets of Affordable Tire, not a rental you lose the day you stop paying.
+              A piece of the monthly number is money you already spend with a vendor who ignores you. The rest buys an email program working your customer list every month. If the platform does not produce orders, the performance fee costs you nothing. And unlike TireTutor, everything we build is yours. The platform, the code, the customer accounts, and the email list are assets of Affordable Tire, not a rental you lose the day you stop paying.
             </p>
           </div>
         </div>
@@ -252,11 +267,35 @@ export default function Proposal() {
           <h2 className="text-[28px] sm:text-[38px] font-extrabold text-neutral-900 tracking-[-0.03em] leading-tight max-w-[760px]">
             First online orders inside 45 days.
           </h2>
-          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Phase weeks="Weeks 1 to 2" title="Foundation" body="TireShop integration connected, catalog structure built, inventory flowing from both locations." />
-            <Phase weeks="Weeks 3 to 4" title="Catalog and pricing" body="Manufacturer photos loaded, four pricing tiers configured, customer registration and approval flow live." />
-            <Phase weeks="Week 5" title="Dashboard and checkout" body="Admin dashboard for approvals, tiers, and orders. Checkout live with card payment." />
-            <Phase weeks="Week 6" title="Launch" body="Platform goes live. First email campaign goes to your list. Orders start." />
+          <div className="mt-10 max-w-[980px]">
+            <Milestone
+              weeks="Milestone 1 · Weeks 1 to 2"
+              title="Foundation and TireShop connection"
+              happens="TireShop API connected, catalog structure built, and inventory syncing automatically from both locations."
+              delivered="A private staging site where you can browse your full live inventory, both stores, updating on its own."
+              fromYou="Forward the TireShop questions to their team so API access is granted in week one."
+            />
+            <Milestone
+              weeks="Milestone 2 · Weeks 3 to 4"
+              title="Photos, pricing tiers, and accounts"
+              happens="Manufacturer image packs loaded across the catalog, four pricing tiers configured, and customer registration with your approval step built."
+              delivered="The catalog with real photos, where a logged in test account sees its tier pricing and nothing else."
+              fromYou="Image packs requested from your manufacturers, plus your discount percentage for each of the four tiers."
+            />
+            <Milestone
+              weeks="Milestone 3 · Week 5"
+              title="Admin dashboard and checkout"
+              happens="Your dashboard for approving accounts, assigning tiers, and viewing orders. Card checkout goes live, and web orders start landing in TireShop automatically."
+              delivered="The complete platform, ready for a real end to end test: you place an order and watch it appear in TireShop."
+              fromYou="Thirty minutes to walk the dashboard with us and approve the first batch of test accounts."
+            />
+            <Milestone
+              weeks="Milestone 4 · Week 6"
+              title="Launch and first campaign"
+              happens="Platform goes live to customers. The first email campaign goes out to your list, driving them to register and order."
+              delivered="A live ordering platform and your first campaign report: opens, clicks, registrations, and orders."
+              fromYou="A yes on the campaign before it sends. Then we watch the orders come in."
+            />
           </div>
         </div>
       </section>
