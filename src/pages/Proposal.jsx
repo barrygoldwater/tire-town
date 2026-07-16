@@ -133,7 +133,7 @@ export default function Proposal() {
             <Leak
               number="3"
               title="2.9% off the top of everything"
-              body="At your volume, card processing costs roughly $200,000 a year. Modern payment options like ACH bank transfer for your larger accounts can cut a meaningful piece of that. We address this in Phase 2."
+              body="At your volume, card processing at 2.9% costs roughly $200,000 a year. We can move you to modern processing at roughly 2.3%, which puts about $40,000 a year back in your pocket with a simple switch. ACH bank transfer for your larger accounts cuts deeper still, and comes in Phase 2."
             />
           </div>
         </div>
