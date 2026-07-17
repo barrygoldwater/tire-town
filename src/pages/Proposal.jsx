@@ -88,7 +88,7 @@ export default function Proposal() {
             Your customers are ready to order online. Your website just has to let them.
           </h1>
           <p className="mt-6 text-[17px] sm:text-[19px] leading-relaxed text-neutral-400 max-w-[720px]">
-            A wholesale ordering platform built specifically for Affordable Tire. Real photos, your pricing tiers, live inventory from TireShop, and orders that land in your system without anyone re-keying them. Built by Vory, owned by you.
+            A wholesale ordering platform built specifically for Affordable Tire. Real photos, your real price levels, live inventory from TireShop, and orders that land in your system without anyone re-keying them. Built by Vory, owned by you.
           </p>
         </div>
       </section>
@@ -122,18 +122,18 @@ export default function Proposal() {
           <div className="mt-10 grid md:grid-cols-3 gap-4">
             <Leak
               number="1"
-              title="10,000+ customer emails, never contacted"
-              body="Every one of these people has bought from you before. They have never received a single email. At your average order size, this list is the cheapest revenue you will ever generate, and it is sitting untouched."
+              title="10,000+ customer emails, never marketed to"
+              body="Your POS has been collecting customer emails since 2014, and the only thing those addresses have ever received is invoices and statements, mostly sent to accounting departments. The people who actually order tires have never heard from you once. That list is the cheapest revenue you will ever generate, and it is sitting untouched."
             />
             <Leak
               number="2"
               title="Paying a vendor who refuses to work"
-              body="You pay TireTutor a percentage of your revenue for a website they will not edit and will not even add photos to. You are funding a product that ignores you."
+              body="TireTutor costs you roughly $650 a month, a flat fee plus a cut of online orders, for a website they will not edit and will not even add photos to. A quarter of your order volume already flows through it. Imagine what that channel does when the site actually works."
             />
             <Leak
               number="3"
-              title="2.9% off the top of everything"
-              body="At your volume, card processing at 2.9% costs roughly $200,000 a year. We can move you to modern processing at roughly 2.3%, which puts about $40,000 a year back in your pocket with a simple switch. ACH bank transfer for your larger accounts cuts deeper still, and comes in Phase 2."
+              title="2.9% on every card payment"
+              body="About a quarter of your volume pays by card, roughly $1.75M a year processed at 2.9%. That is over $50,000 a year in fees. We can move you to modern processing at roughly 2.3%, worth about $10,000 a year back with a simple switch."
             />
           </div>
         </div>
@@ -147,8 +147,10 @@ export default function Proposal() {
             A wholesale ordering platform that belongs to you.
           </h2>
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <Feature title="Wholesale accounts, approved by you" body="Customers register, you approve the account and assign a pricing tier before it goes live. You stay in control of who buys and at what price." />
-            <Feature title="Four pricing tiers" body="Each customer sees exactly one price: theirs. Tier discounts are set by you in the admin dashboard and applied automatically across the entire catalog." />
+            <Feature title="Wholesale accounts, approved by you" body="Customers register, you approve the account and assign a price level before it goes live. You stay in control of who buys and at what price." />
+            <Feature title="Your TireShop price levels, mirrored" body="Each customer is assigned the same price level they have in TireShop, and the site shows them exactly one price: theirs. Tires, wheels, parts, and tubes all priced by level, not just the tire levels TireTutor handles." />
+            <Feature title="Pay on account or by card" body="75% of your customers buy on terms today. Approved accounts check out with charge to account, everyone else pays by card, and both land in TireShop the same way." />
+            <Feature title="Shipping rules you control" body="Threshold logic built in: orders under $399 pay full freight, $400 to $599 pay half, and $600 and up ship free, or whatever numbers you choose. Local truck delivery radius handled per warehouse." />
             <Feature title="Real photos on every product" body="Manufacturer image packs loaded across the catalog, with a drag and drop uploader for anything new. Customers buy what they can see." />
             <Feature title="Live inventory from TireShop" body="Stock levels and pricing sync automatically from TireShop for both locations. What is on the site is what is on the shelf." />
             <Feature title="Orders flow back into TireShop" body="A web order lands in your system automatically. No phone tag, no re-keying, no missed orders." />
@@ -166,8 +168,8 @@ export default function Proposal() {
           </h2>
           <div className="mt-10 grid md:grid-cols-2 gap-x-10 gap-y-8 max-w-[900px]">
             <Step number="1" title="Customer registers" body="A golf course superintendent or shop owner creates an account with their business details." />
-            <Step number="2" title="You approve and assign a tier" body="One click in the admin dashboard. Their account goes live with the pricing you decide they get." />
-            <Step number="3" title="They shop their price" body="Full catalog with photos, sizes, and live stock, showing only their tier pricing. Reordering takes minutes." />
+            <Step number="2" title="You approve and assign a price level" body="One click in the admin dashboard. Their account goes live tied to the TireShop price level you decide they get." />
+            <Step number="3" title="They shop their price" body="Full catalog with photos, sizes, and live stock, showing only their price level. Reordering takes minutes." />
             <Step number="4" title="The order lands in TireShop" body="It appears in your system automatically, tagged to the right location, ready to fulfill." />
           </div>
         </div>
@@ -196,7 +198,7 @@ export default function Proposal() {
               </div>
             </div>
             <p className="mt-7 text-[14px] leading-relaxed text-neutral-500">
-              Illustrative math at your current average order value. These are customers who already know you and already buy tires. The platform gives them somewhere to click.
+              Illustrative math at your current average order value. We clean and verify the list before the first send so campaigns reach the people who actually buy, not the accounting inbox. The platform gives them somewhere to click.
             </p>
           </div>
         </div>
@@ -217,7 +219,7 @@ export default function Proposal() {
             </div>
             <CompareRow label="Product photos" them="No" us="Every product" />
             <CompareRow label="Edits and changes" them="Refused" us="Same week" />
-            <CompareRow label="Wholesale tier pricing" them="Manual, by emailing TireTutor" us="Four tiers, set by you, applied instantly" />
+            <CompareRow label="Wholesale pricing" them="3 or 4 tire levels, changed by emailing them" us="All your price levels: tires, wheels, parts, tubes" />
             <CompareRow label="TireShop integration" them="No" us="Two way, automatic" />
             <CompareRow label="Email marketing" them="No" us="Built in" />
             <CompareRow label="Who owns it" them="They do" us="You do" last />
@@ -237,13 +239,13 @@ export default function Proposal() {
               eyebrow="One time"
               value="$15,000"
               title="Platform build"
-              body="Half to begin, half at launch. Covers the full platform: accounts, tier pricing, catalog with photos, TireShop integration, admin dashboard, and checkout."
+              body="Half to begin, half at launch. Covers the full platform: accounts, price level pricing, catalog with photos, TireShop integration, on account and card checkout, shipping rules, and the admin dashboard."
             />
             <DealCard
               eyebrow="Monthly"
               value="$3,500"
               title="Platform management and email program"
-              body="Part of this replaces what you pay TireTutor today. The rest funds the monthly email program that turns your customer list into orders, plus hosting, updates, and catalog maintenance."
+              body="Replaces the roughly $650 you send TireTutor today, with the balance funding the monthly email program that works your customer list, plus hosting, updates, and catalog maintenance."
             />
             <DealCard
               eyebrow="Performance"
@@ -277,15 +279,15 @@ export default function Proposal() {
             />
             <Milestone
               weeks="Milestone 2 · Weeks 3 to 4"
-              title="Photos, pricing tiers, and accounts"
-              happens="Manufacturer image packs loaded across the catalog, four pricing tiers configured, and customer registration with your approval step built."
-              delivered="The catalog with real photos, where a logged in test account sees its tier pricing and nothing else."
-              fromYou="Image packs requested from your manufacturers, plus your discount percentage for each of the four tiers."
+              title="Photos, price levels, and accounts"
+              happens="Manufacturer image packs loaded across the catalog, your TireShop price levels mirrored, and customer registration with your approval step built."
+              delivered="The catalog with real photos, where a logged in test account sees its price level and nothing else."
+              fromYou="Image packs requested from your manufacturers, plus which price level each customer type should get on the site."
             />
             <Milestone
               weeks="Milestone 3 · Week 5"
               title="Admin dashboard and checkout"
-              happens="Your dashboard for approving accounts, assigning tiers, and viewing orders. Card checkout goes live, and web orders start landing in TireShop automatically."
+              happens="Your dashboard for approving accounts, assigning price levels, and viewing orders. Card and on account checkout go live with your shipping rules, and web orders start landing in TireShop automatically."
               delivered="The complete platform, ready for a real end to end test: you place an order and watch it appear in TireShop."
               fromYou="Thirty minutes to walk the dashboard with us and approve the first batch of test accounts."
             />
