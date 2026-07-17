@@ -155,7 +155,7 @@ export default function Proposal() {
             <Feature title="Live inventory from TireShop" body="Stock levels and pricing sync automatically from TireShop for both locations. What is on the site is what is on the shelf." />
             <Feature title="Orders flow back into TireShop" body="A web order lands in your system automatically. No phone tag, no re-keying, no missed orders." />
             <Feature title="Built for email campaigns" body="The platform connects to a professional email system so your 10,000 person list finally starts producing orders." />
-            <Feature title="Reviews on autopilot" body="Every fulfilled order triggers a review request automatically. At your order volume, that builds a wall of Google reviews no competitor can match." />
+            <Feature title="Reviews on autopilot" body="Every fulfilled order triggers a review request automatically. At your order volume that builds a wall of Google reviews no competitor can match, and reviews are the strongest signal AI search reads when it recommends a supplier." />
           </div>
         </div>
       </section>
@@ -313,8 +313,8 @@ export default function Proposal() {
           </h2>
           <div className="mt-10 grid md:grid-cols-3 gap-4">
             <div className="border border-neutral-200 rounded-lg p-6 bg-white">
-              <div className="text-[17px] font-bold text-neutral-900 tracking-[-0.01em]">Own the search results</div>
-              <p className="mt-2 text-[15px] leading-relaxed text-neutral-600">The platform creates a page for every size and brand you stock. Phase 2 turns them into a machine that owns searches like 18x8.50-8 turf tire, which your current site was never built to rank for.</p>
+              <div className="text-[17px] font-bold text-neutral-900 tracking-[-0.01em]">Own search, including AI search</div>
+              <p className="mt-2 text-[15px] leading-relaxed text-neutral-600">The platform creates a page for every size and brand you stock, structured so Google and AI assistants like ChatGPT can read them. When a customer asks where to buy an 18x8.50-8 turf tire, the goal is one answer: you.</p>
             </div>
             <div className="border border-neutral-200 rounded-lg p-6 bg-white">
               <div className="text-[17px] font-bold text-neutral-900 tracking-[-0.01em]">The processing switch</div>
