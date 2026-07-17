@@ -350,7 +350,7 @@ export default function Proposal() {
             </div>
           </div>
           <div className="mt-12 pt-8 border-t border-white/10">
-            <p className="text-[13px] text-neutral-500">Prepared by JP Porter, Vory</p>
+            <p className="text-[13px] text-neutral-500">Prepared by Jarret Porter, Vory</p>
           </div>
         </div>
       </section>
