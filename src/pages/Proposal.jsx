@@ -155,6 +155,7 @@ export default function Proposal() {
             <Feature title="Live inventory from TireShop" body="Stock levels and pricing sync automatically from TireShop for both locations. What is on the site is what is on the shelf." />
             <Feature title="Orders flow back into TireShop" body="A web order lands in your system automatically. No phone tag, no re-keying, no missed orders." />
             <Feature title="Built for email campaigns" body="The platform connects to a professional email system so your 10,000 person list finally starts producing orders." />
+            <Feature title="Reviews on autopilot" body="Every fulfilled order triggers a review request automatically. At your order volume, that builds a wall of Google reviews no competitor can match." />
           </div>
         </div>
       </section>
@@ -244,9 +245,9 @@ export default function Proposal() {
             />
             <DealCard
               eyebrow="Monthly"
-              value="$3,500"
-              title="Platform management and email program"
-              body="Replaces the roughly $650 you send TireTutor today, with the balance funding the monthly email program that works your customer list, plus hosting, updates, and catalog maintenance."
+              value="$4,000"
+              title="Platform, email program, and reviews"
+              body="Two email campaigns a month to your cleaned customer list, automated review requests after every fulfilled order, Google Business Profile management for both locations, plus hosting, updates, and catalog maintenance. Replaces the roughly $650 you send TireTutor today."
             />
             <DealCard
               eyebrow="Performance"
@@ -257,7 +258,7 @@ export default function Proposal() {
           </div>
           <div className="mt-8 border border-white/10 bg-white/[0.03] rounded-lg p-7 max-w-[900px]">
             <p className="text-[16px] leading-relaxed text-neutral-300">
-              A piece of the monthly number is money you already spend with a vendor who ignores you. The rest buys an email program working your customer list every month. If the platform does not produce orders, the performance fee costs you nothing. And unlike TireTutor, everything we build is yours. The platform, the code, the customer accounts, and the email list are assets of Affordable Tire, not a rental you lose the day you stop paying.
+              A piece of the monthly number is money you already spend with a vendor who ignores you. The rest buys a growth program: campaigns working your customer list twice a month, a review request going out after every order, and your Google listings actively managed. If the platform does not produce orders, the performance fee costs you nothing. And unlike TireTutor, everything we build is yours. The platform, the code, the customer accounts, and the email list are assets of Affordable Tire, not a rental you lose the day you stop paying.
             </p>
           </div>
         </div>
@@ -268,7 +269,7 @@ export default function Proposal() {
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-14 sm:py-20">
           <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary mb-3">Timeline</p>
           <h2 className="text-[28px] sm:text-[38px] font-extrabold text-neutral-900 tracking-[-0.03em] leading-tight max-w-[760px]">
-            First online orders inside 45 days.
+            First online orders inside 45 days of API access.
           </h2>
           <div className="mt-10 max-w-[980px]">
             <Milestone
@@ -276,7 +277,7 @@ export default function Proposal() {
               title="Foundation and TireShop connection"
               happens="TireShop API connected, catalog structure built, and inventory syncing automatically from both locations."
               delivered="A private staging site where you can browse your full live inventory, both stores, updating on its own."
-              fromYou="Forward the TireShop questions to their team so API access is granted in week one."
+              fromYou="TireShop API credentials once their team responds. The questions are already in their inbox."
             />
             <Milestone
               weeks="Milestone 2 · Weeks 3 to 4"
@@ -290,7 +291,7 @@ export default function Proposal() {
               title="Admin dashboard and checkout"
               happens="Your dashboard for approving accounts, assigning price levels, and viewing orders. Card and on account checkout go live with your shipping rules, and web orders start landing in TireShop automatically."
               delivered="The complete platform, ready for a real end to end test: you place an order and watch it appear in TireShop."
-              fromYou="Thirty minutes to walk the dashboard with us and approve the first batch of test accounts."
+              fromYou="A Stripe account for card checkout, set up in about 15 minutes with us on the phone, plus thirty minutes to walk the dashboard and approve the first test accounts."
             />
             <Milestone
               weeks="Milestone 4 · Week 6"
@@ -299,6 +300,30 @@ export default function Proposal() {
               delivered="A live ordering platform and your first campaign report: opens, clicks, registrations, and orders."
               fromYou="A yes on the campaign before it sends. Then we watch the orders come in."
             />
+          </div>
+        </div>
+      </section>
+
+      {/* AFTER LAUNCH */}
+      <section className="bg-white">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-14 sm:py-20">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary mb-3">Phase 2</p>
+          <h2 className="text-[28px] sm:text-[38px] font-extrabold text-neutral-900 tracking-[-0.03em] leading-tight max-w-[760px]">
+            Where this goes once orders are flowing.
+          </h2>
+          <div className="mt-10 grid md:grid-cols-3 gap-4">
+            <div className="border border-neutral-200 rounded-lg p-6 bg-white">
+              <div className="text-[17px] font-bold text-neutral-900 tracking-[-0.01em]">Own the search results</div>
+              <p className="mt-2 text-[15px] leading-relaxed text-neutral-600">The platform creates a page for every size and brand you stock. Phase 2 turns them into a machine that owns searches like 18x8.50-8 turf tire, which your current site was never built to rank for.</p>
+            </div>
+            <div className="border border-neutral-200 rounded-lg p-6 bg-white">
+              <div className="text-[17px] font-bold text-neutral-900 tracking-[-0.01em]">The processing switch</div>
+              <p className="mt-2 text-[15px] leading-relaxed text-neutral-600">Moving your card on file volume from 2.9% to roughly 2.3% is worth about $10,000 a year. A paperwork change, handled once the platform is live.</p>
+            </div>
+            <div className="border border-neutral-200 rounded-lg p-6 bg-white">
+              <div className="text-[17px] font-bold text-neutral-900 tracking-[-0.01em]">Text reordering</div>
+              <p className="mt-2 text-[15px] leading-relaxed text-neutral-600">10% of your orders already arrive by text. Reorder reminders and campaigns by SMS meet those customers exactly where they are.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -317,7 +342,7 @@ export default function Proposal() {
             </div>
             <div className="flex gap-4 items-start">
               <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white font-extrabold flex items-center justify-center text-[14px]">2</div>
-              <p className="text-[16px] leading-relaxed text-neutral-300 pt-1">Forward the TireShop questions to their team so the integration starts on day one.</p>
+              <p className="text-[16px] leading-relaxed text-neutral-300 pt-1">TireShop grants API access. The questions are already in their inbox, and we chase them if needed.</p>
             </div>
             <div className="flex gap-4 items-start">
               <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white font-extrabold flex items-center justify-center text-[14px]">3</div>
