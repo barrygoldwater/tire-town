@@ -349,6 +349,18 @@ export default function Proposal() {
               <p className="text-[16px] leading-relaxed text-neutral-300 pt-1">Request the product image packs from your manufacturers.</p>
             </div>
           </div>
+          <div className="mt-12">
+            <a
+              href="https://vory.co/invoice/affordable"
+              className="inline-flex items-center gap-3 bg-primary text-white font-extrabold text-[17px] rounded-full px-9 py-4 tracking-[-0.01em] transition-transform hover:scale-[1.02]"
+            >
+              Approve and start the build
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
+            <p className="mt-4 text-[14px] text-neutral-400">Secure checkout on vory.co. Bank autopay or card, handled by Stripe.</p>
+          </div>
           <div className="mt-12 pt-8 border-t border-white/10">
             <p className="text-[13px] text-neutral-500">Prepared by Jarret Porter, Vory</p>
           </div>
