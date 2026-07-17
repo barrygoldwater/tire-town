@@ -220,6 +220,7 @@ export default function Proposal() {
             <CompareRow label="Product photos" them="No" us="Every product" />
             <CompareRow label="Edits and changes" them="Refused" us="Same week" />
             <CompareRow label="Wholesale pricing" them="3 or 4 tire levels, changed by emailing them" us="All your price levels: tires, wheels, parts, tubes" />
+            <CompareRow label="Online payment" them="None, orders only" us="Card and on account at checkout" />
             <CompareRow label="TireShop integration" them="No" us="Two way, automatic" />
             <CompareRow label="Email marketing" them="No" us="Built in" />
             <CompareRow label="Who owns it" them="They do" us="You do" last />
