@@ -4,6 +4,7 @@ import BrandFilter from '../BrandFilter';
 import ProductCard from '../ProductCard';
 import InventorySearch from '../InventorySearch';
 import { searchInventory } from '@/lib/searchInventory';
+import { trackPhoneClick } from '@/lib/track';
 import { aiSemanticSearch } from '@/lib/aiSemanticSearch';
 
 const CATEGORY_LABELS = {
@@ -28,7 +29,7 @@ const EmptyState = () => (
     <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary mb-3">Coming Soon</p>
     <h3 className="text-2xl sm:text-3xl font-extrabold tracking-[-0.02em] text-[#0a0a0a]">We're expanding into this category.</h3>
     <p className="mt-3 text-muted-foreground max-w-md mx-auto">
-      Call <a href="tel:619-954-0034" className="text-[#0a0a0a] font-semibold underline">619-954-0034</a> to discuss your wholesale program.
+      Call <a href="tel:619-954-0034" onClick={() => trackPhoneClick('inventory-section', '619-954-0034')} className="text-[#0a0a0a] font-semibold underline">619-954-0034</a> to discuss your wholesale program.
     </p>
   </div>
 );
