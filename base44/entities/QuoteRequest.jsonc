@@ -1,0 +1,25 @@
+{
+  "name": "QuoteRequest",
+  "properties": {
+    "email": {
+      "type": "string"
+    },
+    "email_sent": {
+      "type": "boolean"
+    },
+    "message": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "page": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    }
+  },
+  "type": "object",
+  "required": []
+}

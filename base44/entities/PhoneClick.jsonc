@@ -1,0 +1,18 @@
+{
+  "name": "PhoneClick",
+  "properties": {
+    "number": {
+      "type": "string"
+    },
+    "page": {
+      "description": "Path where the click happened",
+      "type": "string"
+    },
+    "source": {
+      "description": "Which link was clicked, e.g. header, footer, contact-sales",
+      "type": "string"
+    }
+  },
+  "type": "object",
+  "required": []
+}
