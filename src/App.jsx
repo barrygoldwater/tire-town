@@ -8,6 +8,7 @@ import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import Home from '@/pages/Home';
 import About from '@/pages/About';
 import AdminTagger from '@/pages/AdminTagger';
+import AdminDashboard from '@/pages/AdminDashboard';
 import Proposal from '@/pages/Proposal';
 
 const AuthenticatedApp = () => {
@@ -36,6 +37,7 @@ const AuthenticatedApp = () => {
       <Route path="/about" element={<About />} />
       <Route path="/proposal" element={<Proposal />} />
       <Route path="/admin/tag-inventory" element={<AdminTagger />} />
+      <Route path="/admin/dashboard" element={<AdminDashboard />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
