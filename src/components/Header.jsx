@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Phone, Download, Loader2 } from "lucide-react";
 import Logo from "./Logo";
+import { trackPhoneClick } from "@/lib/track";
 
 export default function Header({ onQuoteClick }) {
   const [scrolled, setScrolled] = useState(false);
@@ -71,6 +72,7 @@ export default function Header({ onQuoteClick }) {
           </a>
           <a
             href="tel:619-954-0034"
+            onClick={() => trackPhoneClick("header-desktop", "619-954-0034")}
             className="hidden sm:flex items-center gap-2 px-2 py-2 text-[13px] font-semibold text-primary hover:text-primary/80 transition-colors whitespace-nowrap"
           >
             <Phone className="w-4 h-4" />
@@ -78,6 +80,7 @@ export default function Header({ onQuoteClick }) {
           </a>
           <a
             href="tel:619-954-0034"
+            onClick={() => trackPhoneClick("header-mobile", "619-954-0034")}
             aria-label="Call sales"
             className="sm:hidden w-10 h-10 rounded-full bg-[#fafaf9] border border-border flex items-center justify-center active:bg-[#0a0a0a] active:text-white"
           >
