@@ -3,6 +3,7 @@ import { Phone, Send } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { base44 } from "@/api/base44Client";
+import { trackPhoneClick } from "@/lib/track";
 
 export default function ContactSection({ quoteFormRef }) {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
@@ -22,12 +23,30 @@ export default function ContactSection({ quoteFormRef }) {
       <p>${form.message}</p>
     `;
 
-    await base44.integrations.Core.SendEmail({
-      to: "john.gregory@affordabletiresusa.com",
-      subject: `Quote Request from ${form.name}`,
-      body,
-      from_name: "Affordable Tires Website"
-    });
+    let emailSent = true;
+    try {
+      await base44.integrations.Core.SendEmail({
+        to: "john.gregory@affordabletiresusa.com",
+        subject: `Quote Request from ${form.name}`,
+        body,
+        from_name: "Affordable Tires Website"
+      });
+    } catch (err) {
+      emailSent = false;
+    }
+
+    try {
+      await base44.entities.QuoteRequest.create({
+        name: form.name,
+        email: form.email,
+        phone: form.phone || "",
+        message: form.message,
+        page: window.location.pathname,
+        email_sent: emailSent,
+      });
+    } catch (err) {
+      // record failure must not block the thank-you state
+    }
 
     setSending(false);
     setSent(true);
@@ -51,7 +70,7 @@ export default function ContactSection({ quoteFormRef }) {
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-muted-foreground">Sales</p>
                 <p className="text-lg font-bold text-[#0a0a0a] mt-1">John Gregory</p>
-                <a href="tel:619-954-0034" className="flex items-center gap-2 text-primary font-semibold mt-1 hover:underline">
+                <a href="tel:619-954-0034" onClick={() => trackPhoneClick("contact-sales", "619-954-0034")} className="flex items-center gap-2 text-primary font-semibold mt-1 hover:underline">
                   <Phone className="w-4 h-4" />
                   619-954-0034
                 </a>
@@ -59,7 +78,7 @@ export default function ContactSection({ quoteFormRef }) {
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-muted-foreground">Turf / Golf</p>
                 <p className="text-lg font-bold text-[#0a0a0a] mt-1">Joe Landis</p>
-                <a href="tel:623-258-8277" className="flex items-center gap-2 text-primary font-semibold mt-1 hover:underline">
+                <a href="tel:623-258-8277" onClick={() => trackPhoneClick("contact-turf-golf", "623-258-8277")} className="flex items-center gap-2 text-primary font-semibold mt-1 hover:underline">
                   <Phone className="w-4 h-4" />
                   623-258-8277
                 </a>
