@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Logo from "./Logo";
 import { Phone, ChevronDown } from "lucide-react";
+import { trackPhoneClick } from "@/lib/track";
 
 const HOW_TO_ORDER_STEPS = [
   {
@@ -39,7 +40,7 @@ export default function Footer() {
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-white/40">Sales</p>
             <p className="text-white font-bold mt-2">John Gregory</p>
-            <a href="tel:619-954-0034" className="flex items-center gap-2 text-white/70 text-sm mt-1 hover:text-primary transition-colors">
+            <a href="tel:619-954-0034" onClick={() => trackPhoneClick("footer-sales", "619-954-0034")} className="flex items-center gap-2 text-white/70 text-sm mt-1 hover:text-primary transition-colors">
               <Phone className="w-3 h-3" />
               619-954-0034
             </a>
@@ -49,7 +50,7 @@ export default function Footer() {
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-white/40">Turf / Golf</p>
             <p className="text-white font-bold mt-2">Joe Landis</p>
-            <a href="tel:623-258-8277" className="flex items-center gap-2 text-white/70 text-sm mt-1 hover:text-primary transition-colors">
+            <a href="tel:623-258-8277" onClick={() => trackPhoneClick("footer-turf-golf", "623-258-8277")} className="flex items-center gap-2 text-white/70 text-sm mt-1 hover:text-primary transition-colors">
               <Phone className="w-3 h-3" />
               623-258-8277
             </a>
