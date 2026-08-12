@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { X, Phone, CheckCircle, MapPin, Package, DollarSign, ChevronLeft, ChevronRight } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { parseSize } from "@/lib/parseSize";
+import { trackPhoneClick } from "@/lib/track";
 
 // ── Type pill label ───────────────────────────────────────────────────────────
 
@@ -247,7 +248,7 @@ export default function ProductModal({ product, open, onClose, onQuoteClick }) {
 
         {/* Sticky CTAs */}
         <div className="flex-shrink-0 grid grid-cols-2 gap-2.5 px-5 sm:px-7 py-3.5 sm:py-4 border-t border-border bg-white" style={{paddingBottom: "max(14px, env(safe-area-inset-bottom))"}}>
-          <a href="tel:619-954-0034" className="bg-primary text-white text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.08em] px-3 py-3.5 sm:py-3 rounded-[4px] flex items-center justify-center gap-2 active:bg-primary/80 hover:bg-primary/90 transition-colors">
+          <a href="tel:619-954-0034" onClick={() => trackPhoneClick("product-modal", "619-954-0034")} className="bg-primary text-white text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.08em] px-3 py-3.5 sm:py-3 rounded-[4px] flex items-center justify-center gap-2 active:bg-primary/80 hover:bg-primary/90 transition-colors">
             <Phone className="w-3.5 h-3.5" /> Call for Pricing
           </a>
           <button onClick={() => { onClose(); onQuoteClick(); }} className="border border-[#0a0a0a] text-[#0a0a0a] text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.08em] px-3 py-3.5 sm:py-3 rounded-[4px] active:bg-[#0a0a0a] active:text-white hover:bg-[#0a0a0a] hover:text-white transition-colors">
