@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Phone } from "lucide-react";
+import { trackPhoneClick } from "@/lib/track";
 
 export default function MobileBottomBar({ onQuoteClick }) {
   const [show, setShow] = useState(false);
@@ -15,7 +16,7 @@ export default function MobileBottomBar({ onQuoteClick }) {
       style={{paddingBottom: "max(10px, env(safe-area-inset-bottom))"}}
     >
       <div className="grid grid-cols-2 gap-2.5 px-4 pt-3 pb-1">
-        <a href="tel:619-954-0034" className="bg-primary text-white text-[12px] font-semibold uppercase tracking-[0.08em] px-3 py-3.5 rounded-[4px] flex items-center justify-center gap-2 active:bg-primary/80">
+        <a href="tel:619-954-0034" onClick={() => trackPhoneClick("mobile-bottom-bar", "619-954-0034")} className="bg-primary text-white text-[12px] font-semibold uppercase tracking-[0.08em] px-3 py-3.5 rounded-[4px] flex items-center justify-center gap-2 active:bg-primary/80">
           <Phone className="w-3.5 h-3.5" /> Call
         </a>
         <button onClick={onQuoteClick} className="bg-[#0a0a0a] text-white text-[12px] font-semibold uppercase tracking-[0.08em] px-3 py-3.5 rounded-[4px] active:bg-[#0a0a0a]/80">
