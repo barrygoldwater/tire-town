@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Flag, GraduationCap, Building2, Handshake, HardHat, Wrench, Phone } from "lucide-react";
+import { trackPhoneClick } from "@/lib/track";
 
 function Hero() {
   return (
@@ -264,6 +265,7 @@ function TeamSection() {
               </p>
               <a
                 href={`tel:${person.tel}`}
+                onClick={() => trackPhoneClick("about-team", person.phone)}
                 className="flex items-center gap-2 text-[16px] font-semibold text-foreground hover:text-primary transition-colors mb-4"
               >
                 <Phone className="w-4 h-4" />
@@ -296,6 +298,7 @@ function ClosingCTA() {
         </a>
         <a
           href="tel:6199540034"
+          onClick={() => trackPhoneClick("about-closing-cta", "619-954-0034")}
           className="border border-white text-white text-[13px] font-semibold uppercase tracking-[0.08em] px-6 py-3 rounded-[2px] hover:bg-white hover:text-[#0a0a0a] transition-colors whitespace-nowrap"
         >
           Call 619-954-0034
